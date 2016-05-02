@@ -3,4 +3,9 @@ $(document).on('click', '.navbar-collapse.in', function(e) {
         $(this).collapse('hide');
     }
 });
-// background conversie
+// background conversie 
+$(document).ready(function(){
+    $("ul .nav").click(function(){
+        $("li").remove(".active");
+    });
+});
