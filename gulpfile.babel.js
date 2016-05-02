@@ -29,14 +29,16 @@ gulp.task('scripts', () => {
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('.tmp/scripts'))
+    .pipe(gulp.dest('.tmp/html'))
     .pipe(reload({stream: true}));
 });
 
-gulp.task('jade', () => {
-    return gulp.src('src/**/*.jade')
-        .pipe($.jade()) // pip to jade plugin
-        .pipe(gulp.dest('../')); // tell gulp our output folder
+gulp.task('pug', () => {
+    return gulp.src('app/src/**/*.jade')
+      .pipe($.plumber())
+      .pipe($.pug({pretty:true})) // pip to jade plugin
+      .pipe(gulp.dest('app/')) // tell gulp our output folder
+      .pipe(reload({stream: true}));
 });
 
 function lint(files, options) {
@@ -116,7 +118,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch('app/src/**/*.jade', ['jade']);
+  gulp.watch('app/src/**/*.jade', ['pug']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
