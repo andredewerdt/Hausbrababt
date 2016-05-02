@@ -33,6 +33,12 @@ gulp.task('scripts', () => {
     .pipe(reload({stream: true}));
 });
 
+gulp.task('jade', () => {
+    return gulp.src('src/**/*.jade')
+        .pipe($.jade()) // pip to jade plugin
+        .pipe(gulp.dest('../')); // tell gulp our output folder
+});
+
 function lint(files, options) {
   return () => {
     return gulp.src(files)
@@ -110,6 +116,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/src/**/*.jade', ['jade']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
