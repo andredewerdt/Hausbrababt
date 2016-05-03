@@ -29,7 +29,7 @@ gulp.task('scripts', () => {
     .pipe($.sourcemaps.init())
     .pipe($.babel())
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('.tmp/html'))
+    .pipe(gulp.dest('.tmp/scripts'))
     .pipe(reload({stream: true}));
 });
 
