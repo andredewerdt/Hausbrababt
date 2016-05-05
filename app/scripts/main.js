@@ -9,8 +9,17 @@ $(document).on('click','ul.nav li',function(){
         $("li").removeClass("active");
         $(this).addClass("active");
         WisselAchtergrondSeizoen($("a",this).attr('id'),'overlay');
+        $('html, body').animate({
+              scrollTop: $("#"+$("a",this).attr('id')+"ID").offset().top
+          }, 800);
 });
+// scroll
+$(window).scroll(function(){
+  var wScroll= $(this).scrollTop();
+  $('.periscope').css({'background-position':'center '+ (wScroll +10- $('.periscope').offset().top) +'px'});
+  });
 
+//subs
 function WisselAchtergrondSeizoen(id,klasse) {
         if(id=="Zomer"){
           $(klasse+".winter").removeClass('start-overlay');
@@ -20,40 +29,4 @@ function WisselAchtergrondSeizoen(id,klasse) {
           $(klasse+".winter").addClass('start-overlay');
           $(klasse+".zomer").removeClass('start-overlay');
         }
-
-/*          setTimeout(function(){
-            $(klasse).css('z-index','99');
-          }, 1000);
-          $('body').removeClass('start-overlay');
-          setTimeout(function(){
-            $(klasse).removeClass("winter").addClass("zomer");
-          }, 1000);
-          setTimeout(function(){
-            $('body').addClass('start-overlay');
-          }, 1000);
-          setTimeout(function(){
-            $('overlay').css('z-index','-1');
-          }, 1000);
-        }
-        if(id=='Winter'){
-          $('body').removeClass('start-overlay');
-          setTimeout(function(){
-             $(klasse).removeClass("zomer").addClass("winter");
-          }, 1000);
-          setTimeout(function(){
-            $('body').addClass('start-overlay');
-          }, 1000);
-
-        }
-*/
-/*      if(id=="Zomer"){
-        $('klasse').animate({ opacity: 0 },700,function(){
-        $('klasse').removeClass("winter").addClass("zomer");});
-        $('klasse').animate({ opacity: 1 },700);
-      }
-      if(id=='Winter'){
-        $('klasse').animate({ opacity: 0 },700, function(){
-        $('klasse').removeClass("zomer").addClass("winter");});
-        $('klasse').animate({ opacity: 1 },700);
-      } */
 }

@@ -4,13 +4,14 @@ html
   title Haus Brabant
   link( rel="apple-touch-icon" href="apple-touch-icon.png")
   meta(name="viewport", content="width=device-width, initial-scale=1")
+  link(rel="stylesheet" href="styles/fonts.css")
   link(rel="stylesheet" href="styles/main.css")
   link(rel="stylesheet" href="styles/mobilenav.css")
   link(rel="stylesheet" href="styles/headerstyles.css")
   script( src="/bower_components/modernizr/modernizr.js")
 
   body
-    overlay.zomer
+    overlay.zomer.start-overlay
     overlay.winter
     .container
       .header
@@ -53,17 +54,37 @@ html
               li
                 a(href="indexOld.html") Contact
       .mainbody    
-        .row.marketing
-          .col-lg-6
-            h4 HTML5 boilerplate
-            p HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-            h4 Sass
-            p Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-            h4 Bootstrap
-            p Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.
-            h4 Modernizr
-            p Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.
+        .row.row-eq-height
+          .col-lg-8.col-sm-6
+            h1 Proficiat! 
+            p Je bent terecht gekomen bij een gezellig appartementenhuis in Tirol.
+            
+            p <strong> Wie zijn wij?</strong> Wij zijn een jong gezin met 5 kinderen. <br> Helmut, Leonie, Joy, Brett, Sky, Yesse en Kate 
+            
+            p Onze jeugd hebben wij doorgebracht in het Brabantse Lieshout en Beek en Donk. Samen hebben wij de laatste jaren in het dorpje Waalre gewoond, van waaruit wij verhuist zijn naar Tirol.
+            
+            p In 2009 hebben wij dit huis overgenomen van een Oostenrijkse familie. De eerste jaren hebben wij de naam Bayricherhof-tirol doorgevoerd.
+            p Nadat wij in 2011 de naam brabantsegezelligheid hebben geïntroduceerd zijn wij in 2012 verder gegaan als Haus Brabant.
+            p Haus Brabant heeft 9 appartementen en een 2-4 pers. kamer. Het voorste gedeelte van ons huis dateerde nog uit 1890 en is in 2016 geheel verbouwd. De appartementen bevinden zich aan de achterzijde van ons huis, en hebben een panoramische uitkijk op de "Zugspitze".
+            p Bent je op zoek naar een heerlijke welverdiende vakantie?<br> Stop dan maar met zoeken want bij ons in HAUS BRABANT in Ehrwald bent je gegarandeerd aan het juiste adres. <br> Bij aankomst krijg je van ons voldoende informatie en uitleg over de omgeving. Genoeg om weken vooruit te kunnen!
+            p Niet voor niets hebben we vele "regulars"; mensen die ons al vele jaren op rij bezoeken! 
+            .centerrow
+              .periscope
+          .col-lg-4.col-sm-6.fotocontainer
+              .foto
+                img(src='/images/huis.png')
+              .foto  
+                img(src='/images/stube.png')
+              .foto  
+                img(src='/images/kamer.png')
+        .row#ZomerID 
+          .col-lg-12
+            img(src='/images/zomerbalk.jpg').zomerbalk
+        .row
+          .col-lg-12
+            .bigdiv
         .footer
+        
       nav.mobile-nav 
         .menu-mobile-footer
           ul#menu-mobile-footer.menu 

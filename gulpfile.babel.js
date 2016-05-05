@@ -32,6 +32,13 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(reload({stream: true}));
 });
+gulp.task('sass', () => {
+    return gulp.src('app/styles/**/*.sass')
+      .pipe($.plumber())
+      .pipe($.sass())
+      .pipe(gulp.dest('.tmp/styles')) // tell gulp our output folder
+      .pipe(reload({stream: true}));
+});
 
 gulp.task('pug', () => {
     return gulp.src('app/src/**/*.jade')
@@ -98,7 +105,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['sass','styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -118,6 +125,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
 
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/styles/**/*.sass', ['sass']);
   gulp.watch('app/src/**/*.jade', ['pug']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);

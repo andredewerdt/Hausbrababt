@@ -1,0 +1,115 @@
+$icon-font-path: '../fonts/'
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
+// endbower
+.bigdiv
+  height: 1000px
+
+.browserupgrade
+  margin: 0.2em 0
+  background: #ccc
+  color: #000
+  padding: 0.2em 0
+
+
+/* Space out content a bit */
+body
+  padding-top: 20px
+  padding-bottom: 20px
+  background-color: transparent
+
+.mainbody
+  background-color: #f2f2f2
+  font-family: Arial
+  font-size: 1.2em
+  weight: 400
+
+.header
+  position: relative
+
+.centerrow
+  display: flex
+  justify-content: center
+
+.periscope
+    height: 200px
+    width: 200px
+    background-image: url("../images/gezin.png")
+    background-position: 50% 15%
+    border-radius: 50%
+    border: 1px solid #777
+    transition: transform 0.35s
+
+
+/* Custom page footer */
+.footer
+  padding-top: 19px
+  color: #777
+  border-top: 1px solid #e5e5e5
+
+.navbar-brand
+  background: url("../images/hausbrabant.png") center / contain no-repeat
+  width: 100px
+
+
+.fotocontainer
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.foto img, .zomerbalk
+    width: 100%
+    border: 1px solid #777
+    margin-top: 30px
+.foto
+    &:first-child
+      margin-top: 30px
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px)
+  .container
+    max-width: 1170px
+
+  .row-eq-height
+    display: flex
+
+  .foto
+    transition: all .5s ease-in-out
+    &:hover
+      transform: translate(-200px,-100px) scale(2.1)
+
+  .grow
+    transition: all .5s ease-in-out
+    &:hover
+      transform: translate(100px,-100px) scale(5.1) rotate(360deg)
+
+  .start-overlay
+      opacity: 1
+      pointer-events: all
+
+  .mainbody
+    padding: 10px 40px
+
+  overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    pointer-events: none
+    transition: opacity 1s
+    z-index: -10
+
+  .zomer
+    background: url("../images/topheader.jpg") no-repeat center fixed
+    background-size: cover
+
+  .winter
+    background: url("../images/ski2.jpg") no-repeat center fixed
+    background-size: cover
+
+  .header
+      height: auto

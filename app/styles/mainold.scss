@@ -24,7 +24,26 @@ body {
 .header {
   position: relative;
 }
+.rcolumn {
+  display:flex;
+  justify-content: center;
+}
+.periscope {
+    height: 200px;
+    width:200px;
+    background-image: url("../images/gezin.png");
+    background-position: center 0px;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    margin-top: 50px;
+    border-radius: 50%;
+    border-style: double;
+    transition: transform 0.35s;
+}
+.periscope:hover{
+  transform: scale(2) translate(0,-100px);
 
+}
 /* Custom page footer */
 .footer {
   padding-top: 19px;
