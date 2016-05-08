@@ -5,9 +5,11 @@ html
   link( rel="apple-touch-icon" href="apple-touch-icon.png")
   meta(name="viewport", content="width=device-width, initial-scale=1")
   link(rel="stylesheet" href="styles/fonts.css")
+  link(rel="stylesheet" href="styles/headerstyles.css")
+  link(rel="stylesheet" href="styles/effectVakken.css") 
   link(rel="stylesheet" href="styles/main.css")
   link(rel="stylesheet" href="styles/mobilenav.css")
-  link(rel="stylesheet" href="styles/headerstyles.css")
+  link(rel="stylesheet" href="styles/pageheader.css") 
   script( src="/bower_components/modernizr/modernizr.js")
 
   body
@@ -79,9 +81,72 @@ html
                 img(src='/images/kamer.png')
         .row#ZomerID 
           .col-lg-12
-            img(src='/images/zomerbalk.jpg').zomerbalk
-        .row
+            .figure.effect-menu
+              img(src='/images/zomerbalk.jpg')
+              figcaption
+                h2 Zomer in 
+                  span Ehrwald
+                p wandelen, mountainbike, golf, rodelen en ..
+          .col-lg-12.nabalk
+            .row
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath 
+                    img(src="/images/wandelen.jpg")
+                    figcaption
+                      h2 Wandelen
+                      p Diverse wandelwegen en bergoutes ...
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath 
+                    img(src="/images/mountainbike.jpg")
+                    figcaption
+                      h2 Mountain bike
+                      p Het eldorado voor mountainbikers
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath 
+                    img(src="/images/golf.jpg")
+                    figcaption
+                      h2 Golf
+                      p Een prachtige 9 holes baan
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath 
+                    img(src="/images/rodeln.jpg")
+                    figcaption
+                      h2 Rodelen
+                      p Een absolute aanrader..
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath 
+                    img(src="/images/klimmen.jpg")
+                    figcaption
+                      h2 Klimmen
+                      p Een absolute aanrader..
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath 
+                    img(src="/images/trektocht.jpg")
+                    figcaption
+                      h2 Trektocht
+                      p Spannender als dit zult u niet snel beleven....
+                      a(href="#") View more
+        .row#WinterID
           .col-lg-12
+            .figure.effect-menu
+              img(src='/images/winterbalk.jpg')
+              figcaption
+                h2 Winter in 
+                  span Ehrwald
+                p Gegarandeerde winterpret voor het hele gezin
+          .col-lg-12
+            // info winter
             .bigdiv
         .footer
         

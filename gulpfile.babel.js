@@ -32,11 +32,19 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(reload({stream: true}));
 });
+
 gulp.task('sass', () => {
-    return gulp.src('app/styles/**/*.sass')
+    return gulp.src('app/styles/*.sass')
       .pipe($.plumber())
-      .pipe($.sass())
-      .pipe(gulp.dest('.tmp/styles')) // tell gulp our output folder
+      .pipe($.sourcemaps.init())
+      .pipe($.sass.sync({
+        outputStyle: 'expanded',
+        precision: 10,
+        includePaths: ['.']
+      }).on('error', $.sass.logError))
+      .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
+      .pipe($.sourcemaps.write())
+      .pipe(gulp.dest('.tmp/styles'))
       .pipe(reload({stream: true}));
 });
 

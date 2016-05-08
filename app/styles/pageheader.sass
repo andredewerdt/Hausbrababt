@@ -1,0 +1,88 @@
+.figure.effect-menu
+	position: relative
+	display: block
+	min-height: 100%
+	max-width: 100%
+	margin-top: 30px
+	background: linear-gradient(-45deg, #f3cf3f 0%,#f33f58 100%)
+	text-align: center
+	overflow: hidden
+	border: 1px solid #777
+
+.figure.effect-menu img
+	width: 100%
+	opacity: 0.9
+.figure figcaption,
+.figure figcaption > a
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.figure figcaption > a 
+	z-index: 1000
+	text-indent: 200%
+	white-space: nowrap
+	font-size: 0
+	opacity: 0
+
+
+.figure.effect-menu figcaption::after,
+.figure.effect-menu img,
+.figure.effect-menu p,
+.figure.effect-menu h2
+	transition: opacity 0.35s, transform 0.35s
+
+.figure.effect-menu h2,
+.figure.effect-menu p
+	opacity: 1
+	transform: scale3d(0.8,0.8,1)
+
+.figure figcaption
+	padding: 2em
+	color: #fff
+	text-transform: uppercase
+	font-size: 1.25em
+
+.figure.effect-menu figcaption::after
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-top: 1px solid #fff
+	border-bottom: 1px solid #fff
+	content: ''
+	opacity: 1
+	transition: opacity 0.35s, transform 0.35s
+	transform-origin: 60% 40%
+
+
+.figure.effect-menu:hover img
+	opacity: 0.7
+	transform: scale3d(1.05,1.05,1)
+
+
+.figure.effect-menu:hover figcaption::after,
+	opacity: 1
+	transform: rotate3d(0,0,1,135deg) scale3d(1.5,1.5,1)
+.figure.effect-menu:hover h2,
+.figure.effect-menu:hover p
+	opacity: 1
+	transform: scale3d(1,1,1)
+
+
+.figure.effect-menu p
+	padding: 0.5em 2em
+	text-transform: none
+	font-size: 0.85vw
+	opacity: 0
+
+.figure.effect-menu h2 span
+	font-weight: 900
+.figure.effect-menu h2
+	word-spacing: 0.3em
+	font-weight: 200
+	font-size: 2vw
+	padding-top: 20px
