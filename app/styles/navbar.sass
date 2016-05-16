@@ -1,0 +1,86 @@
+$colornavbar : rgba(33, 92, 192,0.9)
+
+.nav-container
+  width: 100%
+  margin-right: -2em
+
+nav
+  box-sizing: border-box
+  width: 1170px
+  padding: 1em 3em
+  margin-left: -14px
+  background: $colornavbar
+  position: relative
+  border-top-left-radius: 1em 0.5em
+  border-top-right-radius: 1em 0.5em
+  display: block
+  & ul
+    margin-top: 0px
+    margin-bottom: 0px
+
+.nav-left
+  position: absolute
+  left: 0px
+  bottom: -14px
+  width: 14px
+  height: 14px
+  background: $colornavbar
+  border-bottom-left-radius: 100% 50%
+
+
+.nav-left:after
+	content: ''
+	position: absolute
+	right: 0px
+	width: 66%
+	height: 66%
+	background: #000
+	border-top-left-radius: 100% 50%
+	border-bottom-left-radius: 100% 50%
+
+.nav-right
+	position: absolute
+	right: 0px
+	bottom: -14px
+	width: 14px
+	height: 14px
+	background: $colornavbar
+	border-bottom-right-radius: 100% 50%
+
+.nav-right:after
+	content: ''
+	position: absolute
+	left: 0px
+	width: 66%
+	height: 66%
+	background: #000
+	border-top-right-radius: 100% 50%
+	border-bottom-right-radius: 100% 50%
+
+nav li
+	display: inline
+	list-style: none
+
+
+nav li a
+  text-decoration: none
+  font-size: 1.2em
+  color: white
+  font-weight: bold
+  display: inline-block
+  width: 8em
+  text-align: center
+  padding: .5em 1em
+  border-radius: 1px
+
+
+nav li a:hover,
+nav li a.selected
+  color: #fff
+  background: #40bfe8
+  text-decoration: none
+
+.stuck
+  position: fixed
+  top: 0
+  z-index: 50

@@ -15,7 +15,7 @@ html
   body
     overlay.zomer.start-overlay
     overlay.winter
-    .container
+    .container#Home
       .header
         .grid
           figure.effect-jazz
@@ -24,7 +24,7 @@ html
               h2 Zugspitz 
                 span Arena
               p Ehrwald, Lermoos, Biberwier
-      .navbar.navbar-default(role="navigation")
+      .navbar.navbar-default(role="navigation")#mainNav
         .container
           .navbar-header
             button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-collapse")
@@ -36,11 +36,11 @@ html
           .navbar-collapse.collapse
             ul.nav.navbar-nav.navbar-left
               li.active
-                a#Home(href="#") Home
+                a#Home(href="#Home") Home
               li
-                a#Zomer(href="#") Zomer
+                a#Zomer(href="#Zomer") Zomer
               li
-                a#Winter(href="#") Winter
+                a#Winter(href="#Winter") Winter
               li.dropdown
                 a.dropdown-toggle(href="#" data-toggle="dropdown") Accomodatie
                   span.caret
@@ -90,25 +90,25 @@ html
           .col-lg-12.nabalk
             .row
               .col-lg-4.col-sm-6
-                .grid 
+                .grid.os-animation(data-os-animation="fadeInLeft" data-os-animation-delay="2s" )
                   .figure.effect-goliath 
-                    img(src="/images/wandelen.jpg")
+                    img(src="/images/blokken/wandelen.jpg")
                     figcaption
                       h2 Wandelen
                       p Diverse wandelwegen en bergoutes ...
                       a(href="#") View more
               .col-lg-4.col-sm-6
-                .grid 
+                .grid.os-animation(data-os-animation="fadeIn" data-os-animation-delay="2s" )
                   .figure.effect-goliath 
-                    img(src="/images/mountainbike.jpg")
+                    img(src="/images/blokken/mountainbike.jpg")
                     figcaption
                       h2 Mountain bike
                       p Het eldorado voor mountainbikers
                       a(href="#") View more
               .col-lg-4.col-sm-6
-                .grid 
+                .grid.os-animation(data-os-animation="fadeInRight" data-os-animation-delay="2s" ) 
                   .figure.effect-goliath 
-                    img(src="/images/golf.jpg")
+                    img(src="/images/blokken/golf.jpg")
                     figcaption
                       h2 Golf
                       p Een prachtige 9 holes baan
@@ -116,7 +116,7 @@ html
               .col-lg-4.col-sm-6
                 .grid 
                   .figure.effect-goliath 
-                    img(src="/images/rodeln.jpg")
+                    img(src="/images/blokken/rodeln.jpg")
                     figcaption
                       h2 Rodelen
                       p Een absolute aanrader..
@@ -124,7 +124,7 @@ html
               .col-lg-4.col-sm-6
                 .grid 
                   .figure.effect-goliath 
-                    img(src="/images/klimmen.jpg")
+                    img(src="/images/blokken/klimmen.jpg")
                     figcaption
                       h2 Klimmen
                       p Een absolute aanrader..
@@ -132,7 +132,7 @@ html
               .col-lg-4.col-sm-6
                 .grid 
                   .figure.effect-goliath 
-                    img(src="/images/trektocht.jpg")
+                    img(src="/images/blokken/trektocht.jpg")
                     figcaption
                       h2 Trektocht
                       p Spannender als dit zult u niet snel beleven....
@@ -145,8 +145,56 @@ html
                 h2 Winter in 
                   span Ehrwald
                 p Gegarandeerde winterpret voor het hele gezin
-          .col-lg-12
-            // info winter
+          .col-lg-12.nabalk
+            .row
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath.winter 
+                    img(src="/images/blokken/langlauf.jpg")
+                    figcaption
+                      h2 Langlaufen
+                      p Keuze uit loipes te over...
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath.winter 
+                    img(src="/images/blokken/skiblok.jpg")
+                    figcaption
+                      h2 Ski Arena Zugspite
+                      p Sneeuwzeker door de gletscher..
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath.winter 
+                    img(src="/images/blokken/avondrodel.jpg")
+                    figcaption
+                      h2 Rodeln
+                      p Heerlijk rodelen zowel overdag als 's avonds
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath.winter 
+                    img(src="/images/blokken/winterwandel.jpg")
+                    figcaption
+                      h2 Wandelen
+                      p Een absolute aanrader..
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath.winter 
+                    img(src="/images/blokken/arrenslee.jpg")
+                    figcaption
+                      h2 Arrenslee
+                      p Geef je vakantie een romantische draai.
+                      a(href="#") View more
+              .col-lg-4.col-sm-6
+                .grid 
+                  .figure.effect-goliath.winter 
+                    img(src="/images/blokken/garmisch.jpg")
+                    figcaption
+                      h2 Uitstapjes
+                      p Bezoek de pittoreske plaatsen in de directe omgeving
+                      a(href="#") View more
             .bigdiv
         .footer
         
@@ -182,7 +230,10 @@ html
     script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js")
     script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js")
     script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js")
+    script(src="/bower_components/waypoints/lib/jquery.waypoints.min.js")
+    script(src="/bower_components/waypoints/lib/shortcuts/sticky.min.js")
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     script(src="scripts/main.js")
+    script(src="scripts/animation.js")
