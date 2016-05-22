@@ -26,6 +26,7 @@ $(document).ready(function(){
     })
   });
 
+
   var blok = $('.grid.animated');
   blok.css('opacity', 0);
   blok.waypoint({
@@ -34,11 +35,25 @@ $(document).ready(function(){
       this.element.className= this.element.className+' '+klas;
       },
   offset: '75%'
-  })
-//  $('#section-2 .grid.animated').waypoint(function(direction) {
-//      if (direction=='down'){
-        //alert(this.element.getAttributeNode('data-os-animation').value);
-//        var klas = this.element.getAttributeNode('data-os-animation').value;
-//        $('#section-2 .grid.animated').addClass(klas);}
-//  }, { offset: '80%' })
-})
+  });
+
+  $(function() {
+    var sections = $("section");
+  	var navigation_links = $("nav li a");
+
+  	sections.waypoint({
+  		handler: function(direction) {
+
+  			var active_section;
+  			//active_section = $(this);
+        active_section = this.element;
+  			if (direction === "up") active_section = active_section.previousElementSibling;
+        if (active_section!=null) {
+  			var active_link = $('nav li a[href="#' + active_section.id + '"]');
+  			navigation_links.removeClass("selected");
+  			active_link.addClass("selected");}
+      },
+      offset: '25%'
+  	  })
+    });
+});

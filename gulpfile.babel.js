@@ -51,7 +51,7 @@ gulp.task('sass', () => {
 gulp.task('pug', () => {
     return gulp.src('app/src/**/*.jade')
       .pipe($.plumber())
-      .pipe($.pug({pretty:true,debug:true})) // pip to jade plugin
+      .pipe($.pug({pretty:true})) // pip to jade plugin
       .pipe(gulp.dest('app/')) // tell gulp our output folder
       .pipe(reload({stream: true}));
 });

@@ -1,7 +1,7 @@
 // background conversie
 $(document).on('click','nav ul li',function(){
-        $("li a").removeClass("selected");
-        $(this > "a").addClass("selected");
+//        $("li a").removeClass("selected");
+//        $(this > "a").addClass("selected");
         WisselAchtergrondSeizoen($("a",this).attr('data-bg'),'overlay');
         var $distance=$(".nav-container").height()-28
         $('html, body').animate({
@@ -28,10 +28,18 @@ function resizeNavBar(){
 function WisselAchtergrondSeizoen(id,klasse) {
         if(id=="Zomer"){
           $(klasse+".winter").removeClass('start-overlay');
+          $(klasse+".bar").removeClass('start-overlay');
           $(klasse+".zomer").addClass('start-overlay');
         }
         if(id=="Winter"){
           $(klasse+".winter").addClass('start-overlay');
           $(klasse+".zomer").removeClass('start-overlay');
+          $(klasse+".bar").removeClass('start-overlay');
         }
+        if(id=="Bar"){
+          $(klasse+".bar").addClass('start-overlay');
+          $(klasse+".winter").removeClass('start-overlay');
+          $(klasse+".zomer").removeClass('start-overlay');
+        }
+
 }
