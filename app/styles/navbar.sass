@@ -1,5 +1,10 @@
 $colornavbar : rgba(33, 92, 192,0.9)
 
+.stuck
+  position: fixed
+  top: 0
+  z-index: 50
+
 .nav-container
   width: 100%
   margin-right: -2em
@@ -68,19 +73,18 @@ nav li a
   color: white
   font-weight: bold
   display: inline-block
-  width: 8em
+  //width: 8em
   text-align: center
-  padding: .5em 1em
-  border-radius: 1px
-
+  padding: .3em .5em
+  border-radius: 5px
 
 nav li a:hover,
 nav li a.selected
   color: #fff
   background: #40bfe8
   text-decoration: none
-
-.stuck
-  position: fixed
-  top: 0
-  z-index: 50
+  background: rgb(98,163,219)
+  background: -moz-linear-gradient(left,  rgb(98,163,219) 0%, rgb(45,197,239) 50%, rgb(94,170,209) 100%)
+  background: -webkit-linear-gradient(left,  rgb(98,163,219) 0%,rgb(45,197,239) 50%,rgb(94,170,209) 100%)
+  background: linear-gradient(to right,  rgb(98,163,219) 0%,rgb(45,197,239) 50%,rgb(94,170,209) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62a3db', endColorstr='#5eaad1',GradientType=1 )

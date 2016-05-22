@@ -50,13 +50,10 @@ body
 .navbar-brand
   background: url("../images/hausbrabant.png") center / contain no-repeat
   width: 100px
+  margin-top: -5px
+
 .nav-container
   background-color: transparent
-
-.fotocontainer
-    display: flex
-    flex-direction: column
-    justify-content: space-between
 
 .foto img
     width: 100%
@@ -69,11 +66,18 @@ body
 .nabalk
   margin-top: 20px
 
+.fotocontainer
+  display: none
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px)
+
+  .fotocontainer
+      display: flex
+      flex-direction: column
+
   .container
     max-width: 1170px
-
   .row-eq-height
     display: flex
     margin-bottom: 30px
@@ -89,7 +93,6 @@ body
     transition: all .5s ease-in-out
     &:hover
       transform: translate(100px,-100px) scale(5.1) rotate(360deg)
-
 
   .mainbody
     padding: 10px 40px
@@ -119,6 +122,12 @@ body
   .header
       height: auto
 
+@media screen and (min-width: 990px)
+  .fotocontainer
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
 @media screen and (min-width: 1920px)
-  .grid figure h2
+  figure h2
     font-size: 1.5vw

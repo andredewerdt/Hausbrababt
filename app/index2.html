@@ -11,11 +11,12 @@
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/mobilenav.css">
   <link rel="stylesheet" href="styles/pageheader.css">
+  <link rel="stylesheet" href="styles/animate.min.css">
   <script src="/bower_components/modernizr/modernizr.js"></script>
-  <body>
+  <body id="Home">
     <overlay class="zomer start-overlay"></overlay>
     <overlay class="winter"></overlay>
-    <div class="container" id="Home">
+    <div class="container">
       <div class="header"> 
         <div class="grid">
           <figure class="effect-jazz"><img src="images/zugspitze.jpg">
@@ -27,9 +28,9 @@
         </div>
       </div>
       <div class="nav-container">       
-        <nav>
+        <nav><a class="navbar-brand pull-left grow" href="#"></a>
           <ul>
-            <li class="nav-link"><a href="#section-1">Home</a></li>
+            <li class="nav-link"><a href="#Home">Home</a></li>
             <li class="nav-link"><a href="#section-2" data-bg="Zomer">Zomer</a></li>
             <li class="nav-link"><a href="#section-3" data-bg="Winter">Winter</a></li>
             <li class="nav-link"><a href="#section-4">Accomodatie</a></li>
@@ -42,21 +43,34 @@
       <div class="mainbody">
         <section id="section-1">
           <div class="row row-eq-height">
-            <div class="col-lg-8 col-sm-6">
+            <div class="col-lg-8 col-sm-8">
               <h1>Proficiat! </h1>
-              <p>Je bent terecht gekomen bij een gezellig appartementenhuis in Tirol.</p>
-              <p><strong> Wie zijn wij?</strong> Wij zijn een jong gezin met 5 kinderen. <br> Helmut, Leonie, Joy, Brett, Sky, Yesse en Kate </p>
-              <p>Onze jeugd hebben wij doorgebracht in het Brabantse Lieshout en Beek en Donk. Samen hebben wij de laatste jaren in het dorpje Waalre gewoond, van waaruit wij verhuist zijn naar Tirol.</p>
-              <p>In 2009 hebben wij dit huis overgenomen van een Oostenrijkse familie. De eerste jaren hebben wij de naam Bayricherhof-tirol doorgevoerd.</p>
-              <p>Nadat wij in 2011 de naam brabantsegezelligheid hebben geïntroduceerd zijn wij in 2012 verder gegaan als Haus Brabant.</p>
-              <p>Haus Brabant heeft 9 appartementen en een 2-4 pers. kamer. Het voorste gedeelte van ons huis dateerde nog uit 1890 en is in 2016 geheel verbouwd. De appartementen bevinden zich aan de achterzijde van ons huis, en hebben een panoramische uitkijk op de "Zugspitze".</p>
-              <p>Bent je op zoek naar een heerlijke welverdiende vakantie?<br> Stop dan maar met zoeken want bij ons in HAUS BRABANT in Ehrwald bent je gegarandeerd aan het juiste adres. <br> Bij aankomst krijg je van ons voldoende informatie en uitleg over de omgeving. Genoeg om weken vooruit te kunnen!</p>
-              <p>Niet voor niets hebben we vele "regulars"; mensen die ons al vele jaren op rij bezoeken! </p>
+              <p>
+                 Je bent terecht gekomen bij een gezellig appartementenhuis in Tirol.</p>
+              <p>
+                 <strong> Wie zijn wij?</strong> Wij zijn een jong gezin met 5 kinderen. <br> Helmut, Leonie, Joy, Brett, Sky, Yesse en Kate </p>
+              <p>
+                 Onze jeugd hebben wij doorgebracht in het Brabantse Lieshout en Beek en Donk. Samen hebben wij de laatste jaren in het dorpje Waalre gewoond, van waaruit wij verhuist zijn naar Tirol.</p>
+              <p>
+                 In 2009 hebben wij dit huis overgenomen van een Oostenrijkse familie. De eerste jaren hebben wij de naam Bayricherhof-tirol doorgevoerd.</p>
+              <p>
+                 Nadat wij in 2011 de naam brabantsegezelligheid hebben geïntroduceerd zijn wij in 2012 verder gegaan als Haus Brabant.</p>
+              <p> 
+                Haus Brabant heeft 9 appartementen en een 2-4 pers. kamer. Het voorste gedeelte van ons huis dateerde nog uit 1890 en is in 2016 geheel verbouwd. 
+                De appartementen bevinden zich aan de achterzijde van ons huis, en hebben een panoramische uitkijk op de "Zugspitze".
+              </p>
+              <p> 
+                Bent je op zoek naar een heerlijke welverdiende vakantie?<br> Stop dan maar met zoeken want bij ons in HAUS BRABANT in Ehrwald bent je gegarandeerd aan het juiste adres. <br> 
+                Bij aankomst krijg je van ons voldoende informatie en uitleg over de omgeving. Genoeg om weken vooruit te kunnen!
+              </p>
+              <p>
+                 Niet voor niets hebben we vele "regulars"; mensen die ons al vele jaren op rij bezoeken! </p>
               <div class="centerrow">
                 <div class="periscope"></div>
               </div>
+              <hr>
             </div>
-            <div class="col-lg-4 col-sm-6 fotocontainer">
+            <div class="col-lg-4 col-sm-4 fotocontainer">
               <div class="foto"><img src="/images/huis.png"></div>
               <div class="foto"> <img src="/images/stube.png"></div>
               <div class="foto"> <img src="/images/kamer.png"></div>
@@ -69,14 +83,14 @@
               <div class="figure effect-menu"><img src="/images/zomerbalk.jpg">
                 <figcaption>
                   <h2>Zomer in <span>Ehrwald</span></h2>
-                  <p>wandelen, mountainbike, golf, rodelen en ..</p>
+                  <p>Een ideale omgeving voor wandelaars, mountainbikers enz.</p>
                 </figcaption>
               </div>
             </div>
             <div class="col-lg-12 nabalk">
               <div class="row">
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="2s">
+                  <div class="grid animated" data-os-animation="fadeInLeft">
                     <div class="figure effect-goliath"> <img src="/images/blokken/wandelen.jpg">
                       <figcaption>
                         <h2>Wandelen</h2>
@@ -86,7 +100,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid os-animation" data-os-animation="fadeIn" data-os-animation-delay="2s">
+                  <div class="grid animated" data-os-animation="fadeIn">
                     <div class="figure effect-goliath"> <img src="/images/blokken/mountainbike.jpg">
                       <figcaption>
                         <h2>Mountain bike</h2>
@@ -96,7 +110,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid os-animation" data-os-animation="fadeInRight" data-os-animation-delay="2s"> 
+                  <div class="grid animated" data-os-animation="fadeInRight">
                     <div class="figure effect-goliath"> <img src="/images/blokken/golf.jpg">
                       <figcaption>
                         <h2>Golf</h2>
@@ -106,7 +120,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeInLeft"> 
                     <div class="figure effect-goliath"> <img src="/images/blokken/rodeln.jpg">
                       <figcaption>
                         <h2>Rodelen</h2>
@@ -116,7 +130,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeIn"> 
                     <div class="figure effect-goliath"> <img src="/images/blokken/klimmen.jpg">
                       <figcaption>
                         <h2>Klimmen</h2>
@@ -126,7 +140,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeInRight"> 
                     <div class="figure effect-goliath"> <img src="/images/blokken/trektocht.jpg">
                       <figcaption>
                         <h2>Trektocht</h2>
@@ -136,6 +150,13 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <p>Ehrwald ligt in een prachtig dal waar 3 dorpen (Lermoos, Biberwier en Ehrwald) centraal liggen. Prachtige wandelwegen, zowel in de vallei als avontuurlijk de hellingen op trekken al vele decennia wandelaars naar dit gebied.</p>
+              <p>Talrijke wandelwegen en bergroutes op de spitsen van het Wetterstein- en Ammergebergte in de Lechtaler Alpen en Mieminger Kette worden zowel door wandelaars als bergbeklimmers met open armen begroet. Men wordt hier met fraaie uitzichten in de ware zin van het woord verwend. De acht bergmeertjes van het gebied rondom de Zugspitze zijn absoluut landschappelijke juweeltjes.</p>
+              <hr>
             </div>
           </div>
         </section>
@@ -152,7 +173,7 @@
             <div class="col-lg-12 nabalk">
               <div class="row">
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeInLeft"> 
                     <div class="figure effect-goliath winter"> <img src="/images/blokken/langlauf.jpg">
                       <figcaption>
                         <h2>Langlaufen</h2>
@@ -162,17 +183,17 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeIn"> 
                     <div class="figure effect-goliath winter"> <img src="/images/blokken/skiblok.jpg">
                       <figcaption>
                         <h2>Ski Arena Zugspite</h2>
-                        <p>Sneeuwzeker door de gletscher..</p><a href="#">View more</a>
+                        <p>Sneeuwzeker en uitermate geschikt voor gezinnen </p><a href="#">View more</a>
                       </figcaption>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeInRight"> 
                     <div class="figure effect-goliath winter"> <img src="/images/blokken/avondrodel.jpg">
                       <figcaption>
                         <h2>Rodeln</h2>
@@ -182,7 +203,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeInLeft"> 
                     <div class="figure effect-goliath winter"> <img src="/images/blokken/winterwandel.jpg">
                       <figcaption>
                         <h2>Wandelen</h2>
@@ -192,7 +213,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeIn"> 
                     <div class="figure effect-goliath winter"> <img src="/images/blokken/arrenslee.jpg">
                       <figcaption>
                         <h2>Arrenslee</h2>
@@ -202,7 +223,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                  <div class="grid"> 
+                  <div class="grid animated" data-os-animation="fadeInRight"> 
                     <div class="figure effect-goliath winter"> <img src="/images/blokken/garmisch.jpg">
                       <figcaption>
                         <h2>Uitstapjes</h2>
@@ -212,14 +233,89 @@
                   </div>
                 </div>
               </div>
-              <div class="bigdiv"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <p>
+                 Het Zugspitze-ski gebied is uitermate geschikt voor gezinnen met kinderen. Door de aanwezigheid van de gletscher op de Zugspitze is sneeuw gegarandeerd.</p>
+              <p> 
+                Het ski-gebied loopt van 900 to 2700m en zijn uitgerust met sneeuw-installatie's mocht de natuur zelf zijn werk niet optimaal gedaan hebben. 
+                Het totale skigebied van Ehrwald valt in drie delen uiteen. Deze drie gebieden met in totaal 64,5 km piste. 
+              </p>
+              <p> 
+                Ideale gebieden voor gezinnen met kinderen; de pistes in Biberwier en Ehrwald hebben een centraal dalpunt zodat u uw kinderen nooit kwijt raakt. 
+                Maar ook de sportievelingen kunnen hun hart ophalen in het Fun parc of de uitdaging opzoeken in het nabij gelegen Garmisch (bekend van de hanenkam rennen).
+              </p>
+              <p> 
+                Op 3 km van Ehrwald voert een grote zweefbaan in tien minuten naar de top van de Zugspitze (2964 meter), de hoogste berg van Duitsland. 
+                Het ritje is zo spectaculair dat er ook veel mensen zonder skiuitrusting gebruik van maken. Onder de top van de Zugspitze ligt het skigebied Zugspitzplatt (gletsjer) 
+                dat eveneens vanuit Garmisch-Partenkichen (Duitsland) per bergtreintje te bereiken is. 
+              </p>
+              <hr>
             </div>
           </div>
         </section>
-        <section id="section-4">   </section>
-        <div class="footer"></div>
+        <section id="section-4">
+          <div class="row" id="AccomodatieID">
+            <div class="col-lg-12">
+              <div class="figure effect-menu"><img src="/images/appartementen.jpg">
+                <figcaption>
+                  <h2>Appartementen <span>Haus Brabant</span></h2>
+                  <p>sfeervol en modern uitgerust</p>
+                </figcaption>
+              </div>
+            </div>
+            <div class="col-lg-12 nabalk">
+              <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                  <div class="grid animated" data-os-animation="fadeInLeft"> 
+                    <div class="figure effect-goliath"> <img src="/images/blokken/kamers.jpg">
+                      <figcaption>
+                        <h2>Appartementen</h2>
+                        <p>Moderne volledig ingerichte kamers ...</p><a href="#">View more</a>
+                      </figcaption>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                  <div class="grid animated" data-os-animation="fadeIn"> 
+                    <div class="figure effect-goliath"> <img src="/images/blokken/bar.jpg">
+                      <figcaption>
+                        <h2>Gezellige bar</h2>
+                        <p>Biljart, darts, tafeltennis...</p><a href="#">View more</a>
+                      </figcaption>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                  <div class="grid animated" data-os-animation="fadeInRight"> 
+                    <div class="figure effect-goliath"> <img src="/images/blokken/speelkamer.jpg">
+                      <figcaption>
+                        <h2>Speelkamer</h2>
+                        <p>Een paradijsje voor de kleintjes..</p><a href="#">View more</a>
+                      </figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <p> 
+                We hebben 9 appartementen in diverse grootten van 2 tm 8 personen. Vele zijn recent gerenoveerd zodat het u tijdens uw verblijf aan niets ontbreekt. <br>
+                Alle appartementen zijn ruim van opzet en zijn goed uitgerust met TV en complete keuken. Voor een mooi beeld van deze appartementen en hun indeling hebben we onder het kopje appartementen de layout en diverse foto's toegevoegd. 
+              </p>
+              <hr>
+            </div>
+          </div>
+        </section>
+        <div class="footer">
+          <p>Haus Brabant (c) 2016 </p>
+        </div>
       </div>
-      <nav class="mobile-nav"> 
+      <navm class="mobile-nav"> 
         <div class="menu-mobile-footer">
           <ul class="menu" id="menu-mobile-footer"> 
             <li id="telefoon"><a href="tel:#{tel}"></a></li>
@@ -227,7 +323,7 @@
             <li class="book-now"><a href="#">Book Now </a></li>
           </ul>
         </div>
-      </nav>
+      </navm>
     </div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script src="scripts/google.js"></script><!-- build:js scripts/vendor.js -->
 <!-- bower:js -->

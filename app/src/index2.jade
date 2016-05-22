@@ -11,12 +11,13 @@ html
   link(rel="stylesheet" href="styles/navbar.css")
   link(rel="stylesheet" href="styles/mobilenav.css")
   link(rel="stylesheet" href="styles/pageheader.css") 
+  link(rel="stylesheet" href="styles/animate.min.css") 
   script( src="/bower_components/modernizr/modernizr.js")
 
-  body
+  body#Home
     overlay.zomer.start-overlay
     overlay.winter
-    .container#Home
+    .container
       .header 
         .grid
           figure.effect-jazz
@@ -27,9 +28,10 @@ html
               p Ehrwald, Lermoos, Biberwier
       .nav-container        
         nav
+          a.navbar-brand.pull-left.grow(href="#")
           ul
             li.nav-link
-              a(href="#section-1" ) Home
+              a(href="#Home" ) Home
             li.nav-link
               a(href="#section-2" data-bg="Zomer") Zomer
             li.nav-link
@@ -43,22 +45,30 @@ html
       .mainbody
         section#section-1
           .row.row-eq-height
-            .col-lg-8.col-sm-6
+            .col-lg-8.col-sm-8
               h1 Proficiat! 
-              p Je bent terecht gekomen bij een gezellig appartementenhuis in Tirol.
-              
-              p <strong> Wie zijn wij?</strong> Wij zijn een jong gezin met 5 kinderen. <br> Helmut, Leonie, Joy, Brett, Sky, Yesse en Kate 
-              
-              p Onze jeugd hebben wij doorgebracht in het Brabantse Lieshout en Beek en Donk. Samen hebben wij de laatste jaren in het dorpje Waalre gewoond, van waaruit wij verhuist zijn naar Tirol.
-              
-              p In 2009 hebben wij dit huis overgenomen van een Oostenrijkse familie. De eerste jaren hebben wij de naam Bayricherhof-tirol doorgevoerd.
-              p Nadat wij in 2011 de naam brabantsegezelligheid hebben geïntroduceerd zijn wij in 2012 verder gegaan als Haus Brabant.
-              p Haus Brabant heeft 9 appartementen en een 2-4 pers. kamer. Het voorste gedeelte van ons huis dateerde nog uit 1890 en is in 2016 geheel verbouwd. De appartementen bevinden zich aan de achterzijde van ons huis, en hebben een panoramische uitkijk op de "Zugspitze".
-              p Bent je op zoek naar een heerlijke welverdiende vakantie?<br> Stop dan maar met zoeken want bij ons in HAUS BRABANT in Ehrwald bent je gegarandeerd aan het juiste adres. <br> Bij aankomst krijg je van ons voldoende informatie en uitleg over de omgeving. Genoeg om weken vooruit te kunnen!
-              p Niet voor niets hebben we vele "regulars"; mensen die ons al vele jaren op rij bezoeken! 
+              p 
+                | Je bent terecht gekomen bij een gezellig appartementenhuis in Tirol.
+              p 
+                | <strong> Wie zijn wij?</strong> Wij zijn een jong gezin met 5 kinderen. <br> Helmut, Leonie, Joy, Brett, Sky, Yesse en Kate 
+              p 
+                | Onze jeugd hebben wij doorgebracht in het Brabantse Lieshout en Beek en Donk. Samen hebben wij de laatste jaren in het dorpje Waalre gewoond, van waaruit wij verhuist zijn naar Tirol.
+              p 
+                | In 2009 hebben wij dit huis overgenomen van een Oostenrijkse familie. De eerste jaren hebben wij de naam Bayricherhof-tirol doorgevoerd.
+              p 
+                | Nadat wij in 2011 de naam brabantsegezelligheid hebben geïntroduceerd zijn wij in 2012 verder gegaan als Haus Brabant.
+              p 
+                | Haus Brabant heeft 9 appartementen en een 2-4 pers. kamer. Het voorste gedeelte van ons huis dateerde nog uit 1890 en is in 2016 geheel verbouwd. 
+                | De appartementen bevinden zich aan de achterzijde van ons huis, en hebben een panoramische uitkijk op de "Zugspitze".
+              p 
+                | Bent je op zoek naar een heerlijke welverdiende vakantie?<br> Stop dan maar met zoeken want bij ons in HAUS BRABANT in Ehrwald bent je gegarandeerd aan het juiste adres. <br> 
+                | Bij aankomst krijg je van ons voldoende informatie en uitleg over de omgeving. Genoeg om weken vooruit te kunnen!
+              p 
+                | Niet voor niets hebben we vele "regulars"; mensen die ons al vele jaren op rij bezoeken! 
               .centerrow
                 .periscope
-            .col-lg-4.col-sm-6.fotocontainer
+              hr
+            .col-lg-4.col-sm-4.fotocontainer
                 .foto
                   img(src='/images/huis.png')
                 .foto  
@@ -73,11 +83,11 @@ html
                 figcaption
                   h2 Zomer in 
                     span Ehrwald
-                  p wandelen, mountainbike, golf, rodelen en ..
+                  p Een ideale omgeving voor wandelaars, mountainbikers enz.
             .col-lg-12.nabalk
               .row
                 .col-lg-4.col-sm-6
-                  .grid.os-animation(data-os-animation="fadeInLeft" data-os-animation-delay="2s" )
+                  .grid.animated(data-os-animation='fadeInLeft')
                     .figure.effect-goliath 
                       img(src="/images/blokken/wandelen.jpg")
                       figcaption
@@ -85,7 +95,7 @@ html
                         p Diverse wandelwegen en bergoutes ...
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid.os-animation(data-os-animation="fadeIn" data-os-animation-delay="2s" )
+                  .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath 
                       img(src="/images/blokken/mountainbike.jpg")
                       figcaption
@@ -93,7 +103,7 @@ html
                         p Het eldorado voor mountainbikers
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid.os-animation(data-os-animation="fadeInRight" data-os-animation-delay="2s" ) 
+                  .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath 
                       img(src="/images/blokken/golf.jpg")
                       figcaption
@@ -101,7 +111,7 @@ html
                         p Een prachtige 9 holes baan
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeInLeft') 
                     .figure.effect-goliath 
                       img(src="/images/blokken/rodeln.jpg")
                       figcaption
@@ -109,7 +119,7 @@ html
                         p Een absolute aanrader..
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeIn') 
                     .figure.effect-goliath 
                       img(src="/images/blokken/klimmen.jpg")
                       figcaption
@@ -117,13 +127,18 @@ html
                         p Een absolute aanrader..
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeInRight') 
                     .figure.effect-goliath 
                       img(src="/images/blokken/trektocht.jpg")
                       figcaption
                         h2 Trektocht
                         p Spannender als dit zult u niet snel beleven....
                         a(href="#") View more
+          .row
+            .col-lg-12
+              p Ehrwald ligt in een prachtig dal waar 3 dorpen (Lermoos, Biberwier en Ehrwald) centraal liggen. Prachtige wandelwegen, zowel in de vallei als avontuurlijk de hellingen op trekken al vele decennia wandelaars naar dit gebied.
+              p Talrijke wandelwegen en bergroutes op de spitsen van het Wetterstein- en Ammergebergte in de Lechtaler Alpen en Mieminger Kette worden zowel door wandelaars als bergbeklimmers met open armen begroet. Men wordt hier met fraaie uitzichten in de ware zin van het woord verwend. De acht bergmeertjes van het gebied rondom de Zugspitze zijn absoluut landschappelijke juweeltjes.
+              hr
         section#section-3
           .row#WinterID
             .col-lg-12
@@ -136,7 +151,7 @@ html
             .col-lg-12.nabalk
               .row
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeInLeft')  
                     .figure.effect-goliath.winter 
                       img(src="/images/blokken/langlauf.jpg")
                       figcaption
@@ -144,15 +159,15 @@ html
                         p Keuze uit loipes te over...
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeIn')  
                     .figure.effect-goliath.winter 
                       img(src="/images/blokken/skiblok.jpg")
                       figcaption
                         h2 Ski Arena Zugspite
-                        p Sneeuwzeker door de gletscher..
+                        p Sneeuwzeker en uitermate geschikt voor gezinnen 
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeInRight')  
                     .figure.effect-goliath.winter 
                       img(src="/images/blokken/avondrodel.jpg")
                       figcaption
@@ -160,7 +175,7 @@ html
                         p Heerlijk rodelen zowel overdag als 's avonds
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeInLeft')  
                     .figure.effect-goliath.winter 
                       img(src="/images/blokken/winterwandel.jpg")
                       figcaption
@@ -168,7 +183,7 @@ html
                         p Een absolute aanrader..
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeIn')  
                     .figure.effect-goliath.winter 
                       img(src="/images/blokken/arrenslee.jpg")
                       figcaption
@@ -176,18 +191,73 @@ html
                         p Geef je vakantie een romantische draai.
                         a(href="#") View more
                 .col-lg-4.col-sm-6
-                  .grid 
+                  .grid.animated(data-os-animation='fadeInRight')  
                     .figure.effect-goliath.winter 
                       img(src="/images/blokken/garmisch.jpg")
                       figcaption
                         h2 Uitstapjes
                         p Bezoek de pittoreske plaatsen in de directe omgeving
                         a(href="#") View more
-              .bigdiv
-        section#section-4    
+          .row
+            .col-lg-12
+              p 
+                | Het Zugspitze-ski gebied is uitermate geschikt voor gezinnen met kinderen. Door de aanwezigheid van de gletscher op de Zugspitze is sneeuw gegarandeerd.
+              p 
+                | Het ski-gebied loopt van 900 to 2700m en zijn uitgerust met sneeuw-installatie's mocht de natuur zelf zijn werk niet optimaal gedaan hebben. 
+                | Het totale skigebied van Ehrwald valt in drie delen uiteen. Deze drie gebieden met in totaal 64,5 km piste. 
+              p 
+                | Ideale gebieden voor gezinnen met kinderen; de pistes in Biberwier en Ehrwald hebben een centraal dalpunt zodat u uw kinderen nooit kwijt raakt. 
+                | Maar ook de sportievelingen kunnen hun hart ophalen in het Fun parc of de uitdaging opzoeken in het nabij gelegen Garmisch (bekend van de hanenkam rennen).
+              p 
+                | Op 3 km van Ehrwald voert een grote zweefbaan in tien minuten naar de top van de Zugspitze (2964 meter), de hoogste berg van Duitsland. 
+                | Het ritje is zo spectaculair dat er ook veel mensen zonder skiuitrusting gebruik van maken. Onder de top van de Zugspitze ligt het skigebied Zugspitzplatt (gletsjer) 
+                | dat eveneens vanuit Garmisch-Partenkichen (Duitsland) per bergtreintje te bereiken is. 
+              hr
+        section#section-4
+          .row#AccomodatieID
+            .col-lg-12
+              .figure.effect-menu
+                img(src='/images/appartementen.jpg')
+                figcaption
+                  h2 Appartementen 
+                    span Haus Brabant
+                  p sfeervol en modern uitgerust
+            .col-lg-12.nabalk
+              .row
+                .col-lg-4.col-sm-6
+                  .grid.animated(data-os-animation='fadeInLeft') 
+                    .figure.effect-goliath 
+                      img(src="/images/blokken/kamers.jpg")
+                      figcaption
+                        h2 Appartementen
+                        p Moderne volledig ingerichte kamers ...
+                        a(href="#") View more
+                .col-lg-4.col-sm-6
+                  .grid.animated(data-os-animation='fadeIn') 
+                    .figure.effect-goliath 
+                      img(src="/images/blokken/bar.jpg")
+                      figcaption
+                        h2 Gezellige bar
+                        p Biljart, darts, tafeltennis...
+                        a(href="#") View more
+                .col-lg-4.col-sm-6
+                  .grid.animated(data-os-animation='fadeInRight') 
+                    .figure.effect-goliath 
+                      img(src="/images/blokken/speelkamer.jpg")
+                      figcaption
+                        h2 Speelkamer
+                        p Een paradijsje voor de kleintjes..
+                        a(href="#") View more
+          .row
+            .col-lg-12
+              p 
+                | We hebben 9 appartementen in diverse grootten van 2 tm 8 personen. Vele zijn recent gerenoveerd zodat het u tijdens uw verblijf aan niets ontbreekt. <br>
+                | Alle appartementen zijn ruim van opzet en zijn goed uitgerust met TV en complete keuken. Voor een mooi beeld van deze appartementen en hun indeling hebben we onder het kopje appartementen de layout en diverse foto's toegevoegd. 
+              hr
         .footer
-        
-      nav.mobile-nav 
+          p
+            | Haus Brabant (c) 2016 
+      navm.mobile-nav 
         .menu-mobile-footer
           ul#menu-mobile-footer.menu 
             li#telefoon

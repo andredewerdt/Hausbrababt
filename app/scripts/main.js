@@ -15,23 +15,6 @@ $(window).scroll(function(){
   $('.periscope').css({'background-position':'center '+ (wScroll +10- $('.periscope').offset().top) +'px'});
 });
 
-  $(function() {
-
-  	// Do our DOM lookups beforehand
-  	var nav_container = $(".nav-container");
-  	var nav = $("nav");
-
-
-  	var sections = $("section");
-  	var navigation_links = $("nav a");
-
-    var waypoints = $('section').waypoint({
-      handler: function(direction) {
-        var active_link = $('nav a[href="#' +this.element.id  + '"]');
-  			navigation_links.removeClass("selected");
-  			active_link.addClass("selected");
-  	}})
-  });
 
 $(window).on('resize', function(){
       resizeNavBar();

@@ -4,7 +4,7 @@
      src: url(../fonts/fontawesome-webfont.woff);
   }
 
-  nav.mobile-nav {
+  navm.mobile-nav {
     background: #000;
     display: block !important;
     position: fixed;
@@ -15,20 +15,20 @@
     margin-left: -15px;
    }
 
-  nav.mobile-nav ul {
+  navm.mobile-nav ul {
   	display: block;
     width: 100%;
     height: 52px;
   }
 
-  nav.mobile-nav ul li {
+  navm.mobile-nav ul li {
   	display: inline-block;
     height: 52px;
     margin: 0;
     padding: 0;
   }
 
-  nav.mobile-nav ul li a {
+  navm.mobile-nav ul li a {
       line-height: 52px;
     color: #fff;
     padding: 0;
@@ -38,22 +38,22 @@
     font-size: 22px;
   }
 
-  nav.mobile-nav ul li:not(:nth-child(3)) {
+  navm.mobile-nav ul li:not(:nth-child(3)) {
   	min-width:10%;
   	width: 28%;
   }
 
-    nav.mobile-nav ul li:nth-child(2) a:before {
+    navm.mobile-nav ul li:nth-child(2) a:before {
     	font-family: "FontAwesome";
     content: "\f003";
     }
 
-    nav.mobile-nav ul li:nth-child(1) a:before {
+    navm.mobile-nav ul li:nth-child(1) a:before {
     	font-family: "FontAwesome";
   	content: "\f095";
     }
 
-    nav.mobile-nav ul li:nth-child(3) {
+    navm.mobile-nav ul li:nth-child(3) {
       height: 52px;
       background: #80bfff;
       padding: 0;
@@ -62,7 +62,7 @@
       float: right;
     }
 
-    nav.mobile-nav ul li:nth-child(3) a
+    navm.mobile-nav ul li:nth-child(3) a
   {
   	height: 52px;
   	display: block;
@@ -78,7 +78,7 @@
   	border: none;
     }
 
-  nav.mobile-nav ul li:nth-child(3) a:before
+  navm.mobile-nav ul li:nth-child(3) a:before
     {
   	content: "";
   	display: block;
@@ -90,6 +90,6 @@
   	border-color: transparent transparent transparent #000000;
     }
 }
-nav.mobile-nav {
+navm.mobile-nav {
   display: none;
 }
