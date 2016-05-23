@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
-
+  // set nav en mobile nav
+  resizeNavBar();
   var sticky = new Waypoint.Sticky({
     element: $('.nav-container nav')[0]
   })

@@ -3,7 +3,7 @@ $(document).on('click','nav ul li',function(){
 //        $("li a").removeClass("selected");
 //        $(this > "a").addClass("selected");
         WisselAchtergrondSeizoen($("a",this).attr('data-bg'),'overlay');
-        var $distance=$(".nav-container").height()-28
+        var $distance=$(".nav-container").height()-20
         $('html, body').animate({
               //scrollTop: $("#"+$("a",this).attr('id')+"ID").offset().top-$distance
               scrollTop: $($("a",this).attr('href')).offset().top-$distance
@@ -24,6 +24,8 @@ function resizeNavBar(){
   var $width
   $width=$(".header").width()+28;
   $(".nav-container nav").css({width: $width+'px'});
+  $width=$width-28;
+  $("navm.mobile-nav").css({width: $width+'px'});
 }
 function WisselAchtergrondSeizoen(id,klasse) {
         if(id=="Zomer"){

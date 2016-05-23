@@ -12,7 +12,7 @@
     width: 100%;
     z-index: 666;
     height: 52px;
-    margin-left: -15px;
+    //margin-left: -15px;
    }
 
   navm.mobile-nav ul {
@@ -38,22 +38,32 @@
     font-size: 22px;
   }
 
-  navm.mobile-nav ul li:not(:nth-child(3)) {
+  navm.mobile-nav ul li:not(:nth-child(5)) {
   	min-width:10%;
-  	width: 28%;
+  	width: 15%;
   }
 
-    navm.mobile-nav ul li:nth-child(2) a:before {
+    navm.mobile-nav #facebook a:before {
+      font-family: "FontAwesome";
+    content: "\f09a";
+    }
+
+    navm.mobile-nav #mail a:before {
     	font-family: "FontAwesome";
     content: "\f003";
     }
 
-    navm.mobile-nav ul li:nth-child(1) a:before {
+    navm.mobile-nav #whatsapp a:before {
+    	font-family: "FontAwesome";
+    content: "\f232";
+    }
+
+    navm.mobile-nav #telefoon a:before {
     	font-family: "FontAwesome";
   	content: "\f095";
     }
 
-    navm.mobile-nav ul li:nth-child(3) {
+    navm.mobile-nav #book-now {
       height: 52px;
       background: #80bfff;
       padding: 0;
@@ -62,7 +72,7 @@
       float: right;
     }
 
-    navm.mobile-nav ul li:nth-child(3) a
+    navm.mobile-nav #book-now a
   {
   	height: 52px;
   	display: block;
@@ -78,7 +88,7 @@
   	border: none;
     }
 
-  navm.mobile-nav ul li:nth-child(3) a:before
+  navm.mobile-nav #book-now a:before
     {
   	content: "";
   	display: block;
