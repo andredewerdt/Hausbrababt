@@ -18,7 +18,10 @@
 	position: absolute
 	bottom: 0
 	left: 0
-	padding: 30px
+	padding: 1em
+
+.figure.effect-goliath h2
+	font-size: 0.8em
 
 .figure.effect-goliath p
 	text-transform: none
@@ -36,3 +39,11 @@
 .figure.effect-goliath:hover p
 	opacity: 1
 	transform: translate3d(0,0,0)
+
+@media screen and (min-width: 768px)
+	.figure.effect-goliath h2,
+	.figure.effect-goliath p
+		padding: 30px
+
+	.figure.effect-goliath h2
+		font-size: 1em
