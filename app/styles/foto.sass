@@ -1,0 +1,16 @@
+.foto
+  position: relative
+  &:first-child
+    margin-top: 30px
+
+.foto img
+  width: 100%
+  border: 1px solid #777
+  margin-top: 40px
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px)
+  .foto
+    transition: all .5s ease-in-out
+    &:hover
+      transform: translate(-200px,-100px) scale(2.1)
