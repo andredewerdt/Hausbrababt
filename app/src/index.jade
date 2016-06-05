@@ -5,16 +5,18 @@ html
   link( rel="apple-touch-icon" href="apple-touch-icon.png")
   meta(name="keywords", content="Wintersport, ehrwald, oostenrijk, tirol, winterport ehrwald, wintersport oostenrijk, wintersport tirol, wintersport in ehrwald, wintersport in oostenrijk, wintersport in tirol, zomervakantie in oostenrijk, zomervakantie in ehrwald, zomervakantie in tirol, mountainbiken in oostenrijk, mountainbiken in ehrwald, mountainbiken in tirol, wandelen oostenrijk, wandelen ehrwald, wandelen tirol, wandelen in oostenrijk, wandelen in ehrwald, wandelen in tirol, goedkoop wintersport, goedkope wintersport, gezellige wintersport, goedkope zomervakantie oostenrijk, goedkope wintersport ehrwald, goedkoop wintersport ehrwald, goedkoop wintersport oostenrijk, skieen oostenrijk, skieen ehrwald, ehrwald skieen, oostenrijk skieen, ehrwald snowboarden, snowboarden oostenrijk, langlaufen oostenrijk, langlaufen ehrwald, goedkoop hotel ehrwald, goedkoop hotel oostenrijk, goedkoop appartement oostenrijk, apréskieen oostenrijk, apréskieen ehrwald, oostenrijk apreskieen, ehrwald apreskieen, apreskieen oostenrijk, apreskieen ehrwald, lekker eten ehrwald, skiles ehrwald, skiles oostenrijk, oostenrijk skiles, ehrwald skiles, lastminut oostenrijk, lastminut wintersport, lastminut ehrwald, aanbieding wintersport, aanbieding oostenrijk, aanbieding oostenrijk wintersport, aanbieding ehrwald, aanbieding skieen, aanbiedingen wintersport")
   meta(name="viewport", content="width=device-width, initial-scale=1")
-  link(rel="stylesheet" href="styles/fonts.css")
-  link(rel="stylesheet" href="styles/headerstyles.css")
-  link(rel="stylesheet" href="styles/effectVakken.css")
-  link(rel="stylesheet" href="styles/main.css")
-  link(rel="stylesheet" href="styles/navbar.css")
-  link(rel="stylesheet" href="styles/mobilenav.css")
-  link(rel="stylesheet" href="styles/pageheader.css")
-  link(rel="stylesheet" href="styles/animate.min.css")
-  link(rel="stylesheet" href="styles/foto.css")
-  script( src="/bower_components/modernizr/modernizr.js")
+  <!-- build:css css/styles.min.css -->
+  link(href="styles/fonts.css" rel="stylesheet")
+  link(href="styles/headerstyles.css" rel="stylesheet")
+  link(href="styles/effectVakken.css" rel="stylesheet")
+  link(href="styles/main.css" rel="stylesheet")
+  link(href="styles/navbar.css" rel="stylesheet")
+  link(href="styles/mobilenav.css" rel="stylesheet")
+  link(href="styles/pageheader.css" rel="stylesheet")
+  link(href="styles/animate.min.css" rel="stylesheet")
+  link(href="styles/foto.css" rel="stylesheet")
+  <!-- endbuild -->
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
 
   body#Home
     overlay.zomer.start-overlay
@@ -34,7 +36,7 @@ html
           a.navbar-brand.pull-left.grow(href="#")
           ul
             li.nav-link
-              a(href="#Home" ) Home
+              a(href="#section-1" data-bg="Zomer") Home
             li.nav-link
               a(href="#section-2" data-bg="Zomer") Zomer
             li.nav-link
@@ -103,7 +105,7 @@ html
                       img(src="/images/blokken/mountainbike.jpg")
                       figcaption
                         h2 Mountain bike
-                        p Een eldorado voor mountainbikers met afwisselende trails en prachtige vergezichten
+                        p Afwisselende trails en prachtige vergezichten
                         a(href="#") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
@@ -195,7 +197,7 @@ html
                     .figure.effect-goliath.winter
                       img(src="/images/blokken/arrenslee.jpg")
                       figcaption
-                        h2 Arrenslee
+                        h2 Arreslee
                         p Geef je vakantie een romantische draai.
                         a(href="#") View more
                 .col-lg-4.col-sm-6.col-xs-6
@@ -260,10 +262,10 @@ html
           .row
             .col-lg-12
               p
-                | We hebben 9 appartementen in diverse grootten van 2 tm 8 personen. Vele zijn recent gerenoveerd zodat het u tijdens uw verblijf aan niets ontbreekt. <br>
+                | We hebben 9 appartementen van diverse afmetingen voor 2 tm 8 personen. Een aantal is recent gerenoveerd zodat het u tijdens uw verblijf aan niets ontbreekt. <br>
                 | Alle appartementen zijn ruim van opzet en zijn goed uitgerust met TV en complete keuken. Voor een mooi beeld van deze appartementen en hun indeling hebben we onder het kopje appartementen de layout en diverse foto's toegevoegd.
               p
-                | Voor de wintersporters hebben we aparte ruimte met schoenenwarmers zodat u de volgende dag altijd met droge en warme voeten de pistes kunt verkennen.
+                | Voor de wintersporters hebben we een aparte ruimte met schoenverwarmers zodat u de volgende dag altijd met droge en warme voeten de pistes kunt verkennen.
               hr
         section#section-5
           .row#ContactID
@@ -285,7 +287,7 @@ html
                 | Voor reserveringen kunt u gebruik maken van onderstaande link. Mocht deze echter aangeven dat er geen mogelijkheden zijn kunt u via het reserveringsformulier uw wensen doorgeven. Misschien kunnen we het eea schuiven zodat we u toch kunnen plaatsen
         .footer
           p
-            | Haus Brabant (c) 2016
+            | Haus Brabant (c) 2016 A de Werdt
       navm.mobile-nav
         .menu-mobile-footer
           ul#menu-mobile-footer.menu
@@ -302,29 +304,7 @@ html
 
     <!-- Google Analytics: change UA-XXXXX-X to be your sites ID. -->
     script(src="scripts/google.js")
-
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    script( src="/bower_components/jquery/dist/jquery.js")
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:js scripts/plugins.js -->
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js")
-    script(src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js")
-    script(src="/bower_components/waypoints/lib/jquery.waypoints.min.js")
-    script(src="/bower_components/waypoints/lib/shortcuts/sticky.min.js")
-    <!-- endbuild -->
-
-    <!-- build:js scripts/main.js -->
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/shortcuts/sticky.js")
     script(src="scripts/main.js")

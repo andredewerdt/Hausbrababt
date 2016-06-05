@@ -7,6 +7,7 @@ import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+var debug = require('gulp-debug');
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -52,7 +53,7 @@ gulp.task('pug', () => {
     return gulp.src('app/src/**/*.jade')
       .pipe($.plumber())
       .pipe($.pug({pretty:true})) // pip to jade plugin
-      .pipe(gulp.dest('app/')) // tell gulp our output folder
+      .pipe(gulp.dest('.tmp/')) // tell gulp our output folder
       .pipe(reload({stream: true}));
 });
 
@@ -74,9 +75,10 @@ const testLintOptions = {
 gulp.task('lint', lint('app/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
+gulp.task('html', ['pug', 'styles', 'sass', 'scripts'], () => {
+  return gulp.src('.tmp/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
+    .pipe(debug({title: 'Debug file info:'}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
