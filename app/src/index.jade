@@ -15,6 +15,7 @@ html
   link(href="styles/pageheader.css" rel="stylesheet")
   link(href="styles/animate.min.css" rel="stylesheet")
   link(href="styles/foto.css" rel="stylesheet")
+  link(href="styles/button.css" rel="stylesheet")
   <!-- endbuild -->
   script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
 
@@ -36,15 +37,15 @@ html
           a.navbar-brand.pull-left.grow(href="#")
           ul
             li.nav-link
-              a(href="#section-1" data-bg="Zomer") Home
+              a(href="#section-1" data-bg="zomer") Home
             li.nav-link
-              a(href="#section-2" data-bg="Zomer") Zomer
+              a(href="#section-2" data-bg="zomer") Zomer
             li.nav-link
-              a(href="#section-3" data-bg="Winter") Winter
+              a(href="#section-3" data-bg="winter") Winter
             li.nav-link
-              a(href="#section-4" data-bg="Bar") Appartement
+              a(href="#section-4" data-bg="bar") Appartement
             li.nav-link
-              a(href="#section-5") Contact
+              a(href="#section-5" data-bg="bar") Contact
           .nav-left
           .nav-right
       .mainbody
@@ -98,7 +99,7 @@ html
                       figcaption
                         h2 Wandelen
                         p Diverse wandelwegen en bergoutes ...
-                        a(href="#") View more
+                        a(href="zomer.html") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath
@@ -106,7 +107,7 @@ html
                       figcaption
                         h2 Mountain bike
                         p Afwisselende trails en prachtige vergezichten
-                        a(href="#") View more
+                        a(href="zomer.html#section-3") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
@@ -114,7 +115,7 @@ html
                       figcaption
                         h2 Golf
                         p Een prachtige 9 holes baan met prachtige greens voor de ware golf liefhebber
-                        a(href="#") View more
+                        a(href="zomer.html#section-4") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInLeft')
                     .figure.effect-goliath
@@ -122,7 +123,7 @@ html
                       figcaption
                         h2 Rodelen
                         p Een absolute aanrader..
-                        a(href="#") View more
+                        a(href="zomer.html#section-5") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath
@@ -130,15 +131,15 @@ html
                       figcaption
                         h2 Klimmen
                         p Voor de avontuurlijke medemens een geweldige ervaring
-                        a(href="#") View more
+                        a(href="zomer.html#section-6") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
-                      img(src="/images/blokken/trektocht.jpg")
+                      img(src="/images/blokken/Uitstapje.jpg")
                       figcaption
-                        h2 Trektocht
-                        p Spannender als dit zult u niet snel beleven....
-                        a(href="#") View more
+                        h2 Activiteiten
+                        p Dingen die u zeker een keer gezien/gedaan moet hebben
+                        a(href="zomer.html#section-7") View more
           .row
             .col-lg-12
               p
@@ -167,7 +168,7 @@ html
                       figcaption
                         h2 Langlaufen
                         p Keuze uit loipes te over...
-                        a(href="#") View more
+                        a(href="winter.html#section-2") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath.winter
@@ -175,15 +176,15 @@ html
                       figcaption
                         h2 Ski Arena Zugspite
                         p Sneeuwzeker en uitermate geschikt voor gezinnen
-                        a(href="#") View more
+                        a(href="winter.html#section-3") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath.winter
                       img(src="/images/blokken/avondrodel.jpg")
                       figcaption
-                        h2 Rodeln
+                        h2 Rodelen
                         p Heerlijk rodelen zowel overdag als 's avonds
-                        a(href="#") View more
+                        a(href="winter.html#section-4") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInLeft')
                     .figure.effect-goliath.winter
@@ -191,7 +192,7 @@ html
                       figcaption
                         h2 Wandelen
                         p Een absolute aanrader..
-                        a(href="#") View more
+                        a(href="winter.html#section-5") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath.winter
@@ -199,7 +200,7 @@ html
                       figcaption
                         h2 Arreslee
                         p Geef je vakantie een romantische draai.
-                        a(href="#") View more
+                        a(href="winter.html#section-6") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath.winter
@@ -207,7 +208,7 @@ html
                       figcaption
                         h2 Uitstapjes
                         p Bezoek de pittoreske plaatsen in de directe omgeving
-                        a(href="#") View more
+                        a(href="winter.html#section-6") View more
           .row
             .col-lg-12
               p
@@ -285,6 +286,12 @@ html
                 | Laat bij voorkeur een mailtje achter of stuur een whatsappje dan kunnen we u altijd bericht geven mochten we niet in staat zijn om uw boodschap direct aan te nemen.
               p
                 | Voor reserveringen kunt u gebruik maken van onderstaande link. Mocht deze echter aangeven dat er geen mogelijkheden zijn kunt u via het reserveringsformulier uw wensen doorgeven. Misschien kunnen we het eea schuiven zodat we u toch kunnen plaatsen
+              br
+              a.a-btn(href='#')
+                span.a-btn-text Boek nu
+                span.a-btn-slide-text een slimme keus
+                span.a-btn-icon-right
+                  span
         .footer
           p
             | Haus Brabant (c) 2016 A de Werdt

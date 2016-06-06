@@ -16,23 +16,10 @@ function resizeNavBar() {
 }
 
 function wisselAchtergrondSeizoen(id, klasse) {
-  if (id === 'Zomer') {
-    $(klasse + '.winter').removeClass('start-overlay');
-    $(klasse + '.bar').removeClass('start-overlay');
-    $(klasse + '.zomer').addClass('start-overlay');
-  }
-  if (id === 'Winter') {
-    $(klasse + '.winter').addClass('start-overlay');
-    $(klasse + '.zomer').removeClass('start-overlay');
-    $(klasse + '.bar').removeClass('start-overlay');
-  }
-  if (id === 'Bar') {
-    $(klasse + '.bar').addClass('start-overlay');
-    $(klasse + '.winter').removeClass('start-overlay');
-    $(klasse + '.zomer').removeClass('start-overlay');
-  }
-
+  $(klasse).removeClass('start-overlay');
+  $(klasse+'.'+id).addClass('start-overlay');
 }
+
 // Clicken op de link zorgt voor scroll en background wisseling
 $(document).on('click', 'nav ul li', function() {
   wisselAchtergrondSeizoen($('a', this).attr('data-bg'), 'overlay');
@@ -49,9 +36,11 @@ $(document).on('click', 'nav ul li', function() {
 // scroll
 $(window).scroll(function() {
   var wScroll = $(this).scrollTop();
-  $('.periscope').css({
-    'background-position': 'center ' + (wScroll + 10 - $('.periscope').offset().top) + 'px'
+  if ($('.periscope').length != 0) {
+    $('.periscope').css({
+      'background-position': 'center ' + (wScroll + 10 - $('.periscope').offset().top) + 'px'
   });
+  }
 });
 
 
@@ -89,7 +78,7 @@ $(document).ready(function() {
   });
 
 
-  var blok = $('.grid.animated');
+  var blok = $('.animated');
   blok.css('opacity', 0);
   blok.waypoint({
     handler: function(event, direction) {

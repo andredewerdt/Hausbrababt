@@ -60,11 +60,13 @@ body
 
 .fotocontainer
   display: none
-
+.table
+  font-size: 0.8em
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px)
-
+  .stuck
+    height: 61px !important
   .fotocontainer
     display: flex
     flex-direction: column
@@ -75,7 +77,7 @@ body
     margin-bottom: 30px
   .row#ZomerID, .row#WinterID
     margin-top: 5px
-  .grow
+  nav:not(.stuck) .grow
     transition: all .5s ease-in-out
     &:hover
       transform: translate(100px,-100px) scale(5.1) rotate(360deg)
@@ -96,7 +98,9 @@ body
   overlay.start-overlay
       opacity: 1
       pointer-events: all
-
+  .wandel
+    background: url("../images/wandelbg.jpg") no-repeat center fixed
+    background-size: cover
   .zomer
     background: url("../images/topheader.jpg") no-repeat center fixed
     background-size: cover
@@ -106,7 +110,24 @@ body
   .bar
     background: url("../images/overlaybar.jpg") no-repeat center fixed
     background-size: cover
-
+  .mountainbike
+    background: url("../images/mountainbikebg.jpg") no-repeat center fixed
+    background-size: cover
+  .golf
+    background: url("../images/golfbg.jpg") no-repeat center fixed
+    background-size: cover
+  .klimmen
+    background: url("../images/klimmenbg.jpg") no-repeat center fixed
+    background-size: cover
+  .langlaufen
+    background: url("../images/langlaufbg.jpg") no-repeat center fixed
+    background-size: cover
+  .skiien
+    background: url("../images/skibg.jpg") no-repeat center fixed
+    background-size: cover
+  .wandelsnow
+    background: url("../images/wandelsnowbg.jpg") no-repeat center fixed
+    background-size: cover
   .header
       height: auto
 
@@ -115,7 +136,6 @@ body
       display: flex
       flex-direction: column
       justify-content: space-between
-
 @media screen and (min-width: 1024px)
   .container
     max-width: 900px
