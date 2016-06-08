@@ -1,23 +1,6 @@
 doctype html
 html
-  meta(charset="utf-8")
-  title Haus Brabant
-  link( rel="apple-touch-icon" href="apple-touch-icon.png")
-  meta(name="keywords", content="Wintersport, ehrwald, oostenrijk, tirol, winterport ehrwald, wintersport oostenrijk, wintersport tirol, wintersport in ehrwald, wintersport in oostenrijk, wintersport in tirol, zomervakantie in oostenrijk, zomervakantie in ehrwald, zomervakantie in tirol, mountainbiken in oostenrijk, mountainbiken in ehrwald, mountainbiken in tirol, wandelen oostenrijk, wandelen ehrwald, wandelen tirol, wandelen in oostenrijk, wandelen in ehrwald, wandelen in tirol, goedkoop wintersport, goedkope wintersport, gezellige wintersport, goedkope zomervakantie oostenrijk, goedkope wintersport ehrwald, goedkoop wintersport ehrwald, goedkoop wintersport oostenrijk, skieen oostenrijk, skieen ehrwald, ehrwald skieen, oostenrijk skieen, ehrwald snowboarden, snowboarden oostenrijk, langlaufen oostenrijk, langlaufen ehrwald, goedkoop hotel ehrwald, goedkoop hotel oostenrijk, goedkoop appartement oostenrijk, apréskieen oostenrijk, apréskieen ehrwald, oostenrijk apreskieen, ehrwald apreskieen, apreskieen oostenrijk, apreskieen ehrwald, lekker eten ehrwald, skiles ehrwald, skiles oostenrijk, oostenrijk skiles, ehrwald skiles, lastminut oostenrijk, lastminut wintersport, lastminut ehrwald, aanbieding wintersport, aanbieding oostenrijk, aanbieding oostenrijk wintersport, aanbieding ehrwald, aanbieding skieen, aanbiedingen wintersport")
-  meta(name="viewport", content="width=device-width, initial-scale=1")
-  <!-- build:css css/styles.min.css -->
-  link(href="styles/fonts.css" rel="stylesheet")
-  link(href="styles/headerstyles.css" rel="stylesheet")
-  link(href="styles/effectVakken.css" rel="stylesheet")
-  link(href="styles/main.css" rel="stylesheet")
-  link(href="styles/navbar.css" rel="stylesheet")
-  link(href="styles/mobilenav.css" rel="stylesheet")
-  link(href="styles/pageheader.css" rel="stylesheet")
-  link(href="styles/animate.min.css" rel="stylesheet")
-  link(href="styles/foto.css" rel="stylesheet")
-  link(href="styles/button.css" rel="stylesheet")
-  <!-- endbuild -->
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+  include ./head.pug
 
   body#Home
     overlay.winter.start-overlay
@@ -57,7 +40,11 @@ html
             .col-lg-8.col-sm-8
               h1 Langaufen
               p
-                | De grote open vlakte tussen Ehrwald, Lermoos en Biberwier is een eldorado voor de loipen liefhebber. Daarnaast zijn er allerlei koppeltrajecten naar naburige dalen. De Hochloipe Ehrwalder Alm nodigt uit tot een sprookjesachtige rondtocht te midden van een sneeuwrijk landschap op 1500 meter hoogte. Regionaal 100 km loipen, met afwisselende hoogtes van 996–1847 meter.
+                | De grote open vlakte tussen Ehrwald, Lermoos en Biberwier is een eldorado voor de loipen liefhebber.
+                | Daarnaast zijn er allerlei koppeltrajecten naar naburige dalen.
+              p
+                | De Hochloipe Ehrwalder Alm nodigt uit tot een sprookjesachtige rondtocht te midden van een sneeuwrijk landschap op 1500 meter hoogte.
+                | Regionaal 100 km loipen, met afwisselende hoogtes van 996–1847 meter.
                 | Deze Loipen hebben een totale lengte van 63 km, verdeelt in;<br>
                 | Blauw (licht): 8 km<br>
                 | Rood (middel): 20 km<br>
@@ -68,12 +55,11 @@ html
                   img(src='/images/winter/langlauf1.jpg')
                 .foto
                   img(src='/images/winter/langlauf2.jpg')
-          hr
         section#section-3
           .row#ZomerID
-            hr
+            .divider
             .col-lg-8.col-sm-8
-              h1 Skieen
+              h1 Ski / Snowboard
               p
                 | De Zugspitz Arena omvat meerdere dorpen waar met een en dezelfde ski-kaart terecht kunt.
                 | U kunt skieen van Bergwang tot het Duitse Garmisch met zijn bekende Hanenkam. <br>
@@ -94,6 +80,13 @@ html
                 | Voor een overzicht van de mogelijkheden geeft de site van de
                 a(href='http://www.almbahn.at/nl/winter/skigebied/snowpark/' target='new') Ehrwalder Alm
                 |  alle info
+              p
+                | Op 3 km van Ehrwald voert een grote zweefbaan in tien minuten naar de top van de Zugspitze (2964 meter), de hoogste berg van Duitsland.
+                | Het ritje is zo spectaculair dat er ook veel mensen zonder skiuitrusting gebruik van maken.
+                | Onder de top van de Zugspitze ligt het skigebied Zugspitzplatt (gletsjer) dat eveneens vanuit Garmisch-Partenkichen (Duitsland) per bergtreintje te bereiken is.
+                | Door de hoge ligging vind je hier droomsneeuw van november tot mei, en heeft Ehrwald altijd gegarandeerde sneeuwzekerheid achter de hand. Allemaal heerlijke blauwe en rode carvingpistes geflankeerd door offpiste-hellingen.
+                | Via een spectaculaire offpiste route is het mogelijk af te dalen naar de Ehrwalder Alm. (Neue Welt)
+                | Buiten de pistes is de Zugspitzplatt dus een waar diepsneeuwparadijs.
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 img(src='/images/winter/ski1.jpg')
@@ -101,44 +94,119 @@ html
                 img(src='/images/winter/ski2.jpg')
               .foto
                 img(src='/images/winter/ski3.jpg')
+            .col-lg-12
+              table.table-responsive.animated(data-os-animation='fadeIn')
+                tbody
+                  tr
+                    th  Ehrwald
+                    th  Zugsspitze
+                    th  17,0 km Piste
+                    th --
+                    th
+                      a(href='http://www.Zugspitze.at' target='new') www.Zugspitze.at
+                  tr
+                    th
+                    th Ehrwalder Alm
+                    th 26,0 km Piste
+                    th
+                    th
+                      a(href='http://www.ehrwalderalmbahn.at' target='new') www.ehrwalderalmbahn.at
+                  tr
+                    th
+                    th Wettersteinbahnen Sonnenlifte
+                    th 17,0 km Piste
+                    th
+                    th
+                      a(href='http://www.wetterstein-bahnen.at' target='new') www.wetterstein-bahnen.at
+                  tr
+                    th Lermoos
+                    th Grubigsteinbahnen
+                    th 33,0 km Piste
+                    th
+                    th
+                      a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
+                  tr
+                    th Berwang/ Bichlbach
+                    th Skischaukel Berwangertal / Almkopfbahn
+                    th 35,4 km Piste
+                    th
+                    th
+                      a(href='http://www.skischaukel-berwang.at' target='new') www.skischaukel-berwang.at
+                  tr
+                    th Biberwier
+                    th Marienberg
+                    th 14,0 km Piste
+                    th
+                    th
+                      a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
             hr
         section#section-4
           .row#WinterID
-            hr
-            .col-lg-8.col-sm-8
-              h1 Golfen
-              p
-                | De golfplaats ligt prachtig ingesloten in een wonderschone en rustige omgeving tussen Ehrwald en Lermoos en dat is ongetwijfeld het grootste pluspunt.
-              p
-                | Wanneer men spreekt over een natuurpracht, dan zal men niet alleen verrast zijn door de grootte van de Wettersteinmassives met Duitslands hoogste berg, de Zugspitze, maar simpelweg onder de indruk zijn van de tot 3.000 meter hoge bergtoppen.
-              p
-                | De op natuurlijke bodem aangelegde golfbaan is gebouwd naar de top actuele internationale voorschriften en is voor toernooispelen uitermate goed geschikt.
-            .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
-              .foto
-                img(src='/images/zomer/golf1.jpg')
-              .foto
-                img(src='/images/zomer/golf3.jpg')
-            hr
-        section#section-5
-          .row
-            hr
+            .divider
             .col-lg-8.col-sm-8
               h1 Rodelen
               p
-                | Wie in de zomer naar de Zugspitz Arena trekt moet absoluut eens een ritje op de langste zomerrodelbaan van Tirol (1,5 km). Kinderen, maar ook de papa’s en mama’s, zijn helemaal weg van deze rodelbaan.
+                | Uw sneeuwvakantie is niet compleet als je dit niet een keer ervaren hebt.
               p
-                | In de buurt van hotel “Cube” in Biberwier kan je met de Marienbergbahn naar de startplaats.
+                | Alleen of met zijn tweeën de berg af suizen. Heerlijk de berg af kun je overdag op de BrentAlm tot onder in het dorp.
               p
-                | De allerkleinsten kunnen met papa of mama mee op de schoot genieten van een spannende rit naar beneden. Dankzij de rem (en die heb je nodig) kan je zelf je snelheid bepalen. De allereerste rit zal je waarschijnlijk je rodel in toom willen houden, maar al vrij snel komt de raceduivel in je los.
+                | Elke woensdag en vrijdagavond is er vanaf de Ehrwalder Alm een te gekke rodel gelegenheid over een verlichte piste.<br>
+                | Let wel op met drankgebruik, deze avonden kunnen zeer gezellig zijn ;).
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                img(src='/images/zomer/rodelen1.jpg')
+                img(src='/images/winter/rodelen1.jpg')
+              .foto
+                img(src='/images/winter/rodelen2.jpg')
+            hr
+        section#section-5
+          .row
+            .divider
+            .col-lg-8.col-sm-8
+              h1 Wandelen
+              p
+                | De "Zugspitz Arena" staat voor kilometers wandelplezier in de winter.
+                | Ideaal voor de niet-skiërs, terwijl de kinderen of kleinkinderen skiën zijn, lekker door de verse sneeuw wandelen.
+              p
+                | Dagelijks worden de wandelpaden onderhouden door mini-sneeuwruimers. In het toeristenbureau kan je wandelkaartjes krijgen.
+              p
+                | Alle wandelingen zijn goed bewegwijzerd zodat je ook zonder kaart niet snel verloren zal lopen.
+                | De wandelpaden die in de winter vrijgemaakt zijn, zijn voor iedereen goed te doen. Ook met een iets minder goede conditie kan je deze wegen aan.
+                | De 3 dorpjes Ehrwald, Lermoos en Biberwier liggen in een heel groot dal, hierdoor kan je ook kilometers vlak wandelen.
+                | Je hebt ook altijd de mogelijkheid om met de skibus mee te pendelen in het dal. Laat je bijvoorbeeld afzetten in het ene dorp en loop heerlijk wandelend naar je bestemming.
+              p
+                | <i>Wandeling 1: De weideweg tussen Ehrwald en Lermoos.</I><br>
+                | De ideale wandeling om je wintervakantie mee te starten. Héél gemakkelijk en volledig vlak. Je wandelt tussen 2 muren van sneeuw van het ene dorp na het andere. In Ehrwald start je bij hotel “Zum Grünen Baum”, waar je afdaalt naar de weide en in Lermoos vertrek je meestal tegenover de camping of langs “hotel Post”. De wandeling duurt zo'n 45 minuten en je hebt de mooiste zichten onderweg. Er staan veel banken zodat je altijd wel ergens in het zonnetje kan genieten. Er loopt een riviertje langs de weg zodat je voortdurend het kabbelende water hoort. Neem ook je tijd om eens in het riviertje te kijken, het water is zo helder dat je de forellen ziet zwemmen! Vooral in de schaduw van de bruggen kan je ze terugvinden.
+                | 's Morgens vroeg zorgt dit riviertje soms voor een sprookjesachtig effect, er hangt dan een lage mist en de bomen in de weide hangen vol met sneeuw.
+              p
+                | <i>Wandeling 2: De panoramaweg tussen Ehrwald en Lermoos.</i><br>
+                | Een mooie wandeling met enkel in het begin en einde een beetje stijgen en dalen. In Ehrwald vertrek je in de buurt van het Esso benzinestation, even onder de grote brug door en vervolgens links omhoog. Vanuit Lermoos begint de wandeling in de buurt van het station, daar stijg je gedurende een 10-tal minuutjes. Vervolgens blijf je op dezelfde hoogte tot de afdaling naar Ehrwald begint.
+                | Deze wandeling duurt ongeveer 60 min, onderweg staan er banken met telkens een mooi zicht op het dal en de skipistes aan de andere kant van het dal. Ongeveer halfweg is er ook een privéchalet van een Oostenrijker met een bankje in de zon en een gastenboek (hüttebuch). Honderden mensen hebben hier al hun bewondering voor het sprookjesachtige dal beschreven. Zeker de moeite om eens, genietend van het zonnetje, deze commentaren te lezen. De hut ligt ongeveer een 50-tal meter van de wandelweg.
+            .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
+              .foto
+                img(src='/images/winter/wandelen1.jpg')
+              .foto
+                img(src='/images/winter/wandelen2.jpg')
+              .foto
+                img(src='/images/winter/wandelen3.jpg')
             hr
         section#section-6
           .row
-            hr
-            .col-lg-12.col-sm-12
+            .divider
+            .col-lg-8.col-sm-8
               h1 Activiteiten
+              h3 Arrenslee
+              p
+                | Een romantisch tochtje met de arrenslee?<br>
+                | Ideaal om een comfortabele tour door de omgeving te maken.
+              h3 Avondskieen
+              p
+                | Op diverse avonden bestaat de mogelijkheid om op verlichte pistes af te dalen. O.a. in Berwang en Lermoos worden de pistes 's avonds opengesteld voor een avontuurlijke afdaling onder kunstlicht.
+            .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
+              .foto
+                img(src='/images/winter/arrenslee1.jpg' alt='Arrenslee')
+              .foto
+                img(src='/images/winter/avondski1.jpg' alt='Avond ski in Bergwang')
+            .col-lg-12
               table.table.table-striped.table-responsive.animated(data-os-animation='fadeIn')
                 thead
                   tr
@@ -224,10 +292,4 @@ html
               a(href="http://www.facebook.com/hausbrabant")
             li#book-now
               a(href="#") Book Now
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your sites ID. -->
-    script(src="scripts/google.js")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/shortcuts/sticky.js")
-    script(src="scripts/main.js")
+include ./footer.pug

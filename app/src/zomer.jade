@@ -1,23 +1,6 @@
 doctype html
 html
-  meta(charset="utf-8")
-  title Haus Brabant
-  link( rel="apple-touch-icon" href="apple-touch-icon.png")
-  meta(name="keywords", content="Wintersport, ehrwald, oostenrijk, tirol, winterport ehrwald, wintersport oostenrijk, wintersport tirol, wintersport in ehrwald, wintersport in oostenrijk, wintersport in tirol, zomervakantie in oostenrijk, zomervakantie in ehrwald, zomervakantie in tirol, mountainbiken in oostenrijk, mountainbiken in ehrwald, mountainbiken in tirol, wandelen oostenrijk, wandelen ehrwald, wandelen tirol, wandelen in oostenrijk, wandelen in ehrwald, wandelen in tirol, goedkoop wintersport, goedkope wintersport, gezellige wintersport, goedkope zomervakantie oostenrijk, goedkope wintersport ehrwald, goedkoop wintersport ehrwald, goedkoop wintersport oostenrijk, skieen oostenrijk, skieen ehrwald, ehrwald skieen, oostenrijk skieen, ehrwald snowboarden, snowboarden oostenrijk, langlaufen oostenrijk, langlaufen ehrwald, goedkoop hotel ehrwald, goedkoop hotel oostenrijk, goedkoop appartement oostenrijk, apréskieen oostenrijk, apréskieen ehrwald, oostenrijk apreskieen, ehrwald apreskieen, apreskieen oostenrijk, apreskieen ehrwald, lekker eten ehrwald, skiles ehrwald, skiles oostenrijk, oostenrijk skiles, ehrwald skiles, lastminut oostenrijk, lastminut wintersport, lastminut ehrwald, aanbieding wintersport, aanbieding oostenrijk, aanbieding oostenrijk wintersport, aanbieding ehrwald, aanbieding skieen, aanbiedingen wintersport")
-  meta(name="viewport", content="width=device-width, initial-scale=1")
-  <!-- build:css css/styles.min.css -->
-  link(href="styles/fonts.css" rel="stylesheet")
-  link(href="styles/headerstyles.css" rel="stylesheet")
-  link(href="styles/effectVakken.css" rel="stylesheet")
-  link(href="styles/main.css" rel="stylesheet")
-  link(href="styles/navbar.css" rel="stylesheet")
-  link(href="styles/mobilenav.css" rel="stylesheet")
-  link(href="styles/pageheader.css" rel="stylesheet")
-  link(href="styles/animate.min.css" rel="stylesheet")
-  link(href="styles/foto.css" rel="stylesheet")
-  link(href="styles/button.css" rel="stylesheet")
-  <!-- endbuild -->
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js")
+  include ./head.pug
 
   body#Home
     overlay.wandel.start-overlay
@@ -86,10 +69,9 @@ html
                   img(src='/images/zomer/wandel2.jpg')
                 .foto
                   img(src='/images/zomer/wandel3.jpg')
-          hr
         section#section-3
           .row#ZomerID
-            hr
+            .divider
             .col-lg-8.col-sm-8
               h1 Mountain Bike
               p
@@ -109,7 +91,7 @@ html
             hr
         section#section-4
           .row#WinterID
-            hr
+            .divider
             .col-lg-8.col-sm-8
               h1 Golfen
               p
@@ -126,7 +108,7 @@ html
             hr
         section#section-5
           .row
-            hr
+            .divider
             .col-lg-8.col-sm-8
               h1 Rodelen
               p
@@ -141,7 +123,7 @@ html
             hr
         section#section-6
           .row
-            hr
+            .divider
             .col-lg-8.col-sm-8
               h1 Klimmen
               p
@@ -158,8 +140,26 @@ html
             hr
         section#section-7
           .row
-            hr
+            .divider
             .col-lg-12.col-sm-12
+              h1 Zugspitze
+              p
+                | De prachtige tocht met de Tiroler Zugspitzbahn naar het hoogste punt van Duitsland (2.962 m) brengt de bezoeker in een bergwereld met geweldige uitzichten. Eén keer moet men van het “4-landen-uitzicht” genoten hebben, waar bergen van twee- tot drieduizend meter hoogte te zien zijn (en zelfs één van vierduizend meter).
+                | Vanaf het ruime panoramaterras kan men bij helder weer o.a. de Großglockner (de hoogste berg van Oostenrijk), de Piz Bernina en ook de TV-toren van München herkennen.
+              p
+                a(href='http://www.zugspitze.at/nl/het-hoogste-punt/de-zugspitze/uitzicht/' target='new') Voor een 360 uitzicht en een zomer en winter aanzicht klik hier
+              p
+                 a(href="http://www.youtube.com/embed/rqZWLk-HsHg?autohide=1&autoplay=1&controls=0" class='fancybox.iframe').fancybox-media Videofragment van de Zugspitzbahn
+              h1 Z-ticket
+              p
+                | Het Z-Ticket is uw aktiefkaart voor de zomer.
+                | Met het Z-Ticket zijn vele aanbiedingen incl.
+                | Daarmee kunt u op de Zugspitze rijden, de zomerbanen gebruiken, op de Heiterwanger See een boottocht maken of een bezoek in onze zwembaden maken.
+                | Ook de wandelbus kan met uw Z-Ticket gebruikt worden.
+              p
+                | Alle diensten van het Z-Tickets vindt u&nbsp
+                a(href='http://www.zugspitzarena.com/de/urlaubsthemen/z-ticket' target='new') hier
+                | .<br>
               h1 Activiteiten
               table.table.table-striped.table-responsive.animated(data-os-animation='fadeIn')
                 thead
@@ -246,10 +246,4 @@ html
               a(href="http://www.facebook.com/hausbrabant")
             li#book-now
               a(href="#") Book Now
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your sites ID. -->
-    script(src="scripts/google.js")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/shortcuts/sticky.js")
-    script(src="scripts/main.js")
+    include ./footer.pug
