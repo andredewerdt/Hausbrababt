@@ -1,7 +1,6 @@
 'use strict';
 /* global $ */
-/* eslint camelcase: ["warning", {properties: "never"}]*/
-/* eslint no-unused-vars:"warning" */
+
 /* eslint-disable */
 function resizeNavBar() {
   var $width;

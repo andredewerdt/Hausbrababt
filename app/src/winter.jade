@@ -52,9 +52,12 @@ html
                 | Groen (Skate): 10 km<br>
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
                 .foto
-                  img(src='/images/winter/langlauf1.jpg')
+                  img(src='images/winter/langlauf1.jpg')
                 .foto
-                  img(src='/images/winter/langlauf2.jpg')
+                  img(src='images/winter/langlauf2.jpg')
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/winter/langlauf1.jpg')
         section#section-3
           .row#ZomerID
             .divider
@@ -89,57 +92,57 @@ html
                 | Buiten de pistes is de Zugspitzplatt dus een waar diepsneeuwparadijs.
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                img(src='/images/winter/ski1.jpg')
+                img(src='images/winter/ski1.jpg')
               .foto
-                img(src='/images/winter/ski2.jpg')
+                img(src='images/winter/ski2.jpg')
               .foto
-                img(src='/images/winter/ski3.jpg')
+                img(src='images/winter/ski3.jpg')
+          .row
             .col-lg-12
-              table.table-responsive.animated(data-os-animation='fadeIn')
-                tbody
+              .containtable
+                table.table-responsive.animated(data-os-animation='fadeIn')
+                  tbody
                   tr
                     th  Ehrwald
-                    th  Zugsspitze
-                    th  17,0 km Piste
-                    th --
-                    th
+                  tr
+                    th &nbsp &nbsp 17,0 km Piste&nbsp
+                    th Zugsspitze
+                    th &nbsp
                       a(href='http://www.Zugspitze.at' target='new') www.Zugspitze.at
                   tr
-                    th
+                    th &nbsp &nbsp 26,0 km Piste&nbsp
                     th Ehrwalder Alm
-                    th 26,0 km Piste
-                    th
-                    th
+                    th &nbsp
                       a(href='http://www.ehrwalderalmbahn.at' target='new') www.ehrwalderalmbahn.at
                   tr
-                    th
+                    th &nbsp &nbsp 17,0 km Piste&nbsp
                     th Wettersteinbahnen Sonnenlifte
-                    th 17,0 km Piste
-                    th
-                    th
+                    th &nbsp
                       a(href='http://www.wetterstein-bahnen.at' target='new') www.wetterstein-bahnen.at
                   tr
                     th Lermoos
-                    th Grubigsteinbahnen
-                    th 33,0 km Piste
-                    th
-                    th
-                      a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
                   tr
-                    th Berwang/ Bichlbach
-                    th Skischaukel Berwangertal / Almkopfbahn
-                    th 35,4 km Piste
-                    th
-                    th
-                      a(href='http://www.skischaukel-berwang.at' target='new') www.skischaukel-berwang.at
+                    th &nbsp &nbsp 33,0 km Piste&nbsp
+                    th Grubigsteinbahnen
+                    th &nbsp
+                      a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
                   tr
                     th Biberwier
+                  tr
+                    th &nbsp &nbsp 14,0 km Piste&nbsp
                     th Marienberg
-                    th 14,0 km Piste
-                    th
-                    th
+                    th &nbsp
                       a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
-            hr
+                  tr
+                    th Berwang/Bichlbach
+                  tr
+                    th &nbsp;&nbsp;35,4 km Piste&nbsp
+                    th Skischaukel Berwangertal / Almkopfbahn
+                    th &nbsp
+                      a(href='http://www.skischaukel-berwang.at' target='new') www.skischaukel-berwang.at
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/winter/ski1.jpg')
         section#section-4
           .row#WinterID
             .divider
@@ -154,10 +157,12 @@ html
                 | Let wel op met drankgebruik, deze avonden kunnen zeer gezellig zijn ;).
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                img(src='/images/winter/rodelen1.jpg')
+                img(src='images/winter/rodelen1.jpg')
               .foto
-                img(src='/images/winter/rodelen2.jpg')
-            hr
+                img(src='images/winter/rodelen2.jpg')
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/winter/rodelen1.jpg')
         section#section-5
           .row
             .divider
@@ -183,12 +188,14 @@ html
                 | Deze wandeling duurt ongeveer 60 min, onderweg staan er banken met telkens een mooi zicht op het dal en de skipistes aan de andere kant van het dal. Ongeveer halfweg is er ook een privéchalet van een Oostenrijker met een bankje in de zon en een gastenboek (hüttebuch). Honderden mensen hebben hier al hun bewondering voor het sprookjesachtige dal beschreven. Zeker de moeite om eens, genietend van het zonnetje, deze commentaren te lezen. De hut ligt ongeveer een 50-tal meter van de wandelweg.
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                img(src='/images/winter/wandelen1.jpg')
+                img(src='images/winter/wandelen1.jpg')
               .foto
-                img(src='/images/winter/wandelen2.jpg')
+                img(src='images/winter/wandelen2.jpg')
               .foto
-                img(src='/images/winter/wandelen3.jpg')
-            hr
+                img(src='images/winter/wandelen3.jpg')
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/winter/wandelen1.jpg')
         section#section-6
           .row
             .divider
@@ -197,85 +204,92 @@ html
               h3 Arrenslee
               p
                 | Een romantisch tochtje met de arrenslee?<br>
-                | Ideaal om een comfortabele tour door de omgeving te maken.
+                | Ideaal om een comfortabele tour door de omgeving te maken.<br>
+                | De slee met de wagenmenner vindt u meestal voor de kerk bij het plein.
+              p <br>
+              p <br>
               h3 Avondskieen
               p
                 | Op diverse avonden bestaat de mogelijkheid om op verlichte pistes af te dalen. O.a. in Berwang en Lermoos worden de pistes 's avonds opengesteld voor een avontuurlijke afdaling onder kunstlicht.
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                img(src='/images/winter/arrenslee1.jpg' alt='Arrenslee')
+                img(src='images/winter/arrenslee1.jpg' alt='Arrenslee')
               .foto
-                img(src='/images/winter/avondski1.jpg' alt='Avond ski in Bergwang')
+                img(src='images/winter/avondski1.jpg' alt='Avond ski in Bergwang')
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/winter/wandel1.jpg')
+          .row
             .col-lg-12
-              table.table.table-striped.table-responsive.animated(data-os-animation='fadeIn')
-                thead
-                  tr
-                    th Bezienswaardigheid
-                    th Plaats
-                    th Land
-                    th Webpagina
-                tbody
-                  tr
-                    th Plansee Heiterwang
-                    th Heiterwang
-                    th Oostenrijk
-                    th
-                      a(href='http://www.zugspitzarena.com' target='new') www.zugspitzarena.com
-                  tr
-                    th Burgenwelten Ehrenberg
-                    th Reutte
-                    th Oostenrijk
-                    th
-                      a(href='www.ehrenberg.at' target='new') www.ehrenberg.at
-                  tr
-                    th Schloß Fernstein en Fernstein See
-                    th Nassereith
-                    th Oostenrijk
-                    th
-                      a(href='http://www.fernsteinsee.at' target='new') www.fernsteinsee.at
-                  tr
-                    th EibSee
-                    th Grainau
-                    th Duitsland
-                    th
-                      a(href='http://www.eibsee.de' target='new') www.eibsee.de
-                  tr
-                    th Schloß Linderhof
-                    th Ettal
-                    th Duitsland
-                    th
-                      a(href='http://www.schlosslinderhof.de' target='new') www.schlosslinderhof.de
-                  tr
-                    th Kloster Ettal
-                    th Ettal
-                    th Duitsland
-                    th
-                      a(href='http://www.kloster-ettal.de' target='new') www.kloster-ettal.de
-                  tr
-                    th "het sprookjeskasteel"
-                    th Neuschwanstein	Schwangau
-                    th Duitsland
-                    th
-                      a(href='http://www.neuschwanstein.de' target='new') www.neuschwanstein.de
-                  tr
-                    th Geierwally Freilichtbühne
-                    th Elbigenalp
-                    th Oostenrijk
-                    th
-                      a(href='http://www.lechtal.at' target='new') www.lechtal.at
-                  tr
-                    th Geisterklamm
-                    th Leutasch
-                    th Oostenrijk
-                    th
-                      a(href='http://www.leutasch.net' target='new') www.leutasch.net
-                  tr
-                    th Swarovski kristalwerelden
-                    th Wattens
-                    th Oostenrijk
-                    th
-                      a(href='http://kristallwelten.swarovski.com' target='new') kristallwelten.swarovski.com
-            hr
+              .containtable
+                table.table.table-striped.table-responsive.animated(data-os-animation='fadeIn')
+                  thead
+                    tr
+                      th Bezienswaardigheid
+                      th Plaats
+                      th Land
+                      th Webpagina
+                  tbody
+                    tr
+                      th Plansee Heiterwang
+                      th Heiterwang
+                      th Oostenrijk
+                      th
+                        a(href='http://www.zugspitzarena.com' target='new') www.zugspitzarena.com
+                    tr
+                      th Burgenwelten Ehrenberg
+                      th Reutte
+                      th Oostenrijk
+                      th
+                        a(href='www.ehrenberg.at' target='new') www.ehrenberg.at
+                    tr
+                      th Schloß Fernstein en Fernstein See
+                      th Nassereith
+                      th Oostenrijk
+                      th
+                        a(href='http://www.fernsteinsee.at' target='new') www.fernsteinsee.at
+                    tr
+                      th EibSee
+                      th Grainau
+                      th Duitsland
+                      th
+                        a(href='http://www.eibsee.de' target='new') www.eibsee.de
+                    tr
+                      th Schloß Linderhof
+                      th Ettal
+                      th Duitsland
+                      th
+                        a(href='http://www.schlosslinderhof.de' target='new') www.schlosslinderhof.de
+                    tr
+                      th Kloster Ettal
+                      th Ettal
+                      th Duitsland
+                      th
+                        a(href='http://www.kloster-ettal.de' target='new') www.kloster-ettal.de
+                    tr
+                      th "het sprookjeskasteel"
+                      th Neuschwanstein	Schwangau
+                      th Duitsland
+                      th
+                        a(href='http://www.neuschwanstein.de' target='new') www.neuschwanstein.de
+                    tr
+                      th Geierwally Freilichtbühne
+                      th Elbigenalp
+                      th Oostenrijk
+                      th
+                        a(href='http://www.lechtal.at' target='new') www.lechtal.at
+                    tr
+                      th Geisterklamm
+                      th Leutasch
+                      th Oostenrijk
+                      th
+                        a(href='http://www.leutasch.net' target='new') www.leutasch.net
+                    tr
+                      th Swarovski kristalwerelden
+                      th Wattens
+                      th Oostenrijk
+                      th
+                        a(href='http://kristallwelten.swarovski.com' target='new') kristallwelten.swarovski.com
         .footer
           p
             | Haus Brabant (c) 2016 A de Werdt
@@ -283,11 +297,11 @@ html
         .menu-mobile-footer
           ul#menu-mobile-footer.menu
             li#telefoon
-              a(href="tel:#{tel}")
+              a(href="tel:+43 6 50 41 65 726")
             li#mail
-              a(href="mailto:#{mail}")
+              a(href="mailto:info@hausbrabant.com")
             li#whatsapp
-              a(href="intent://send/#{tel}#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end")
+              a(href="intent://send/+436504165726#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end")
             li#facebook
               a(href="http://www.facebook.com/hausbrabant")
             li#book-now
