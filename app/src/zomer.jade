@@ -244,17 +244,5 @@ html
         .footer
           p
             | Haus Brabant (c) 2016 A de Werdt
-      navm.mobile-nav
-        .menu-mobile-footer
-          ul#menu-mobile-footer.menu
-            li#telefoon
-              a(href="tel:+43 6 50 41 65 726")
-            li#mail
-              a(href="mailto:info@hausbrabant.com")
-            li#whatsapp
-              a(href="intent://send/+436504165726#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end")
-            li#facebook
-              a(href="http://www.facebook.com/hausbrabant")
-            li#book-now
-              a(href="#") Book Now
-    include ./footer.pug
+      include ./mobilenav.pug
+include ./footer.pug

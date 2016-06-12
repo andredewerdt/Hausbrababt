@@ -1,7 +1,6 @@
 doctype html
 html
   include ./head.pug
-
   body#Home
     overlay.zomer.start-overlay
     overlay.bar
@@ -34,6 +33,7 @@ html
       .mainbody
         section#section-1
           .row.row-eq-height
+            .divider
             .col-lg-8.col-sm-8
               h1 Proficiat!
               p
@@ -69,9 +69,9 @@ html
                   img(src='images/stube.png')
                 .foto
                   img(src='images/kamer.jpg')
-            .divider
         section#section-2
           .row#ZomerID
+            .divider
             .col-lg-12
               .figure.effect-menu
                 img(src='images/zomerbalk.jpg')
@@ -140,9 +140,9 @@ html
                | De selectie varieert van lichte paden verspreid over avontuurlijke paden tot uitdagende klimmtochten en bergtoppen. De grootste uitdaging is de populaire Zugspitze met 2962 meter.
               p
                a(href="http://www.youtube.com/embed/FaxgLmY7M68?autohide=1&autoplay=1&controls=0" class='fancybox.iframe').fancybox-media Videofragment om een indruk te krijgen
-            .divider
         section#section-3
           .row#WinterID
+            .divider
             .col-lg-12
               .figure.effect-menu
                 img(src='images/winterbalk.jpg')
@@ -217,9 +217,9 @@ html
                 | dat eveneens vanuit Garmisch-Partenkichen (Duitsland) per bergtreintje te bereiken is.
               p
                a(href="http://www.youtube.com/embed/A4r_8q5_rvw?autohide=1&autoplay=1&controls=0" class='fancybox.iframe').fancybox-media Videofragment om een indruk te krijgen van de omgeving en de pistes
-            .divider
         section#section-4
           .row#AccomodatieID
+            .divider
             .col-lg-12
               .figure.effect-menu
                 img(src='images/appartementen.jpg')
@@ -259,10 +259,12 @@ html
                 | We hebben 9 appartementen van diverse afmetingen voor 2 tm 8 personen. Een aantal is recent gerenoveerd zodat het u tijdens uw verblijf aan niets ontbreekt. <br>
                 | Alle appartementen zijn ruim van opzet en zijn goed uitgerust met TV en complete keuken. Voor een mooi beeld van deze appartementen en hun indeling hebben we onder het kopje appartementen de layout en diverse foto's toegevoegd.
               p
+                | Ons huis ligt aan de hoofdstraat, de (ski)bus stopt voor de deur. Het centrum, de supermarkt en de restaurants vind u op loopafstand.
+              p
                 | Voor de wintersporters hebben we een aparte ruimte met schoenverwarmers zodat u de volgende dag altijd met droge en warme voeten de pistes kunt verkennen.
-            .divider
         section#section-5
           .row#ContactID
+            .divider
             .col-lg-12
               .figure.effect-menu
                 img(src='images/contactheader.jpg')
@@ -288,17 +290,5 @@ html
         .footer
           p
             | Haus Brabant (c) 2016 A de Werdt
-      navm.mobile-nav
-        .menu-mobile-footer
-          ul#menu-mobile-footer.menu
-            li#telefoon
-              a(href="tel:+43 6 50 41 65 726")
-            li#mail
-              a(href="mailto:info@hausbrabant.com")
-            li#whatsapp
-              a(href="intent://send/+436504165726#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end")
-            li#facebook
-              a(href="http://www.facebook.com/hausbrabant")
-            li#book-now
-              a(href="#") Book Now
-      include ./footer.pug
+      include ./mobilenav.pug
+include ./footer.pug

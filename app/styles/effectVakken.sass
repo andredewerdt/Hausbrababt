@@ -20,6 +20,13 @@
 	left: 0
 	padding: 1em
 
+.figure.effect-goliath figcaption
+  padding: 1.5vw
+  color: #fff
+  text-transform: uppercase
+  font-size: 1.25em
+
+
 .figure.effect-goliath h2
 	font-size: 0.6em
 
@@ -39,6 +46,61 @@
 .figure.effect-goliath:hover p
 	opacity: 1
 	transform: translate3d(0,0,0)
+
+
+.figure.effect-ming
+	background: #3168c4
+
+.figure.effect-ming img
+	opacity: 0.9
+	transition: opacity 0.35s
+	width: 100%
+
+.figure.effect-ming figcaption::before
+	position: absolute
+	top: 30px
+	right: 30px
+	bottom: 30px
+	left: 30px
+	border: 2px solid #fff
+	box-shadow: 0 0 0 30px rgba(255,255,255,0.2)
+	content: ''
+	opacity: 0
+	transition: opacity 0.35s, transform 0.35s
+	transform: scale3d(1.4,1.4,1)
+
+.figure.effect-ming figcaption
+  padding: 1.5vw
+  color: #fff
+  font-size: 1em
+
+.figure.effect-ming h2
+	margin: 10% 0 10px 0
+	transition: transform 0.35s
+.figure.effect-ming p
+	padding: 1.5em
+	opacity: 0
+	transition: opacity 0.35s, transform 0.35s
+	transform: scale(1.5)
+	font-size: 70%
+
+.figure.effect-ming:hover h2
+	transform: scale(0.9) translate3d(0,-20px,0)
+
+
+.figure.effect-ming:hover figcaption::before
+	opacity: 1
+	transform: scale3d(1,1,1)
+.figure.effect-ming:hover p
+	opacity: 1
+	transform: scale3d(1,1,1) translate3d(0,-40px,0)
+
+.figure.effect-ming:hover figcaption
+	background-color: rgba(58,52,42,0)
+
+.figure.effect-ming:hover img
+	opacity: 0.4
+
 
 @media screen and (min-width: 768px)
 	.figure.effect-goliath h2,

@@ -9,6 +9,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 var debug = require('gulp-debug');
 
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -49,6 +50,11 @@ gulp.task('sass', () => {
       .pipe(reload({stream: true}));
 });
 
+gulp.task('css',() => {
+  return gulp.src('app/styles/*.css')
+    .pipe(gulp.dest('.tmp/styles'));
+});
+
 gulp.task('pug', () => {
     return gulp.src('app/src/**/*.jade')
       .pipe($.plumber())
@@ -71,8 +77,31 @@ const testLintOptions = {
     mocha: true
   }
 };
-
-gulp.task('lint', lint('app/scripts/**/*.js'));
+const LintOptions = {
+  env: {
+        jquery: true,
+        node: true
+    },
+  globals: {
+    ga: true
+  },
+  extends: "eslint:recommended",
+    rules: {
+        "no-case-declarations": 0,
+        "no-class-assign": 0,
+        "no-const-assign": 0,
+        "no-dupe-class-members": 0,
+        "no-empty-pattern": 0,
+        "no-new-symbol": 0,
+        "no-self-assign": 0,
+        "no-this-before-super": 0,
+        "no-unexpected-multiline": 0,
+        "no-unused-labels": 0,
+        "constructor-super": 0,
+        "no-unused-expressions": 0
+      }
+};
+gulp.task('lint', lint('app/scripts/**/*.js',LintOptions));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['pug', 'styles', 'sass', 'scripts'], () => {
@@ -105,17 +134,14 @@ gulp.task('fonts', () => {
 });
 
 gulp.task('extras', () => {
-  return gulp.src([
-    'app/*.*',
-    '!app/*.html'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'));
+  return gulp.src(['app/*.*','!app/*.html'],{ dot: true})
+  .pipe(debug({title: 'Debug file info:'}))
+  .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['sass','styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['sass','styles', 'scripts', 'fonts','css'], () => {
   browserSync({
     notify: false,
     port: 9000,
