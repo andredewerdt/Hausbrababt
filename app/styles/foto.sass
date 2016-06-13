@@ -1,13 +1,28 @@
 .foto
   position: relative
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5)
+  padding: 10px
+  background: white
+  margin-top: 40px
   &:first-child
-    margin-top: 30px
-
+    margin-top: 70px
+.foto::after
+    content: ''
+    position: absolute
+    z-index: -1
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3)
+    width: 90%
+    left: 5%
+    height: 100px
+    bottom: 0
 .foto img
   width: 100%
-  border: 1px solid #777
-  margin-top: 40px
+  border: 1px solid #8a4419
+  border-style: inset
 
+.videozomer
+  width: 50%
+  max-width: 400px
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px)
   .foto

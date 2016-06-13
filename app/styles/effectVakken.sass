@@ -101,6 +101,21 @@
 .figure.effect-ming:hover img
 	opacity: 0.4
 
+.videovoorbeeld figcaption
+	height: 100%
+	width: 100%
+	opacity: 0
+	text-align: center
+	backface-visibility: hidden
+	transition: opacity 0.3s
+	position: absolute
+	top: 0
+	left: 0
+	padding: 20px
+	background: rgba(31,86,175,0.6)
+	color: white
+.videovoorbeeld .figure:hover figcaption
+	opacity: 1
 
 @media screen and (min-width: 768px)
 	.figure.effect-goliath h2,

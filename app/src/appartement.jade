@@ -95,6 +95,9 @@ html
                 img(src='images/bar/bar2.jpg')
               .foto
                 img(src='images/bar/bar3.jpg')
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/winter/bar1.jpg')
         section#section-4
           .row#WinterID
             .divider
@@ -115,20 +118,11 @@ html
                 img(src='images/bar/speelkamer1.jpg')
               .foto
                 img(src='images/bar/speelkamer2.jpg')
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/winter/speelkamer1.jpg')
         .footer
           p
             | Haus Brabant (c) 2016 A de Werdt
-      navm.mobile-nav
-        .menu-mobile-footer
-          ul#menu-mobile-footer.menu
-            li#telefoon
-              a(href="tel:+43 6 50 41 65 726")
-            li#mail
-              a(href="mailto:info@hausbrabant.com")
-            li#whatsapp
-              a(href="intent://send/+436504165726#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end")
-            li#facebook
-              a(href="http://www.facebook.com/hausbrabant")
-            li#book-now
-              a(href="#") Book Now
-      include ./footer.pug
+      include ./mobilenav.pug
+include ./footer.pug
