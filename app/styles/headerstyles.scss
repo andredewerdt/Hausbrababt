@@ -1,9 +1,10 @@
 .grid {
 	position: relative;
 	max-width: 100%;
+	overflow: hidden;
 }
 
-/* Common style */
+/* Common style  voor topmenu */
 .grid figure {
 	position: relative;
 	overflow: hidden;
@@ -15,8 +16,9 @@
 	}
 
 .grid figure img {
-	position: relative;
+	border: 1px solid white;
 	display: block;
+	position: relative;
 	min-height: 100%;
 	max-width: 100%;
 }
