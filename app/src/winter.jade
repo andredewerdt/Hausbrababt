@@ -102,46 +102,59 @@ html
           .row
             .col-lg-12
               .containtable
-                table.table-responsive.animated(data-os-animation='fadeIn')
+                | <!--[if !IE]><!-->
+                | <style>
+                | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+                |  td:nth-of-type(1):before { content: "Plaats"; }
+                |  td:nth-of-type(2):before { content: "Lengte"; }
+                |  td:nth-of-type(3):before { content: "Gebied"; }
+                |  td:nth-of-type(4):before { content: "Web"; }
+                | }
+                | </style>
+                | <!--<![endif]-->
+                table.animated(data-os-animation='fadeIn')
                   tbody
-                  tr
-                    th  Ehrwald
-                  tr
-                    th &nbsp &nbsp 17,0 km Piste&nbsp
-                    th Zugsspitze
-                    th &nbsp
-                      a(href='http://www.Zugspitze.at' target='new') www.Zugspitze.at
-                  tr
-                    th &nbsp &nbsp 26,0 km Piste&nbsp
-                    th Ehrwalder Alm
-                    th &nbsp
-                      a(href='http://www.ehrwalderalmbahn.at' target='new') www.ehrwalderalmbahn.at
-                  tr
-                    th &nbsp &nbsp 17,0 km Piste&nbsp
-                    th Wettersteinbahnen Sonnenlifte
-                    th &nbsp
-                      a(href='http://www.wetterstein-bahnen.at' target='new') www.wetterstein-bahnen.at
-                  tr
-                    th Lermoos
-                  tr
-                    th &nbsp &nbsp 33,0 km Piste&nbsp
-                    th Grubigsteinbahnen
-                    th &nbsp
-                      a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
-                  tr
-                    th Biberwier
-                  tr
-                    th &nbsp &nbsp 14,0 km Piste&nbsp
-                    th Marienberg
-                    th &nbsp
-                      a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
-                  tr
-                    th Berwang/Bichlbach
-                  tr
-                    th &nbsp;&nbsp;35,4 km Piste&nbsp
-                    th Skischaukel Berwangertal / Almkopfbahn
-                    th &nbsp
-                      a(href='http://www.skischaukel-berwang.at' target='new') www.skischaukel-berwang.at
+                    thead
+                      th Plaats
+                      th lengte
+                      th Gebied
+                      th Web
+                    tr
+                      td Ehrwald
+                      td 17,0 km Piste
+                      td Zugsspitze
+                      td
+                        a(href='http://www.Zugspitze.at' target='new') www.Zugspitze.at
+                    tr
+                      td Ehrwald
+                      td 26,0 km Piste
+                      td Ehrwalder Alm
+                      td
+                        a(href='http://www.ehrwalderalmbahn.at' target='new') www.ehrwalderalmbahn.at
+                    tr
+                      td Ehrwald
+                      td 17,0 km Piste
+                      td Wettersteinbahnen Sonnenlifte
+                      td
+                        a(href='http://www.wetterstein-bahnen.at' target='new') www.wetterstein-bahnen.at
+                    tr
+                      td Lermoos
+                      td 33,0 km Piste
+                      td Grubigsteinbahnen
+                      td
+                        a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
+                    tr
+                      td Biberwier
+                      td 14,0 km Piste
+                      td Marienberg
+                      td
+                        a(href='http://www.bergbahnen-langes.at' target='new') www.bergbahnen-langes.at
+                    tr
+                      td Berwang/Bichlbach
+                      td 35,4 km Piste
+                      td Skischaukel Berwangertal / Almkopfbahn
+                      td
+                        a(href='http://www.skischaukel-berwang.at' target='new') www.skischaukel-berwang.at
           .row.fotomobile.animated(data-os-animation='fadeIn')
             .col-sm-12
               img(src='images/winter/ski1.jpg')
@@ -223,11 +236,21 @@ html
                 img(src='images/winter/avondski1.jpg' alt='Avond ski in Bergwang')
           .row.fotomobile.animated(data-os-animation='fadeIn')
             .col-sm-12
-              img(src='images/winter/wandel1.jpg')
+              img(src='images/winter/avondski1.jpg')
           .row
             .col-lg-12
               .containtable
-                table.table.table-striped.table-responsive.animated(data-os-animation='fadeIn')
+                | <!--[if !IE]><!-->
+                | <style>
+                | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+                |  td:nth-of-type(1):before { content: "Bezienswaardigheid"; }
+                |  td:nth-of-type(2):before { content: "Plaats"; }
+                |  td:nth-of-type(3):before { content: "Land"; }
+                |  td:nth-of-type(4):before { content: "Web"; }
+                | }
+                | </style>
+                | <!--<![endif]-->
+                table.animated(data-os-animation='fadeIn')
                   thead
                     tr
                       th Bezienswaardigheid
@@ -236,64 +259,64 @@ html
                       th Webpagina
                   tbody
                     tr
-                      th Plansee Heiterwang
-                      th Heiterwang
-                      th Oostenrijk
-                      th
+                      td Plansee Heiterwang
+                      td Heiterwang
+                      td Oostenrijk
+                      td
                         a(href='http://www.zugspitzarena.com' target='new') www.zugspitzarena.com
                     tr
-                      th Burgenwelten Ehrenberg
-                      th Reutte
-                      th Oostenrijk
-                      th
+                      td Burgenwelten Ehrenberg
+                      td Reutte
+                      td Oostenrijk
+                      td
                         a(href='www.ehrenberg.at' target='new') www.ehrenberg.at
                     tr
-                      th Schloß Fernstein en Fernstein See
-                      th Nassereith
-                      th Oostenrijk
-                      th
+                      td Schloß Fernstein en Fernstein See
+                      td Nassereith
+                      td Oostenrijk
+                      td
                         a(href='http://www.fernsteinsee.at' target='new') www.fernsteinsee.at
                     tr
-                      th EibSee
-                      th Grainau
-                      th Duitsland
-                      th
+                      td EibSee
+                      td Grainau
+                      td Duitsland
+                      td
                         a(href='http://www.eibsee.de' target='new') www.eibsee.de
                     tr
-                      th Schloß Linderhof
-                      th Ettal
-                      th Duitsland
-                      th
+                      td Schloß Linderhof
+                      td Ettal
+                      td Duitsland
+                      td
                         a(href='http://www.schlosslinderhof.de' target='new') www.schlosslinderhof.de
                     tr
-                      th Kloster Ettal
-                      th Ettal
-                      th Duitsland
-                      th
+                      td Kloster Ettal
+                      td Ettal
+                      td Duitsland
+                      td
                         a(href='http://www.kloster-ettal.de' target='new') www.kloster-ettal.de
                     tr
-                      th "het sprookjeskasteel"
-                      th Neuschwanstein	Schwangau
-                      th Duitsland
-                      th
+                      td "het sprookjeskasteel"
+                      td Neuschwanstein	Schwangau
+                      td Duitsland
+                      td
                         a(href='http://www.neuschwanstein.de' target='new') www.neuschwanstein.de
                     tr
-                      th Geierwally Freilichtbühne
-                      th Elbigenalp
-                      th Oostenrijk
-                      th
+                      td Geierwally Freilichtbühne
+                      td Elbigenalp
+                      td Oostenrijk
+                      td
                         a(href='http://www.lechtal.at' target='new') www.lechtal.at
                     tr
-                      th Geisterklamm
-                      th Leutasch
-                      th Oostenrijk
-                      th
+                      td Geisterklamm
+                      td Leutasch
+                      td Oostenrijk
+                      td
                         a(href='http://www.leutasch.net' target='new') www.leutasch.net
                     tr
-                      th Swarovski kristalwerelden
-                      th Wattens
-                      th Oostenrijk
-                      th
+                      td Swarovski kristalwerelden
+                      td Wattens
+                      td Oostenrijk
+                      td
                         a(href='http://kristallwelten.swarovski.com' target='new') kristallwelten.swarovski.com
         .footer
           p
