@@ -1,7 +1,6 @@
 doctype html
 html
   include ./head.pug
-
   body#Home
     overlay.appartement.start-overlay
     overlay.bar
@@ -27,6 +26,8 @@ html
               a(href="#section-3" data-bg="bar") Bar
             li.nav-link
               a(href="#section-4" data-bg="speelkamer") Speelkamer
+            li.nav-link
+              a(href="#section-5" data-bg="appartement") Reservering
           .nav-left
           .nav-right
       .mainbody
@@ -45,37 +46,14 @@ html
                   | De keukens in de appartementen zijn volledig uitgerust met servies, bestek, kookplaat, koelkast, magnetron/ of oven, koffieapparaat en waterkoker.
                 p
                   | Alle appartementen/kamers hebben beschikking over een (Oostenrijkse) satelliet TV. <br>
-                  | Alle appartementen en kamers hebben toegang tot een gratis draadloze internet verbinding(WIFI).
+                  | Alle appartementen en kamers hebben toegang tot een gratis draadloze internet verbinding(WIFI).<br>
+                p
+                  h3 Overzicht appartementen
           .row
-            .col-lg-6.col-sm-12
-              .grid
-                .figure.effect-ming
-                  img(src='images/app1/Appartement1.jpg')
-                  figcaption
-                    h2 Appartement 1
-                    p
-                      | 4-6 personen - Oppervlakte 70m2<br>
-                      | Dit appartement heeft een slaapkamer met een tweepersoons bed (180 X 200)
-                      | woonkamer met een comfortabele hoekbank, extra éénpersoonsbed, waaronder een tweede uitschuifbaar éénpersoonsbed.
-                      | badkamer met wc en een seperate badkamer met douche.
-                      | tevens beschikt dit appartement over een nieuwe compleet ingerichte keuken, met vaatwasser
-                      | Dit appartement heeft een balkon met een panoramisch uitzicht op de Zugspitze
-            .col-lg-6.col-sm-12
-              .grid
-                .figure.effect-ming
-                  img(src='images/app2/Appartement2.jpg')
-                  figcaption
-                    h2 Appartement 2
-                    p
-                      | 2 tot 4 personen (62m2) <br>
-                      | Dit appartement heeft een slaapkamer met een tweepersoons bed (180 X 200),
-                      | woonkamer met een comfortabele tweepersoons zit/slaapbank,
-                      | in de woonkamer bevind zich een Eckbank (Hoekbank in Oostenrijkse stijl) waar men ruimte heeft om met evt. 8 personen te eten.
-                      | Tevens is dit appartement uitgerust met een nieuwe Smart Televisie.
-                      | Badkamer met douche, separate wc, grote compleet ingerichte keuken.
-                      | Dit appartement heeft een balkon met een panoramisch uitzicht op de Zugspitze
+            .col-lg-12
+              include ./easybookCategorie.html
         section#section-3
-          .row#ZomerID
+          .row
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
@@ -99,9 +77,9 @@ html
                 img(src='images/bar/bar3.jpg')
           .row.fotomobile.animated(data-os-animation='fadeIn')
             .col-sm-12
-              img(src='images/winter/bar1.jpg')
+              img(src='images/bar/bar1.jpg')
         section#section-4
-          .row#WinterID
+          .row
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
@@ -123,7 +101,16 @@ html
                 img(src='images/bar/speelkamer2.jpg')
           .row.fotomobile.animated(data-os-animation='fadeIn')
             .col-sm-12
-              img(src='images/winter/speelkamer1.jpg')
+              img(src='images/bar/speelkamer1.jpg')
+        section#section-5
+          .row
+            .divider
+            .col-lg-12
+              .editcms.cms-editable
+                h1 Reservering
+                p
+                  | U kunt een reservering maken via onderstaand formulier
+                include ./easybookV2.html
         .footer
           p
             | Haus Brabant (c) 2016 A de Werdt

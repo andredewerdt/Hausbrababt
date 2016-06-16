@@ -1,0 +1,28 @@
+.row
+  .col-lg-6.col-sm-12
+    .grid
+      .figure.effect-ming
+        img(src='images/app1/Appartement1.jpg')
+        figcaption
+          h2 Appartement 1
+          p
+            | 4-6 personen - Oppervlakte 70m2<br>
+            | Dit appartement heeft een slaapkamer met een tweepersoons bed (180 X 200)
+            | woonkamer met een comfortabele hoekbank, extra éénpersoonsbed, waaronder een tweede uitschuifbaar éénpersoonsbed.
+            | badkamer met wc en een seperate badkamer met douche.
+            | tevens beschikt dit appartement over een nieuwe compleet ingerichte keuken, met vaatwasser
+            | Dit appartement heeft een balkon met een panoramisch uitzicht op de Zugspitze
+  .col-lg-6.col-sm-12
+    .grid
+      .figure.effect-ming
+        img(src='images/app2/Appartement2.jpg')
+        figcaption
+          h2 Appartement 2
+          p
+            | 2 tot 4 personen (62m2) <br>
+            | Dit appartement heeft een slaapkamer met een tweepersoons bed (180 X 200),
+            | woonkamer met een comfortabele tweepersoons zit/slaapbank,
+            | in de woonkamer bevind zich een Eckbank (Hoekbank in Oostenrijkse stijl) waar men ruimte heeft om met evt. 8 personen te eten.
+            | Tevens is dit appartement uitgerust met een nieuwe Smart Televisie.
+            | Badkamer met douche, separate wc, grote compleet ingerichte keuken.
+            | Dit appartement heeft een balkon met een panoramisch uitzicht op de Zugspitze

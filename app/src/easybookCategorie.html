@@ -1,0 +1,33 @@
+<div id="ebCategories"></div>
+<script type="text/javascript" src="//www.easy-booking.at/ebPlugins/categories/jquery.easybooking.categories.v2.js"></script>
+<script type="text/javascript">
+function ebCategoriesLoadedCheck() {
+    if(typeof jQuery != "undefined") {
+        if(jQuery.fn.ebCategories) {
+            jQuery("#ebCategories").ebCategories({
+                customerId: 3561,
+                serialNo: "7822-2579-9427",
+                localeId: 3,
+                loadCSS : true,
+                maxImgWidth : 960,
+                maxImgHeight : 960,
+                bookingPage : "popup",
+                enquiryPage : "popup",
+                showAvailability : true,
+                showPrices : true,
+                showDetails : true,
+                category : "all",
+                roomLevel: false,
+                room: "all",
+                categoryDescription: true,
+                roomSorting: "random"
+            });
+        } else {
+            setTimeout(ebCategoriesLoadedCheck,200);
+        }
+    } else{
+        setTimeout(ebCategoriesLoadedCheck,200);
+    }
+}
+ebCategoriesLoadedCheck();
+</script>
