@@ -14,7 +14,10 @@
     height: 52px;
     //margin-left: -15px;
    }
-
+  navm.mobile-nav.landscape {
+    display: none !important;
+  }
+  
   navm.mobile-nav ul {
   	display: block;
     width: 100%;

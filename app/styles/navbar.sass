@@ -3,7 +3,7 @@ $colornavbar : rgba(33, 92, 192,0.9)
 .stuck
   position: fixed
   top: 0
-  z-index: 50
+  z-index: 999
 
 .nav-container
   width: 100%
@@ -18,10 +18,11 @@ nav
   position: relative
   border-top-left-radius: 1em 0.5em
   border-top-right-radius: 1em 0.5em
-  display: block
+  display: flex
   & ul
     margin-top: 0px
     margin-bottom: 0px
+    padding: 0px
 
 .nav-left
   position: absolute

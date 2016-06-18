@@ -1,6 +1,7 @@
 doctype html
 html
-  include ./head.pug
+  head
+    include ./head.pug
   body#Home
     overlay.zomer.start-overlay
     overlay.bar
@@ -9,25 +10,29 @@ html
       .header
         .grid
           figure.effect-jazz
-            img(src="images/zugspitze.jpg")
+            img(src="images/header/zugspitze.jpg")
             figcaption
               h2 Zugspitz
                 span  Arena
               p Ehrwald, Lermoos, Biberwier
       .nav-container
         nav
-          a.navbar-brand.pull-left.grow(href="#")
-          ul
-            li.nav-link
-              a(href="#section-1" data-bg="zomer") Home
-            li.nav-link
-              a(href="#section-2" data-bg="zomer") Zomer
-            li.nav-link
-              a(href="#section-3" data-bg="winter") Winter
-            li.nav-link
-              a(href="#section-4" data-bg="bar") Appartement
-            li.nav-link
-              a(href="#section-5" data-bg="bar") Contact
+          div
+            a.navbar-brand.pull-left.grow(href="#")
+          div
+            ul
+              li.nav-link
+                a(href="#section-1" data-bg="zomer") Home
+              li.nav-link
+                a(href="#section-2" data-bg="zomer") Zomer
+              li.nav-link
+                a(href="#section-3" data-bg="winter") Winter
+              li.nav-link
+                a(href="#section-4" data-bg="bar") Appartement
+              li.nav-link
+                a(href="reservering.html" data-bg="bar") Reservering
+              li.nav-link
+                a(href="#section-5" data-bg="bar") Contact
           .nav-left
           .nav-right
       .mainbody
@@ -63,11 +68,14 @@ html
                 .periscope
             .col-lg-4.col-sm-4.fotocontainer
                 .foto
-                  img(src='images/huis.png')
+                  a(href='images/galHoofd/hausbrabant.jpg' rel='group1' title='Haus Brabant ' ).groupfb
+                    img(src='images/huis.png')
                 .foto
-                  img(src='images/stube.png')
+                  a(href='images/galhoofd/bar.jpg' rel='group1' title='Onze gezellige bar ' ).groupfb
+                    img(src='images/stube.png')
                 .foto
-                  img(src='images/kamer.jpg')
+                  a(href='images/galHoofd/kamer.jpg' rel='group1' title='Luxe bedden..' ).groupfb
+                    img(src='images/kamer.jpg')
                 .foto
                   a(href='http://www.zoover.nl/oostenrijk/tirol/ehrwald/haus-brabant-bayrischerhof-tirol/appartement' target='new')
                     img(src='images/zoover1.jpg')
@@ -76,7 +84,7 @@ html
             .divider
             .col-lg-12
               .figure.effect-menu
-                img(src='images/zomerbalk.jpg')
+                img(src='images/header/zomerbalk.jpg')
                 figcaption
                   h2 Zomer in
                     span  Ehrwald
@@ -154,7 +162,7 @@ html
             .divider
             .col-lg-12
               .figure.effect-menu
-                img(src='images/winterbalk.jpg')
+                img(src='images/header/winterbalk.jpg')
                 figcaption
                   h2 Winter in
                     span  Ehrwald
@@ -238,7 +246,7 @@ html
             .divider
             .col-lg-12
               .figure.effect-menu
-                img(src='images/appartementen.jpg')
+                img(src='images/header/appartementen.jpg')
                 figcaption
                   h2 Appartementen
                     span  Haus Brabant
@@ -284,7 +292,7 @@ html
             .divider
             .col-lg-12
               .figure.effect-menu
-                img(src='images/contactheader.jpg')
+                img(src='images/header/contactheader.jpg')
                 figcaption
                   h2 Haus Brabant
                     span  De gezelligste locatie in Tirol
@@ -303,13 +311,13 @@ html
                   | Misschien kunnen we het eea schuiven zodat we u toch kunnen plaatsen.<br>
                   | U kunt natuurlijk ook altijd bellen<br> (tel:+43 6 50 41 65 726).
               br
-              a.a-btn(href='appartement.html#section-5')
+              a.a-btn(href='reservering.html')
                 span.a-btn-text Reserveer nu
                 span.a-btn-slide-text een slimme keus
                 span.a-btn-icon-right
                   span
         .footer
           p
-            | Haus Brabant (c) 2016 A de Werdt
+            | Haus Brabant (c) 2016 fam v. Schijndel
       include ./mobilenav.pug
 include ./footer.pug

@@ -45,6 +45,11 @@ $(window).scroll(function() {
 
 $(window).on('resize', function() {
   resizeNavBar();
+  if(window.innerHeight < window.innerWidth){
+    $('navm').addClass('landscape');
+  } else {
+    $('navm').removeClass('landscape');
+  }
 });
 
 $(document).ready(function() {
@@ -53,6 +58,15 @@ $(document).ready(function() {
   var sticky = new Waypoint.Sticky({
     element: $('.nav-container nav')[0]
   });
+  $("a.groupfb").fancybox({
+      'titlePosition'  : 'inside',
+  		'transitionIn'	:	'elastic',
+  		'transitionOut'	:	'elastic',
+  		'speedIn'		:	600,
+  		'speedOut'		:	200,
+  		'overlayShow'	:	false
+  	});
+
   $('.fancybox-media').fancybox({
         maxWidth	: 800,
     		maxHeight	: 600,
