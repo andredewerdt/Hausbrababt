@@ -100,7 +100,7 @@ figure.effect-jazz p {
 }
 
 figure.effect-jazz h2 {
-	padding-top: 9%;
+	padding-top: 0%;
 	transition: transform 0.35s;
 }
 
@@ -125,4 +125,20 @@ figure.effect-jazz:hover h2,
 figure.effect-jazz:hover p {
 	opacity: 1;
 	transform: scale3d(1,1,1);
+}
+
+@media screen and (min-width: 768px) {
+	figure.effect-jazz h2 {
+		padding-top: 9%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.grid figure h2 {
+	  font-size: 3vw;
+	}
+	figure.effect-jazz p {
+		font-size: 1.2vw;
+	}
+
 }
