@@ -1,7 +1,7 @@
 doctype html
 html
-  include ./head.pug
-
+  head
+    include ./head.pug
   body#Home
     overlay.wandel.start-overlay
     overlay.mountainbike
@@ -11,7 +11,7 @@ html
       .header
         .grid
           figure.effect-jazz
-            img(src="images/zomerbalk.jpg")
+            img(src="images/header/zomerbalk.jpg")
             figcaption
               h2 Zomer in
                 span  Ehrwald
@@ -65,16 +65,19 @@ html
                   | Nordic walkers komen in Ehrwald niets te kort. De grote open vlakte tussen Ehrwald, Lermoos en Biberwier is een eldorado voor de nordic walkers. Daarnaast zijn er allerlei koppeltrajecten naar naburige dalen. De Hochloipe Ehrwalder Alm nodigt uit tot een sprookjesachtige rondtocht te midden van een uitgestrekt landschap op 1500 meter hoogte.
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
                 .foto
-                  img(src='images/zomer/wandel1.jpg')
+                  a(href='images/galZomer/wandelen1.jpg' rel='wandelgroup').groupfb
+                    img(src='images/zomer/wandel1.jpg')
                 .foto
-                  img(src='images/zomer/wandel2.jpg')
+                  a(href='images/galZomer/wandelen2.jpg' rel='wandelgroup').groupfb
+                    img(src='images/zomer/wandel2.jpg')
                 .foto
-                  img(src='images/zomer/wandel3.jpg')
+                  a(href='images/galZomer/wandelen3.jpg' rel='wandelgroup' titel='prachtige wandeling bergkam').groupfb
+                    img(src='images/zomer/wandel3.jpg')
           .row.fotomobile.animated(data-os-animation='fadeIn')
             .col-sm-12
               img(src='images/zomer/wandel1.jpg')
         section#section-3
-          .row#ZomerID
+          .row
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
@@ -88,16 +91,19 @@ html
                   | De fietsroutes in de Ehrwalder Moos zijn uitstekend geschikt voor degene die zich wat meer op het vlakkere terrein willen begeven. De bergtouren zijn bedoeld voor de getrainde fietser. Voor elke doelgroep vind u bij ons in de Zugspitz Arena de juiste fietsroute.
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                img(src='images/zomer/mountainbike1.jpg')
+                a(href='images/galZomer/mountainbike1.jpg' rel='mountainbike').groupfb
+                  img(src='images/zomer/mountainbike1.jpg')
               .foto
-                img(src='images/zomer/mountainbike2.jpg')
+                a(href='images/galZomer/mountainbike2.jpg' rel='mountainbike').groupfb
+                  img(src='images/zomer/mountainbike2.jpg')
               .foto
-                img(src='images/zomer/mountainbike3.jpg')
+                a(href='images/galZomer/mountainbike3.jpg' rel='mountainbike').groupfb
+                  img(src='images/zomer/mountainbike3.jpg')
           .row.fotomobile.animated(data-os-animation='fadeIn')
             .col-sm-12
               img(src='images/zomer/mountainbike1.jpg')
         section#section-4
-          .row#WinterID
+          .row
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
@@ -110,9 +116,11 @@ html
                   | De op natuurlijke bodem aangelegde golfbaan is gebouwd naar de top actuele internationale voorschriften en is voor toernooispelen uitermate goed geschikt.
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                img(src='images/zomer/golf1.jpg')
+                a(href='images/galZomer/golf1.jpg' rel='golf').groupfb
+                  img(src='images/zomer/golf1.jpg')
               .foto
-                img(src='images/zomer/golf3.jpg')
+                a(href='images/galZomer/golf2.jpg' rel='golf').groupfb
+                  img(src='images/zomer/golf3.jpg')
           .row.fotomobile.animated(data-os-animation='fadeIn')
             .col-sm-12
               img(src='images/zomer/golf1.jpg')
@@ -259,6 +267,6 @@ html
                         a(href='http://kristallwelten.swarovski.com' target='new') kristallwelten.swarovski.com
         .footer
           p
-            | Haus Brabant (c) 2016 A de Werdt
+            | Haus Brabant (c) 2016 fam v. Schijndel
       include ./mobilenav.pug
 include ./footer.pug

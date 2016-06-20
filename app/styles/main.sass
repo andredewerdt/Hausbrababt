@@ -4,9 +4,10 @@ $icon-font-path: '../fonts/'
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
 // endbower
 // email obfuscator
-span.reverse 
+span.reverse
   unicode-bidi: bidi-override
   direction: rtl
+  color: blue
 
 .browserupgrade
   margin: 0.2em 0
@@ -123,11 +124,6 @@ td, th
 		body
 			padding: 0
 			margin: 0
-			width: 320px
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
-		body
-			width: 495px
-/* 	Table responsive layout End
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px)
@@ -149,6 +145,7 @@ td, th
     transition: all .5s ease-in-out
     &:hover
       transform: translate(100px,-100px) scale(5.1) rotate(360deg)
+      cursor: pointer
   .mainbody
     padding: 10px 40px
   .divider
@@ -166,44 +163,45 @@ td, th
     pointer-events: none
     transition: opacity 1s
     z-index: -10
+    transition: z-index 3s
   overlay.start-overlay
-      opacity: 1
-      pointer-events: all
+    opacity: 1
+    pointer-events: all
   .wandel
-    background: url("../images/wandelbg.jpg") no-repeat center fixed
+    background: url("../images/background/wandelbg-min.jpg") no-repeat center fixed
     background-size: cover
   .zomer
-    background: url("../images/topheader.jpg") no-repeat center fixed
+    background: url("../images/background/topheader-min.jpg") no-repeat center fixed
     background-size: cover
   .winter
-    background: url("../images/ski2.jpg") no-repeat center fixed
+    background: url("../images/background/ski2-min.jpg") no-repeat center fixed
     background-size: cover
   .bar
-    background: url("../images/overlaybar.jpg") no-repeat center fixed
+    background: url("../images/background/overlaybar-min.jpg") no-repeat center fixed
     background-size: cover
   .mountainbike
-    background: url("../images/mountainbikebg.jpg") no-repeat center fixed
+    background: url("../images/background/mountainbikebg-min.jpg") no-repeat center fixed
     background-size: cover
   .golf
-    background: url("../images/golfbg.jpg") no-repeat center fixed
+    background: url("../images/background/golfbg-min.jpg") no-repeat center fixed
     background-size: cover
   .klimmen
-    background: url("../images/klimmenbg.jpg") no-repeat center fixed
+    background: url("../images/background/klimmenbg-min.jpg") no-repeat center fixed
     background-size: cover
   .langlaufen
-    background: url("../images/langlaufbg.jpg") no-repeat center fixed
+    background: url("../images/background/langlaufbg-min.jpg") no-repeat center fixed
     background-size: cover
   .skiien
-    background: url("../images/skibg.jpg") no-repeat center fixed
+    background: url("../images/background/skibg-min.jpg") no-repeat center fixed
     background-size: cover
   .wandelsnow
-    background: url("../images/wandelsnowbg.jpg") no-repeat center fixed
+    background: url("../images/background/wandelsnowbg-min.jpg") no-repeat center fixed
     background-size: cover
   .appartement
-    background: url("../images/appartementenbg.jpg") no-repeat center fixed
+    background: url("../images/background/appartementenbg-min.jpg") no-repeat center fixed
     background-size: cover
   .speelkamer
-    background: url("../images/speelkamerbg.jpg") no-repeat center fixed
+    background: url("../images/background/speelkamerbg-min.jpg") no-repeat center fixed
     background-size: cover
 
   .header

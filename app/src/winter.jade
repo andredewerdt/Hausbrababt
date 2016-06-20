@@ -1,7 +1,7 @@
 doctype html
 html
-  include ./head.pug
-
+  head
+    include ./head.pug
   body#Home
     overlay.winter.start-overlay
     overlay.langlaufen
@@ -11,7 +11,7 @@ html
       .header
         .grid
           figure.effect-jazz
-            img(src="images/winterbalk.jpg")
+            img(src="images/header/winterbalk.jpg")
             figcaption
               h2 Winter in
                 span  Ehrwald
@@ -320,6 +320,6 @@ html
                         a(href='http://kristallwelten.swarovski.com' target='new') kristallwelten.swarovski.com
         .footer
           p
-            | Haus Brabant (c) 2016 A de Werdt
+            | Haus Brabant (c) 2016 fam v. Schijndel
       include ./mobilenav.pug
 include ./footer.pug
