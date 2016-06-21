@@ -4,7 +4,8 @@ $colornavbar : rgba(33, 92, 192,0.9)
   position: fixed
   top: 0
   z-index: 999
-
+.topicon
+  display: none
 .nav-container
   width: 100%
   margin-right: -2em
@@ -89,3 +90,6 @@ nav li a.selected
   background: -webkit-linear-gradient(left,  rgb(98,163,219) 0%,rgb(45,197,239) 50%,rgb(94,170,209) 100%)
   background: linear-gradient(to right,  rgb(98,163,219) 0%,rgb(45,197,239) 50%,rgb(94,170,209) 100%)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62a3db', endColorstr='#5eaad1',GradientType=1 )
+
+nav.stuck .topicon
+    display: inline

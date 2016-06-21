@@ -25,7 +25,7 @@ $(document).on('click', 'nav ul li', function() {
   var $distance = $('.nav-container').height() - 20;
   var scrollTopvar = $($('a', this).attr('href')).offset().top - $distance;
   //console.log($(this).children().attr('href'));
-  if ($(this).children().attr('href') === '#section-1') {
+  if ($(this).children().attr('href') === '#section-1')  {
     scrollTopvar = 0;
   }
   $('html, body').animate({
