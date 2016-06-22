@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    include ./head.pug
+    include ./include/head.pug
   body#Home
     overlay.appartement.start-overlay
     .container
@@ -21,9 +21,16 @@ html
               a(href="index.html" data-bg="appartement") Home
             li.nav-link
               a(href="#section-2" data-bg="appartement") Reservering
+            li.nav-link.pull-left.topicon
+              a(href="#section-1" data-bg="wandel")
+                img(src='images/top.svg')
+          div.fblogo
+            a(href="https://www.facebook.com/brabantsegezelligheid/" target='new')
+              img(src='images/fb.png').fblogo
           .nav-left
           .nav-right
       .mainbody
+        section#section-1
         section#section-2
           .row
             .divider
@@ -36,9 +43,9 @@ html
                   | dan kunnen we altijd kijken of we door hier en daar wat te schuiven toch aan uw voorkeur kunnen voldoen.<br>
                   | <br>
 
-                include ./easybookV2.html
+                include ./include/easybookV2.html
         .footer
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
-      include ./mobilenav.pug
-include ./footer.pug
+      include ./include/mobilenav.pug
+include ./include/footer.pug

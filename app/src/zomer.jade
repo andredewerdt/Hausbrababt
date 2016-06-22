@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    include ./head.pug
+    include ./include/head.pug
   body#Home
     overlay.wandel.start-overlay
     overlay.mountainbike
@@ -37,6 +37,9 @@ html
             li.nav-link.pull-left.topicon
               a(href="#section-1" data-bg="wandel")
                 img(src='images/top.svg')
+          div.fblogo
+            a(href="https://www.facebook.com/brabantsegezelligheid/" target='new')
+              img(src='images/fb.png').fblogo
           .nav-left
           .nav-right
       .mainbody
@@ -327,5 +330,5 @@ html
         .footer
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
-      include ./mobilenav.pug
-include ./footer.pug
+      include ./include/mobilenav.pug
+include ./include/footer.pug

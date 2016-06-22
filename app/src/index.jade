@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    include ./head.pug
+    include ./include/head.pug
   body#Home
     overlay.zomer.start-overlay
     overlay.bar
@@ -30,12 +30,13 @@ html
               li.nav-link
                 a(href="#section-4" data-bg="bar") Appartement
               li.nav-link
-                a(href="reservering.html" data-bg="bar") Reservering
-              li.nav-link
                 a(href="#section-5" data-bg="bar") Contact
               li.nav-link.pull-left.topicon
                 a(href="#section-1" data-bg="wandel")
                   img(src='images/top.svg')
+          div.fblogo
+            a(href="https://www.facebook.com/brabantsegezelligheid/" target='new')
+              img(src='images/fb.png').fblogo
           .nav-left
           .nav-right
       .mainbody
@@ -297,7 +298,7 @@ html
                       figcaption
                         h2 Gezellige bar
                         p Biljart, darts, tafeltennis...
-                        a(href="appartement.html#section-3") View more
+                        a(href="bar.html#section-2") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
@@ -305,7 +306,7 @@ html
                       figcaption
                         h2 Speelkamer
                         p Een paradijsje voor de kleintjes..
-                        a(href="appartement.html#section-4") View more
+                        a(href="bar.html#section-3") View more
           .row
             .col-lg-12
               .editcms.cms-editable
@@ -316,6 +317,11 @@ html
                   | Ons huis ligt aan de hoofdstraat, de (ski)bus stopt voor de deur. Het centrum, de supermarkt en de restaurants vind u op loopafstand.
                 p
                   | Voor de wintersporters hebben we een aparte ruimte met schoenverwarmers zodat u de volgende dag altijd met droge en warme voeten de pistes kunt verkennen.
+              a.a-btn(href='reservering.html')
+                span.a-btn-text Reserveer nu
+                span.a-btn-slide-text via het formulier
+                span.a-btn-icon-right
+                  span
         section#section-5
           .row#ContactID
             .divider
@@ -338,7 +344,24 @@ html
                   | Voor reserveringen kunt u gebruik maken van onderstaande link.<br>
                   | Mocht deze echter aangeven dat er geen mogelijkheden zijn kunt u via het reserveringsformulier uw wensen doorgeven. <br>
                   | Misschien kunnen we het eea schuiven zodat we u toch kunnen plaatsen.<br>
-                  | U kunt natuurlijk ook altijd bellen<br> (tel:+43 6 50 41 65 726).
+                  | U kunt natuurlijk ook altijd bellen  (tel:+43 6 50 41 65 726).
+                p
+                  | <strong>Haus Brabant</strong>
+              .row
+                .col-lg-4.col-sm-6 
+                  p 
+                    | Straat en huisnr<br>
+                    | Postcode<br>
+                    | Plaats <br>
+                    | Email-adres<br>
+                    | Telefoonnr<br>
+                .col-lg-4.col-sm-6
+                  p 
+                    | Haupstrasse 108 <br>
+                    | 6632<br>
+                    | Ehrwald<br>
+                    | <span class="reverse">moc.tnabarbsuah@ofni</span><br>
+                    | +43056073202431<br>
               br
               a.a-btn(href='reservering.html')
                 span.a-btn-text Reserveer nu
@@ -348,5 +371,5 @@ html
         .footer
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
-      include ./mobilenav.pug
-include ./footer.pug
+      include ./include/mobilenav.pug
+include ./include/footer.pug
