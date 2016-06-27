@@ -1,0 +1,383 @@
+- var koptext= 'Zomer in'
+- var koptextsub = 'Een ideale omgeving voor wandelaars, mountainbikers..'
+
+// menu
+- var Wandelen = 'Wandelen'
+- var Mountainbike = 'Mountainbike'
+- var Golf = 'Golf'
+- var Rodelen = 'Rodelen'
+- var Klimmen = 'Klimmen'
+- var Activiteiten = 'Activiteiten'
+- var WandelRouters = 'Wandel routes'
+
+// table
+- var Bezienswaardigheid = 'Bezienswaardigheid'
+- var Plaats = 'Plaats'
+- var Land = 'Land'
+- var Webpagina = 'Webpagina'
+
+// repeat var
+- var klikfoto = 'klik op de foto voor meer ....'
+
+doctype html
+html
+  head
+    include ./include/head.pug
+  body#Home
+    overlay.wandel.start-overlay
+    overlay.mountainbike
+    overlay.golf
+    overlay.klimmen
+    .container
+      .header
+        .grid
+          figure.effect-jazz
+            img(src="images/header/zomerbalk.jpg")
+            figcaption
+              h2= koptext
+                span  Ehrwald
+              p= koptextsub
+      .nav-container
+        nav
+          a.navbar-brand.pull-left.grow(href="#")
+          ul
+            li.nav-link
+              a(href="indexEN.html" data-bg="wandel") Home
+            li.nav-link
+              a(href="#section-2" data-bg="wandel")= Wandelen
+            li.nav-link
+              a(href="#section-3" data-bg="mountainbike")= Mountainbike
+            li.nav-link
+              a(href="#section-4" data-bg="golf")= Golf
+            li.nav-link
+              a(href="#section-5" data-bg="wandel")= Rodelen
+            li.nav-link
+              a(href="#section-6" data-bg="klimmen")= Klimmen
+            li.nav-link
+              a(href="#section-7" data-bg="wandel")= Activiteiten
+            li.nav-link.pull-left.topicon
+              a(href="#section-1" data-bg="wandel")
+                img(src='images/top.svg')
+          div.fblogo
+            a(href="https://www.facebook.com/brabantsegezelligheid/" target='new')
+              img(src='images/fb.png')
+          div.taal
+            .de
+              a(href="zomerDE.html")
+                img(src="images/de.png")
+            .nl
+              a(href="zomer.html")
+                img(src="images/nl.png")
+            .en
+              a(href="zomerEN.html")
+                img(src="images/en.png")
+          .nav-left
+          .nav-right
+      .mainbody
+        section#section-1
+        section#section-2
+          .row.row-eq-height
+            .col-lg-8.col-sm-8
+              .editcms.cms-editable
+                h1 Wandelen
+                p
+                  | Talrijke wandelwegen en bergroutes op de spitsen van het Wetterstein- en Ammergebergte in de Lechtaler Alpen
+                  | en Mieminger Kette worden zowel door wandelaars als bergbeklimmers met open armen begroet.
+                  | Men wordt hier met fraaie uitzichten in de ware zin van het woord verwend.
+                  | De acht bergmeertjes van het gebied rondom de Zugspitze zijn absoluut landschappelijke juweeltjes.
+                p
+                  | Wandeling 1: Zugspitze 2.962 m - looptijd: ca. 6 uur
+                  | Omhoog met de Tiroler Zugspitzbahn naar de top van de Zugspitze.
+                  | Naar beneden met de Gletscherbahn of via het moeilijke bergpad naar het plateau van de Zugspitze.
+                  | De weg leidt via de Knorrhütte 2.051 m naar de Gatterl 2.000 m - Feldernjöchl 2.045 m - Hochfeldern Alm 1.732 m –
+                  | Ehrwalder Alm 1.502 m – afdaling met de Ehrwalder Almbahn of te voet via
+                  | de Forst- of Wiesenweg naar het dal.
+                p
+                  | Wandeling 2: Seebensee – Coburger Hütte 1.917 m – wandeltijd: circa 4 uur
+                  | Het vertrekpunt voor deze route is het dalstation van de Ehrwalder Almbahn.
+                  | Men kan met de kabelbaan of te voet het bergrestaurant Ehrwalder Alm bereiken. De brede wandelweg loopt via de Ganghofer`s Rast, langs de Seebenalm tot en met het wondermooi gelegen
+                  | Seebenmeertje. Van daaruit loopt een steil en bochtig pad naar de Coburgerhütte
+                h3 Nordic Walking
+                p
+                  | Vele jaren langlaufervaring in de wintersport vormen de basis van het enthousiasme voor Nordic Walking, een sport welke natuurlijk veel gelijkenis heeft met Langlaufen, ook wel bekend als Nordicskiën.
+                  | Nordic walkers komen in Ehrwald niets te kort. De grote open vlakte tussen Ehrwald, Lermoos en Biberwier is een eldorado voor de nordic walkers.
+                  | Daarnaast zijn er allerlei koppeltrajecten naar naburige dalen. De Hochloipe Ehrwalder Alm nodigt uit tot een sprookjesachtige rondtocht te midden van een uitgestrekt landschap op 1500 meter hoogte.
+              .row
+                .col-lg-4.col-sm-8
+                  h4= Wandelroutes
+                  .foto.reversegrow
+                    a(href='http://www.zugspitzarena.com/nl/info-service/tourenportaal' target='new')
+                      img(src='images/zomer/trail.jpg')
+                      .kliktosee
+                        span
+                          p= klikfoto
+            .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
+                .foto
+                  a(href='images/galZomer/wandelen1.jpg' rel='wandelgroup' title='met de kids onderweg..').groupfb
+                    img(src='images/zomer/wandel1.jpg')
+                  .kliktosee
+                    span
+                      p= klikfoto
+                .foto
+                  a(href='images/galZomer/wandelen2.jpg' rel='wandelgroup' title='ongerepte natuur').groupfb
+                    img(src='images/zomer/wandel2.jpg')
+                  .kliktosee
+                    span
+                      p= klikfoto
+                .foto
+                  a(href='images/galZomer/wandelen3.jpg' rel='wandelgroup' title='uitdagende routes..').groupfb
+                    img(src='images/zomer/wandel3.jpg')
+                  a(href='images/galZomer/wandelen4.jpg' rel='wandelgroup' title='alpenwei').groupfb
+                  a(href='images/galZomer/wandelen5.jpg' rel='wandelgroup' title='prachtige wandeling bergkam').groupfb
+                  a(href='images/galZomer/wandelen6.jpg' rel='wandelgroup' title='prachtige wandeling bergkam').groupfb
+                  .kliktosee
+                    span
+                      p= klikfoto
+        section#section-3
+          .row
+            .divider
+            .col-lg-8.col-sm-8
+              .editcms.cms-editable
+                h1 Mountain Bike
+                p
+                  | De Zugspitz Arena wordt door vele genoemd als het “Eldorado” voor de mountainbikers. Het is niet voor niets al diverse keren uitgeroepen tot het beste mountainbike regio van Tirol. U kunt er zeker van zijn dat u in de Zugspitz Arena voldoende, geprepareerde en bewegwijzerde mountainbikeroutes aantreft.
+                p
+                  | Heeft u behoefte aan een tour onder professionele begeleiding dan staan de fietsprofi's van het Bikeguiding Team Zugspitzarena u met raad en daad ter zijde. Afwisselende tochten in verschillende categorieën worden u hier aangeboden en indien gewenst kunt u er een mountainbike uitrusting huren.
+                p
+                  | Vanuit ons huis zijn de mountainbikeroutes snel en makkelijk te bereiken en naar het mountainbikegebied Ehrwalder Alm zijn het maar een paar minuten.
+                  | De fietsroutes in de Ehrwalder Moos zijn uitstekend geschikt voor degene die zich wat meer op het vlakkere terrein willen begeven. De bergtouren zijn bedoeld voor de getrainde fietser. Voor elke doelgroep vind u bij ons in de Zugspitz Arena de juiste fietsroute.
+                p
+                  | Alvast de route verkennen?
+                  a(href='http://www.zugspitzarena.com/nl/info-service/tourenportaal' target='new') Bike en freeride routes
+            .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
+              .foto
+                a(href='images/galZomer/mountainbike1.jpg' rel='mountainbike').groupfb
+                  img(src='images/zomer/mountainbike1.jpg')
+                .kliktosee
+                  span
+                    p= klikfoto
+              .foto
+                a(href='images/galZomer/mountainbike2.jpg' rel='mountainbike').groupfb
+                  img(src='images/zomer/mountainbike2.jpg')
+                .kliktosee
+                  span
+                    p= klikfoto
+              .foto
+                a(href='images/galZomer/mountainbike3.jpg' rel='mountainbike').groupfb
+                  img(src='images/zomer/mountainbike3.jpg')
+                a(href='images/galZomer/mountainbike4.jpg' rel='mountainbike').groupfb
+                a(href='images/galZomer/mountainbike5.jpg' rel='mountainbike').groupfb
+                .kliktosee
+                  span
+                    p= klikfoto
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              .carousel-foto
+                .slide
+                  img(src='images/zomer/mountainbike1.jpg')
+                .slide
+                  img(src='images/zomer/mountainbike2.jpg')
+                .slide
+                  img(src='images/zomer/mountainbike3.jpg')
+        section#section-4
+          .row
+            .divider
+            .col-lg-8.col-sm-8
+              .editcms.cms-editable
+                h1 Golfen
+                p
+                  | De golfplaats ligt prachtig ingesloten in een wonderschone en rustige omgeving tussen Ehrwald en Lermoos en dat is ongetwijfeld het grootste pluspunt.
+                p
+                  | Wanneer men spreekt over een natuurpracht, dan zal men niet alleen verrast zijn door de grootte van de Wettersteinmassives met Duitslands hoogste berg, de Zugspitze, maar simpelweg onder de indruk zijn van de tot 3.000 meter hoge bergtoppen.
+                p
+                  | De op natuurlijke bodem aangelegde golfbaan is gebouwd naar de top actuele internationale voorschriften en is voor toernooispelen uitermate goed geschikt.
+                p
+                  i Golfclub Zugspitze, Am Rettensee 1, 6632 Ehrwald, Österreich
+            .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
+              .foto
+                a(href='images/galZomer/golf1.jpg' rel='golf').groupfb
+                  img(src='images/zomer/golf1.jpg')
+                .kliktosee
+                  span
+                    p= klikfoto
+              .foto
+                a(href='images/galZomer/golf2.jpg' rel='golf').groupfb
+                  img(src='images/zomer/golf2.jpg')
+                a(href='images/galZomer/golf3.jpg' rel='golf').groupfb
+                .kliktosee
+                  span
+                    p= klikfoto
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/zomer/golf1.jpg')
+        section#section-5
+          .row
+            .divider
+            .col-lg-8.col-sm-8
+              .editcms.cms-editable
+                h1 Rodelen
+                p
+                  | Wie in de zomer naar de Zugspitz Arena trekt moet absoluut eens een ritje op de langste zomerrodelbaan van Tirol (1,5 km). Kinderen, maar ook de papa’s en mama’s, zijn helemaal weg van deze rodelbaan.
+                p
+                  | In de buurt van hotel “Cube” in Biberwier kan je met de Marienbergbahn naar de startplaats.
+                p
+                  | De allerkleinsten kunnen met papa of mama mee op de schoot genieten van een spannende rit naar beneden. Dankzij de rem (en die heb je nodig) kan je zelf je snelheid bepalen. De allereerste rit zal je waarschijnlijk je rodel in toom willen houden, maar al vrij snel komt de raceduivel in je los.
+            .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
+              .foto
+                img(src='images/zomer/rodelen1.jpg')
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              img(src='images/zomer/rodelen1.jpg')
+        section#section-6
+          .row
+            .divider
+            .col-lg-8.col-sm-8
+              .editcms.cms-editable
+                h1 Klimmen
+                p
+                  | Voor wie een liefhebber is van de klimsport zijn er volop mogelijkheden. Ehrwald is een echte bolder klimhal rijk.
+                p
+                  | De nieuwe klimhal heeft de modernste klim-inrichtingen. In de winkel kan uitrusting en accessoires worden geleend of besteld. Er zijn ook cursussen.
+                P
+                  | Alpine klimmers en bergbeklimmers vinden in de Tiroler Zugspitz Arena een verscheidenheid van rotsformaties en klimroutes in alle moeilijkheidsgraden. Door de ligging in het zuiden, veel wandelpaden en routes zijn in de vroege ochtenduren beklimbaar.
+            .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
+              .foto
+                a(href='images/galZomer/klimmen1.jpg' rel='klim').groupfb
+                  img(src='images/zomer/klimmen1.jpg')
+                .kliktosee
+                  span
+                    p= klikfoto
+              .foto
+                a(href='images/galZomer/klimmen2.jpg' rel='klim').groupfb
+                  img(src='images/zomer/klimmen2.jpg')
+                a(href='images/galZomer/klimmen3.jpg' rel='klim').groupfb
+                a(href='images/galZomer/klimmen4.jpg' rel='klim').groupfb
+                a(href='images/galZomer/klimmen5.jpg' rel='klim').groupfb
+                .kliktosee
+                  span
+                    p= klikfoto
+          .row.fotomobile.animated(data-os-animation='fadeIn')
+            .col-sm-12
+              .carousel-foto2
+                .slide
+                  img(src='images/zomer/klimmen1.jpg')
+                .slide
+                  img(src='images/zomer/klimmen2.jpg')
+        section#section-7
+          .row
+            .divider
+            .col-lg-12.col-sm-12
+              .editcms.cms-editable
+                h1 Zugspitze
+                p
+                  | De prachtige tocht met de Tiroler Zugspitzbahn naar het hoogste punt van Duitsland (2.962 m) brengt de bezoeker in een bergwereld met geweldige uitzichten. Eén keer moet men van het “4-landen-uitzicht” genoten hebben, waar bergen van twee- tot drieduizend meter hoogte te zien zijn (en zelfs één van vierduizend meter).
+                  | Vanaf het ruime panoramaterras kan men bij helder weer o.a. de Großglockner (de hoogste berg van Oostenrijk), de Piz Bernina en ook de TV-toren van München herkennen.
+                p
+                  a(href='http://www.zugspitze.at/nl/het-hoogste-punt/de-zugspitze/uitzicht/' target='new') Voor een 360 uitzicht en een zomer en winter aanzicht klik hier
+                p
+                   a(href="http://www.youtube.com/embed/rqZWLk-HsHg?autohide=1&autoplay=1&controls=0" class='fancybox.iframe').fancybox-media Videofragment van de Zugspitzbahn
+                h1 Z-ticket
+                p
+                  | Het Z-Ticket is uw aktiefkaart voor de zomer.
+                  | Met het Z-Ticket zijn vele aanbiedingen incl.
+                  | Daarmee kunt u op de Zugspitze rijden, de zomerbanen gebruiken, op de Heiterwanger See een boottocht maken of een bezoek in onze zwembaden maken.
+                  | Ook de wandelbus kan met uw Z-Ticket gebruikt worden.
+                p
+                  | Alle diensten van het Z-Tickets vindt u&nbsp
+                  a(href='http://www.zugspitzarena.com/de/urlaubsthemen/z-ticket' target='new') hier
+                  | .<br>
+                h1 Activiteiten
+              .containtable
+                | <!--[if !IE]><!-->
+                | <style>
+                | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+                |  td:nth-of-type(1):before { content: "Bezienswaardigheid"; }
+                |  td:nth-of-type(2):before { content: "Plaats"; }
+                |  td:nth-of-type(3):before { content: "Land"; }
+                |  td:nth-of-type(4):before { content: "Web"; }
+                | }
+                | </style>
+                | <!--<![endif]-->
+                table.animated(data-os-animation='fadeIn')
+                  thead
+                    tr
+                      td= Bezienswaardigheid
+                      td= Plaats
+                      td= Land
+                      td= Webpagina
+                  tbody
+                    tr
+                      td Plansee Heiterwang
+                      td Heiterwang
+                      td
+                        img(src= 'images/au.png')
+                      td
+                        a(href='http://www.zugspitzarena.com' target='new') www.zugspitzarena.com
+                    tr
+                      td Burgenwelten Ehrenberg
+                      td Reutte
+                      td
+                        img(src= 'images/au.png')
+                      td
+                        a(href='www.ehrenberg.at' target='new') www.ehrenberg.at
+                    tr
+                      td Schloß Fernstein en Fernstein See
+                      td Nassereith
+                      td
+                        img(src= 'images/au.png')
+                      td
+                        a(href='http://www.fernsteinsee.at' target='new') www.fernsteinsee.at
+                    tr
+                      td EibSee
+                      td Grainau
+                      td
+                        img(src= 'images/de.png')
+                      td
+                        a(href='http://www.eibsee.de' target='new') www.eibsee.de
+                    tr
+                      td Schloß Linderhof
+                      td Ettal
+                      td
+                        img(src= 'images/de.png')
+                      td
+                        a(href='http://www.schlosslinderhof.de' target='new') www.schlosslinderhof.de
+                    tr
+                      td Kloster Ettal
+                      td Ettal
+                      td
+                        img(src= 'images/de.png')
+                      td
+                        a(href='http://www.kloster-ettal.de' target='new') www.kloster-ettal.de
+                    tr
+                      td "het sprookjeskasteel"
+                      td Neuschwanstein	Schwangau
+                      td
+                        img(src= 'images/de.png')
+                      td
+                        a(href='http://www.neuschwanstein.de' target='new') www.neuschwanstein.de
+                    tr
+                      td Geierwally Freilichtbühne
+                      td Elbigenalp
+                      td
+                        img(src= 'images/au.png')
+                      td
+                        a(href='http://www.lechtal.at' target='new') www.lechtal.at
+                    tr
+                      td Geisterklamm
+                      td Leutasch
+                      td
+                        img(src= 'images/au.png')
+                      td
+                        a(href='http://www.leutasch.net' target='new') www.leutasch.net
+                    tr
+                      td Swarovski kristalwerelden
+                      td Wattens
+                      td
+                        img(src= 'images/au.png')
+                      td
+                        a(href='http://kristallwelten.swarovski.com' target='new') kristallwelten.swarovski.com
+        .footer
+          p
+            | Haus Brabant (c) 2016 fam v. Schijndel
+      include ./include/mobilenav.pug
+include ./include/footer.pug

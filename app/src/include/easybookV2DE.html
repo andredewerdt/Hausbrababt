@@ -1,0 +1,22 @@
+<div id="ebFrontEndFrame">Data wordt geladen</div>
+<script src="http://www.easy-booking.at/clientWeb001/js/jquery.easybooking.frontend.v2.js"></script>
+<script type="text/javascript">
+function ebFrontendLoadedCheck() {
+    if(typeof jQuery != "undefined") {
+        if(jQuery.fn.ebFrontEnd) {
+            jQuery("#ebFrontEndFrame").ebFrontEnd({
+                customerId: 3561,
+                serialNo: "7822-2579-9427",
+                localeId: 2,
+                frameId: "ebFrontEndPlugin",
+                frameWidth: "auto",
+                frameHeight: "auto",
+                conversionReservation: "",
+                conversionEnquiry: "",
+                resizeInterval: 500
+            });
+        } else {setTimeout(ebFrontendLoadedCheck,200);}
+    } else {setTimeout(ebFrontendLoadedCheck,200);}
+}
+ebFrontendLoadedCheck();
+</script>
