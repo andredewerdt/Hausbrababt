@@ -6,12 +6,18 @@ $colornavbar : rgba(33, 92, 192,0.9)
   z-index: 999
 .topicon
   display: none
-div.fblogo
+.fblogo, .taal
   position: absolute
-  right: 40px
   top: -50px
-img.fblogo
-  height: 40px
+.fblogo
+  right: 40px
+.taal
+  display: flex
+  right: 75px
+  width: 110px
+  justify-content: space-between
+.fblogo img, .taal img
+  height: 32px
 .nav-container
   width: 100%
   margin-right: -2em
@@ -101,5 +107,7 @@ nav.stuck .topicon
     display: inline
 
 @media screen and (max-width: 768px)
-  div.fblogo
+  .fblogo
     display: none
+  .taal
+    right: 40px

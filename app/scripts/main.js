@@ -14,10 +14,28 @@ function resizeNavBar() {
   });
 }
 
+var doit;
+function resizedw(){
+  resizeNavBar();
+  if(window.innerHeight < window.innerWidth){
+    $('navm').addClass('landscape');
+  } else {
+    $('navm').removeClass('landscape');
+  }
+}
+
+$(window).on('resize', function() {
+  clearTimeout(doit);
+  doit = setTimeout(function() {
+      resizedw();
+  }, 500);
+});
+
 function wisselAchtergrondSeizoen(id, klasse) {
   $(klasse).removeClass('start-overlay');
   $(klasse+'.'+id).addClass('start-overlay');
 }
+
 
 // Clicken op de link zorgt voor scroll en background wisseling
 $(document).on('click', 'nav ul li', function() {
@@ -43,14 +61,6 @@ $(window).scroll(function() {
 });
 
 
-$(window).on('resize', function() {
-  resizeNavBar();
-  if(window.innerHeight < window.innerWidth){
-    $('navm').addClass('landscape');
-  } else {
-    $('navm').removeClass('landscape');
-  }
-});
 
 $(document).ready(function() {
   // set nav en mobile nav
@@ -81,6 +91,24 @@ $(document).ready(function() {
 			media : {}
 		}
 	});
+
+  // carousel-foto
+  $('.carousel-foto').jR3DCarousel({
+    slideClass: 'slide',    //
+    slideLayout : 'fill',  //fill, cover
+    navigation: 'circles',  //squares
+    perspective: 'dynamic',
+    animation: 'slide3D',
+    onSlideShow: function(){}
+  })
+  $('.carousel-foto2').jR3DCarousel({
+    slideClass: 'slide',    //
+    slideLayout : 'fill',  //fill, cover
+    navigation: 'circles',  //squares
+    perspective: 'dynamic',
+    animation: 'slide3D',
+    onSlideShow: function(){}
+  })
 
   // waypoint op sections voor aut aanpassen menubalk
   $(function() {
