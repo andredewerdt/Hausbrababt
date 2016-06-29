@@ -10,13 +10,13 @@
 
 // table
 - var Bezienswaardigheid = 'Sehenswürdigkeit'
-- var Plaats = 'Ort'
+- var Plaats = 'Stadt'
 - var Land = 'Land'
 - var Webpagina = 'Web'
 - var lengte = 'Länge'
 - var Gebied = 'Bereich'
 // repeat varBe
-- var klikfoto = 'Klicken Sie auf das Bild für weitere Foto....'
+- var klikfoto = 'klicken Sie auf das Foto für mehr ....'
 
 doctype html
 html
@@ -29,13 +29,12 @@ html
     overlay.wandelsnow
     .container
       .header
-        .grid
-          figure.effect-jazz
-            img(src="images/header/winterbalk.jpg")
-            figcaption
-              h2= koptext
-                span  Ehrwald
-              p= koptextsub
+        .figure.effect-menu
+          img(src="images/header/winterbalk.jpg")
+          figcaption
+            h2= koptext
+              span  Ehrwald
+            p= koptextsub
       .nav-container
         nav
           a.navbar-brand.pull-left.grow(href="#")

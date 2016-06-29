@@ -1,5 +1,5 @@
 - var koptext= 'Sommer in'
-- var koptextsub = 'Een ideale omgeving voor wandelaars, mountainbikers..'
+- var koptextsub = 'Ein idealer Ort für Wanderer, Mountainbiker usw.'
 
 // menu
 - var Wandelen = 'Wandern'
@@ -11,13 +11,13 @@
 - var WandelRouters = 'Wander routes'
 
 // table
-- var Bezienswaardigheid = 'Bezienswaardigheid'
-- var Plaats = 'Ort'
+- var Bezienswaardigheid = 'Sehenswürdigkeit'
+- var plaats = 'Stadt'
 - var Land = 'Land'
 - var Webpagina = 'Webpagina'
 
 // repeat var
-- var klikfoto = 'Klicken Sie auf das Bild für weitere Foto....'
+- var klikfoto = 'klicken Sie auf das Foto für mehr ....'
 
 doctype html
 html
@@ -30,13 +30,12 @@ html
     overlay.klimmen
     .container
       .header
-        .grid
-          figure.effect-jazz
-            img(src="images/header/zomerbalk.jpg")
-            figcaption
-              h2= koptext
-                span  Ehrwald
-              p= koptextsub
+        .figure.effect-menu
+          img(src="images/header/zomerbalk.jpg")
+          figcaption
+            h2= koptext
+              span  Ehrwald
+            p= koptextsub
       .nav-container
         nav
           a.navbar-brand.pull-left.grow(href="#")
