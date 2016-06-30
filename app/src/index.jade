@@ -55,7 +55,7 @@
 
 - var reserveer = 'Reserveer nu'
 - var viaform = 'via het formulier'
-- var slimkeus = 'een slimme keus'
+- var slimkeus = 'fantatisch!!'
 
 // repeat var
 - var klikfoto = 'klik op de foto voor meer ....'
@@ -95,7 +95,7 @@ html
               li.nav-link
                 a(href="#section-5" data-bg="bar")= Contact
               li.nav-link.pull-left.topicon
-                a(href="#section-1" data-bg="wandel")
+                a(href="#section-1" data-bg="zomer")
                   img(src='images/top.svg')
           div.fblogo
             a(href="https://www.facebook.com/brabantsegezelligheid/" target='new')
@@ -119,7 +119,9 @@ html
               .editcms.cms-editable
                 h1 Proficiat!
                 p
-                  | Je bent terecht gekomen bij het gezelligste <strong>appartementenhuis</strong> in Tirol.
+                  | Je bent terecht gekomen bij het gezelligste <strong>appartementenhuis</strong> in Tirol. 
+                  a(href='https://www.google.nl/maps/place/Haus+Brabant/@47.4061755,10.9151109,17z/data=!3m1!4b1!4m5!3m4!1s0x479cfd367bc4e725:0xf959551d7caf98f7!8m2!3d47.4061719!4d10.9172996' target='new') 
+                    img(src='images/googlemaps.png').gmapsicon
                 p
                   | <strong> Wie zijn wij?</strong> Wij zijn een jong gezin met 5 kinderen. <br> Helmut, Leonie, Joy, Brett, Sky, Yesse en Kate
                 p
@@ -138,11 +140,17 @@ html
                   | Niet voor niets hebben we vele "regulars"; mensen die ons al vele jaren op rij bezoeken!
                 p
                   | Met trots verwijzen wij dan ook naar onze referentie op Zoover vakantiebeoordelingen<br>
+                a.a-btn(href='reservering.html')
+                  span.a-btn-text= reserveer
+                  span.a-btn-slide-text= slimkeus
+                  span.a-btn-icon-right
+                p
               .zoover
                 a(href='http://www.zoover.nl/oostenrijk/tirol/ehrwald/haus-brabant-bayrischerhof-tirol/appartement' target='new')
-                  img(style="border: 0px none ; margin: 1px; padding: 0px;" src="http://www.zoover.nl/shared/images2/nl/logosummarywide.png").img-responsive
+                  img(style="border: 0px none ; margin: 1px; width: 100%; padding: 0px;" src="http://www.zoover.nl/shared/images2/nl/logosummarywide.png")
               .centerrow
                 .periscope
+                  span
             .col-lg-4.col-sm-4.fotocontainer
                 .foto
                   a(href='images/galHoofd/hausbrabant1.jpg' rel='group1' title='Haus Brabant ' ).groupfb
@@ -423,7 +431,7 @@ html
                 p
                   | <strong>Haus Brabant</strong>
               .row
-                .col-lg-4.col-sm-6
+                .col-lg-3.col-sm-4.col-xs-6
                   p= straat
                     | <br/>
                     = postcode
@@ -434,7 +442,7 @@ html
                     | <br>
                     = telefoon
                     | <br>
-                .col-lg-4.col-sm-6
+                .col-lg-3.col-sm-4.col-xs-6
                   p
                     | Haupstrasse 108 <br>
                     | 6632<br>
@@ -447,7 +455,7 @@ html
                 span.a-btn-slide-text= slimkeus
                 span.a-btn-icon-right
                   span
-        .footer
+        .footer 
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
       include ./include/mobilenav.pug
