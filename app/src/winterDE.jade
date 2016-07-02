@@ -309,95 +309,281 @@ html
               img(src='images/winter/avondski1.jpg')
           .row
             .col-lg-12
-              .containtable
-                | <!--[if !IE]><!-->
-                | <style>
-                | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
-                |  td:nth-of-type(1):before { content: "Bezienswaardigheid"; }
-                |  td:nth-of-type(2):before { content: "Plaats"; }
-                |  td:nth-of-type(3):before { content: "Land"; }
-                |  td:nth-of-type(4):before { content: "Web"; }
-                | }
-                | </style>
-                | <!--<![endif]-->
-                table.animated(data-os-animation='fadeIn')
-                  thead
-                    tr
-                      th= Bezienswaardigheid
-                      th= Plaats
-                      th= Land
-                      th= Webpagina
-                  tbody
-                    tr
-                      td Plansee Heiterwang
-                      td Heiterwang
-                      td 
-                        img(src= 'images/au.png')
-                      td
-                        a(href='http://www.zugspitzarena.com' target='new') www.zugspitzarena.com
-                    tr
-                      td Burgenwelten Ehrenberg
-                      td Reutte
-                      td 
-                        img(src= 'images/au.png')
-                      td
-                        a(href='www.ehrenberg.at' target='new') www.ehrenberg.at
-                    tr
-                      td Schloß Fernstein en Fernstein See
-                      td Nassereith
-                      td 
-                        img(src= 'images/au.png')
-                      td
-                        a(href='http://www.fernsteinsee.at' target='new') www.fernsteinsee.at
-                    tr
-                      td EibSee
-                      td Grainau
-                      td 
-                        img(src= 'images/de.png')
-                      td
-                        a(href='http://www.eibsee.de' target='new') www.eibsee.de
-                    tr
-                      td Schloß Linderhof
-                      td Ettal
-                      td 
-                        img(src= 'images/de.png')
-                      td
-                        a(href='http://www.schlosslinderhof.de' target='new') www.schlosslinderhof.de
-                    tr
-                      td Kloster Ettal
-                      td Ettal
-                      td 
-                        img(src= 'images/de.png')
-                      td
-                        a(href='http://www.kloster-ettal.de' target='new') www.kloster-ettal.de
-                    tr
-                      td "het sprookjeskasteel"
-                      td Neuschwanstein	Schwangau
-                      td
-                        img(src= 'images/de.png')
-                      td
-                        a(href='http://www.neuschwanstein.de' target='new') www.neuschwanstein.de
-                    tr
-                      td Geierwally Freilichtbühne
-                      td Elbigenalp
-                      td 
-                        img(src= 'images/au.png')
-                      td
-                        a(href='http://www.lechtal.at' target='new') www.lechtal.at
-                    tr
-                      td Geisterklamm
-                      td Leutasch
-                      td 
-                        img(src= 'images/au.png')
-                      td
-                        a(href='http://www.leutasch.net' target='new') www.leutasch.net
-                    tr
-                      td Swarovski kristalwerelden
-                      td Wattens
-                      td 
-                        img(src= 'images/au.png')
-                      td
-                        a(href='http://kristallwelten.swarovski.com' target='new') kristallwelten.swarovski.com
+            .containtable
+              | <!--[if !IE]><!-->
+              | <style>
+              | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+              |  td:nth-of-type(1):before { content: "Type"; }
+              |  td:nth-of-type(2):before { content: "Bezienswaardigheid"; }
+              |  td:nth-of-type(3):before { content: "Plaats"; }
+              |  td:nth-of-type(4):before { content: "Land"; }
+              |  td:nth-of-type(5):before { content: "km"; }
+              |  td:nth-of-type(6):before { content: "min"; }
+              | }
+              | </style>
+              | <!--<![endif]-->
+              table.animated(data-os-animation='fadeIn')
+                thead
+                  tr
+                    th= Type
+                    th= Bezienswaardigheid
+                    th= Plaats
+                    th= Land
+                    th km
+                    th minuten
+                tbody
+                  tr
+                    td See
+                    td 
+                      a(href='http://www.zugspitzarena.com' target='new') Plansee Heiterwang
+                    td Heiterwang
+                    td 
+                      img(src= 'images/au.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.zugspitzarena.com' target='new') Blindsee
+                    td Biberwier
+                    td 
+                      img(src= 'images/au.png')
+                    td &nbsp
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.zugspitzarena.com' target='new') Mittersee
+                    td Biberwier
+                    td 
+                      img(src= 'images/au.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.zugspitzarena.com' target='new') Loisachquellen
+                    td Biberwier
+                    td 
+                      img(src= 'images/au.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.eibsee.de' target='new') EibSee
+                    td Grainau
+                    td 
+                      img(src= 'images/au.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td Klamm/waterval
+                    td
+                      a(href='http://www.leutasch.net' target='new') web Geisterklamm
+                    td Leutasch
+                    td 
+                      img(src= 'images/au.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.parnachklamm-info.de' target='new') web Partnachklamm
+                    td Garmisch-Partenkichen
+                    td 
+                      img(src= 'images/de.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.hoellentalklamm-info.de' target='new') Höllentalklamm
+                    td Grainaus
+                    td 
+                      img(src= 'images/de.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.imst.at/de/naturjuwele/rosengartenschlucht-blaue-grotte-1609625.html' target='new') Rosengartenschlucht
+                    td Imst
+                    td 
+                      img(src= 'images/au.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.stuibenfall.com' target='new') Stuibenfall
+                    td Umhausen
+                    td 
+                      img(src= 'images/au.png')
+                    td 67.2
+                    td 66
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.stuibenfaelle.at' target='new') Stuibenfälle
+                    td Reutte
+                    td 
+                      img(src= 'images/au.png')
+                    td 20
+                    td 24
+                  tr
+                    td Kastelen
+                    td
+                      a(href='http://www.schlosslinderhof.de' target='new') Schloß Linderhof
+                    td Ettal
+                    td 
+                      img(src= 'images/de.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.kloster-ettal.de' target='new') web Kloster Ettal
+                    td Ettal
+                    td 
+                      img(src= 'images/de.png')
+                    td 36.7
+                    td 36
+                  tr
+                    td &nbsp
+                    td 
+                      a(href='http://www.neuschwanstein.de' target='new') "het sprookjeskasteel"
+                    td Neuschwanstein	Schwangau
+                    td 
+                      img(src= 'images/de.png')
+                    td 40.9
+                    td 40
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.fernsteinsee.at' target='new') web Schloß Fernstein en Fernstein See
+                    td Nassereith
+                    td 
+                      img(src= 'images/au.png')
+                    td &nbsp 
+                    td &nbsp
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http:/www.hohenschwangau.de' target='new') Kasteel Hohenschwangau
+                    td Füssen
+                    td 
+                      img(src= 'images/de.png')
+                    td 39.2
+                    td 36
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='www.ehrenberg.at' target='new') Burgenwelten Ehrenberg
+                    td Reutte
+                    td 
+                      img(src= 'images/au.png')
+                    td 18.4
+                    td 19
+                  tr
+                    td &nbsp
+                    td
+                      a(href='http://www.linderhof.de' target='new') Kasteel Linderhof
+                    td Ettak
+                    td 
+                      img(src= 'images/de.png')
+                    td 45.9
+                    td 48
+                  tr
+                    td Divers
+                    td
+                      a(href='http://kristallwelten.swarovski.com' target='new') Swarovski kristalwerelden
+                    td Wattens
+                    td 
+                      img(src= 'images/au.png')
+                    td 97
+                    td 74
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.glentleiten.de' target='new') Openluchtmuseum Glentleiten
+                    td Grossweil
+                    td 
+                      img(src= 'images/de.png')
+                    td 52.8
+                    td 47
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.knappenwelt.at' target='new') Knappenwelt Gurgltal
+                    td Tarrenz
+                    td 
+                      img(src= 'images/au.png')
+                    td 31.6
+                    td 32
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.oetzi-dorf.at' target='new') Ötzi dorp - Umhausen
+                    td Umhausen
+                    td 
+                      img(src= 'images/au.png')
+                    td 65.3
+                    td 62
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.highline179.com' target='new') Highline 179
+                    td Reutte
+                    td 
+                      img(src= 'images/au.png')
+                    td 20
+                    td 22
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.dachau.nl' target='new') Concentratiekamp
+                    td Dachau
+                    td 
+                      img(src= 'images/de.png')
+                    td 127
+                    td 92
+                  tr
+                    td Stadt
+                    td
+                      a(href='http://www.gapa.de' target='new') Garmisch-Partenkichen
+                    td Garmisch-Partenkichen
+                    td 
+                      img(src= 'images/de.png')
+                    td 22.3
+                    td 22
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.muenchen.de' target='new') München
+                    td München
+                    td 
+                      img(src= 'images/de.png')
+                    td 111
+                    td 87
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.innsbruck.info' target='new') Innsbruck
+                    td Innsbruck
+                    td 
+                      img(src= 'images/au.png')
+                    td 82.5
+                    td 68
+                  tr
+                    td &nbsp 
+                    td
+                      a(href='http://www.fuessen.de' target='new') Füssen
+                    td Füssen
+                    td 
+                      img(src= 'images/de.png')
+                    td 40.9
+                    td 40
         .footer
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
