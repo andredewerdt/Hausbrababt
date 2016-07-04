@@ -37,23 +37,30 @@ html
             p= koptextsub
       .nav-container
         nav
-          a.navbar-brand.pull-left.grow(href="#")
-          ul
-            li.nav-link
-              a(href="indexDE.html" data-bg="winter") Home
-            li.nav-link
-              a(href="#section-2" data-bg="langlaufen")= Langaufen
-            li.nav-link
-              a(href="#section-3" data-bg="skiien")= Ski
-            li.nav-link
-              a(href="#section-4" data-bg="skiien")= Rodelen
-            li.nav-link
-              a(href="#section-5" data-bg="wandelsnow")= Wandelen
-            li.nav-link
-              a(href="#section-6" data-bg="wandelsnow")= Activiteiten
-            li.nav-link.pull-left.topicon
-              a(href="#section-1" data-bg="winter")
-                img(src='images/top.svg')
+          div
+            button(type="button" data-target="#myNavbar").menubutton
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            div
+              a.navbar-brand.pull-left.grow(href="#")
+          div#myNavbar
+            ul
+              li.nav-link
+                a(href="indexDE.html" data-bg="winter") Home
+              li.nav-link
+                a(href="#section-2" data-bg="langlaufen")= Langaufen
+              li.nav-link
+                a(href="#section-3" data-bg="skiien")= Ski
+              li.nav-link
+                a(href="#section-4" data-bg="skiien")= Rodelen
+              li.nav-link
+                a(href="#section-5" data-bg="wandelsnow")= Wandelen
+              li.nav-link
+                a(href="#section-6" data-bg="wandelsnow")= Activiteiten
+              li.nav-link.pull-left.topicon
+                a(href="#section-1" data-bg="winter")
+                  img(src='images/top.svg')
           div.fblogo
             a(href="https://www.facebook.com/brabantsegezelligheid/" target='new')
               img(src='images/fb.png')

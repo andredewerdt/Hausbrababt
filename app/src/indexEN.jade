@@ -81,8 +81,13 @@ html
       .nav-container
         nav
           div
-            a.navbar-brand.pull-left.grow(href="#")
-          div
+            button(type="button" data-target="#myNavbar").menubutton
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            div
+              a.navbar-brand.pull-left.grow(href="#")
+          div#myNavbar
             ul
               li.nav-link
                 a(href="#" data-bg="zomer") Home

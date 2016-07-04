@@ -163,4 +163,11 @@ $(document).ready(function() {
       offset: '25%'
     });
   });
+
+  $(function(){
+    $('button').click(function(){
+      var id=$(this).attr('data-target');
+      $(id).toggleClass('verberg');
+    });
+  });
 });
