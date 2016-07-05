@@ -165,6 +165,12 @@ $(document).ready(function() {
   });
 
   $(function(){
+    if (Modernizr.touch){
+        $('.videozomer .figure').addClass('touchdevice')
+    }
+  });
+
+  $(function(){
     $('button').click(function(){
       var id=$(this).attr('data-target');
       $(id).toggleClass('verberg');

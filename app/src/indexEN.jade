@@ -47,15 +47,15 @@
 - var koptextsubcontact = 'altijd staan we met een lach voor u klaar'
 
 // adres
-- var straat = 'Straat en huisnr'
-- var postcode = 'Postcode'
-- var plaats = 'Plaats'
-- var email = 'Email-adres'
-- var telefoon = 'Telefoonnr'
+- var straat = 'Street and number'
+- var postcode = 'Postalcode'
+- var plaats = 'City'
+- var email = 'Email-address'
+- var telefoon = 'Phonenumber'
 
-- var reserveer = 'Reserveer nu'
-- var viaform = 'via het formulier'
-- var slimkeus = 'een slimme keus'
+- var reserveer = 'Reserve now'
+- var viaform = 'use the form'
+- var slimkeus = 'a smart choice'
 
 // repeat var
 - var klikfoto = 'klik op de foto voor meer ....'
@@ -435,7 +435,8 @@ html
                   | <strong>Haus Brabant</strong>
               .row
                 .col-lg-3.col-sm-4.col-xs-6
-                  p= straat
+                  p.adresfont
+                    = straat
                     | <br/>
                     = postcode
                     | <br>
@@ -446,7 +447,7 @@ html
                     = telefoon
                     | <br>
                 .col-lg-3.col-sm-4.col-xs-6
-                  p
+                  p.adresfont
                     | Haupstrasse 108 <br>
                     | 6632<br>
                     | Ehrwald<br>
