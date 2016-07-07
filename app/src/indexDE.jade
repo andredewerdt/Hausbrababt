@@ -1,65 +1,13 @@
-- var Zomer = 'Sommer'
-- var Winter = 'Winter'
-- var Appartement = 'Apartment'
-- var Contact = 'Kontakt'
-// var balkzomer
-- var koptextzomer = 'Sommer in'
-- var koptextsubzomer= 'Ein idealer Ort für Wanderer, Mountainbiker usw.'
-- var wandelen =  'Wandern'
-- var wandelensub = ' Verschiedene Wander- und Bergwege ...'
-- var mountainbike = 'Mountain bike'
-- var mountainbikesub = 'Alternate Trails und Schönen Aussichten'
-- var golf = 'Golf'
-- var golfsub = 'Ein 9-Loch GolfPlatz mit ein mit dem schönen Alpenpanorama.'
-- var rodelen = 'Rodeln'
-- var rodelensub = 'Sehr empfehlenswert..'
-- var klimmen = 'Klettern'
-- var klimmensub = 'Für die Abenteurer ein tolle Erfahrung'
-- var activeiten = 'Aktivitäten'
-- var activeitensub = 'Ein muss für jeden Urlaub!'
-// var balkwinter
-- var koptextwinter= 'im Winter'
-- var koptextsubwinter = 'garantiert Winterspaβ für die ganze Familie'
-- var langlaufen = 'Langlaufen'
-- var langlaufensub = 'Grösses Loipennetz  '
-- var ski = 'Ski Arena Zugspitze'
-- var skisub = 'Schneesicherheit und ideal für Familien'
-- var rodelen = 'Rodeln'
-- var rodelensub = 'Overdag en s’avonds rodelen/ Rodeln bei Tag und Nacht.'
-- var wandelen = 'Wandern'
-- var wandelensub = 'Sehr empfehlenswert..'
-- var arrenslee = 'Pferdeschlittenfahrt'
-- var arrensleesub = 'Geben Sie Ihren Urlaub ein Romantische Wendung'
-- var uitstapjes = 'Ausflugziele'
-- var uitstapjessub = 'Ausflugsziele in der region und etwas weiter'
-- var koptextApp = 'Wohnungen oder Apartmenten'
-- var koptextAppsub = 'Comfort und modern ausgestattet' 
-- var appartementen = 'Wohnungen oder Apartmenten'
-- var appartementensub = 'Moderne komplett eingerichtete Zimmer ...'
-- var bar = ' Gemutliche stube'
-- var barsub = 'Billard Darts, Tischtennis…'
-- var speelkamer = 'Spielzimmer und Spielplatz'
-- var speelkamersub = 'Ein paradies dür die kleinen..'
-// balkcontact
-- var koptextcontact = ' Der Schönste Ort in Tirol'
-- var koptextsubcontact = 'wir sind mmer da für Sie'
-
-// adres
-- var straat = 'Straβe und Hausnummer'
-- var postcode = 'Postleitzahl'
-- var plaats = 'Stadt'
-- var email = 'E-Mail-Adresse'
-- var telefoon = 'Telefonnummer'
-
-- var reserveer = 'Jetzt Buchen'
-- var viaform = 'mit der Formular'
-- var slimkeus = 'intelligente Wahl'
-
-// repeat var
-- var klikfoto = 'klicken Sie auf das Foto für mehr ....'
-- var klikzoover = 'klicken um Zoover zu offnen...'
-- var klikvideo = 'klicken für ein Eindruck'
-
+- var taal = 'DE'
+if taal == 'NL' 
+  include ./include/index/var_indexNL.pug
+  include ./include/links.pug
+if taal == 'DE'
+  include ./include/index/var_indexDE.pug
+  include ./include/linksDE.pug
+if taal == 'EN'  
+  include ./include/index/var_indexEN.pug
+  include ./include/linksEN.pug
 
 doctype html
 html
@@ -121,28 +69,18 @@ html
           .row.row-eq-height
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Proficiat!! Gratuliere!! Congratulations!!
-                p Sie sind in der schönsten <strong>Familienhaus</strong> in Tirol angekommen.
-                  a(href='https://www.google.de/maps/place/Haus+Brabant/@47.4061755,10.9151109,17z/data=!3m1!4b1!4m5!3m4!1s0x479cfd367bc4e725:0xf959551d7caf98f7!8m2!3d47.4061719!4d10.9172996' target='new') 
-                    img(src='images/googlemaps.png').gmapsicon                
-                p  Sie haben das Juwel in Tirol entdeckt, und das ist schon eine Leistung mit allen Optionen und Möglichkeiten, die das Netz Sie heute bietet.
-                p  Was macht Haus Brabant so besonders? Komfort in den brandneuen Apartments, in einem alten Gebäude realisiert! (1890!). Eine wunderbare Kombination aus alt und neu, mit Panoramablick auf alle Berggipfeln!
-                p  Es fehlt an wie Zu Hause kommen im Winter-Frühjahr-Sommer-Herbst.
-                p  Die gemütliche Atmosphäre in der Stube und um das Lagerfeuer ist einzigartig!
-                p  Und das ist nicht um hoch zu sprechen: Das ist die Meinung unserer Gäste, was man sehen kann mit ein 9.3 auf Zoover.
-                  | Und da sind wir auch Rechtlich stolz auf ..
-                p  Wir hoffen, dass Sie sich bei uns einen sehr schönen Aufenthalt haben, und rested'll nach Hause kommen.
-                p  Es gibt unzählige Möglichkeiten in der Umgebung, sowohl im Winter als auch im Sommer.
-                p  Wenn es irgendwelche Fragen nach Anzeige dieser Website sein, oder wenn Sie spezielle Anforderungen haben, sind wir für Sie da.
-                p  Liebe Grüße, <br/>
-                  |  Helmut und Leonie
-                
-                a.a-btn(href='reserveringDE.html')
+                if taal == 'NL' 
+                  include ./include/index/html_index1.pug
+                if taal == 'DE'
+                  include ./include/index/html_index1DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index1EN.pug
+                a.a-btn(href= reserveerknop)
                   span.a-btn-text= reserveer
                   span.a-btn-slide-text= slimkeus
                   span.a-btn-icon-right
               .zoover
-                a(href='http://www.zoover.nl/oostenrijk/tirol/ehrwald/haus-brabant-bayrischerhof-tirol/appartement' target='new')
+                a(href= zooverlink target='new')
                   img(style="border: 0px none ; margin: 1px; width: 100%; padding: 0px;" src="http://www.zoover.nl/shared/images2/nl/logosummarywide.png")
               .centerrow
                 .periscope
@@ -157,15 +95,15 @@ html
                     span 
                       p= klikfoto
                 .foto
-                  a(href='images/galHoofd/bar.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                  a(href='images/galHoofd/bar.jpg' rel='bar1' title= onzebar ).groupfb
                     img(src='images/stube.png')
                   a(href='images/galHoofd/speelkamer1.jpg' rel='bar1' title='Das Spielzimmer ' ).groupfb
-                  a(href='images/galHoofd/bar2.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar3.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar4.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar5.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar6.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar7.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                  a(href='images/galHoofd/bar2.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar3.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar4.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar5.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar6.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar7.jpg' rel='bar1' title= onzebar ).groupfb
                   .kliktosee
                     span
                       p= klikfoto
@@ -184,7 +122,7 @@ html
                     span
                       p= klikfoto
                 .foto
-                  a(href='http://www.zoover.nl/oostenrijk/tirol/ehrwald/haus-brabant-bayrischerhof-tirol/appartement' target='new')
+                  a(href= zooverlink target='new')
                     img(src='images/zoover1.jpg')
                   .kliktosee
                     span
@@ -252,13 +190,12 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p Haus Brabant liegt im ein romantischen Dorf Ehrwald von einem Tal umgeben, die als Zugspitzarena bekannt ist.
-                p Dieser Name kommt einige vielleicht vertraut und kommt von der Zugspitze, dem höchsten Berg in Deutschland!?!<br>
-                  | Tatsächlich Deutschland ist die Grenze klar oben auf dem Berg, aber immer noch ist wirklich Ehrwald in Österreich! Die typische und traditionelle Architektur auch viel zurück gibt. Ehrwald ist das größte Dorf von die drei in diesem Tal.
-                p Aber was machst, sie sind bei uns zum recht, weil im Sommer ist richtig viel Loss bei uns! jedoch von Ehrwald beginnen angenehme Spaziergänge für den passionierten Wanderer, Nordic Walker, sondern auch für die Bergsteiger.
-                p Wir sind in einem Tal, umgeben von Bergen, was bedeutet, Sie können viele Kilometer sowie Höhenmessgeräte machen. Eine Runde von Fahrrädern geht auch sehr einfach oder für die Fanatikern sind sehr schwierig strecken. Radfahren / Mountainbike-Strecken gibt es haufe, von einfachen bis zu echten schwierige.
-                p Im  der ZugspitzArana finden Sie Acht-ungerade Seen, die eine wärmer als die andere. Gleich um die Ecke finden Sie einen schönen großen Wasserfall, hier Schwimmen ist für die echten Fanatiker.
-                p Sehen Sie das Video unter an für einen Eindruck von der Landschaft.
+                if taal == 'NL' 
+                  include ./include/index/html_index2.pug
+                if taal == 'DE'
+                  include ./include/index/html_index2DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index2EN.pug
           .row
             .col-sm-12
               .videozomer
@@ -332,13 +269,12 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p Warum würden Sie ein weitere Fahrt brauchen für einen Winterurlaub? Bei uns finden Sie das <strong>erste</strong> Skigebiet im Norden Tirol!
-                p Im Winter denken Sie oft an Kälte und Schnee. Aber wussten Sie, dass es oft hohe Temperaturen im Winter in Österreich aufgenommen werden? Der trockene Bergluft ist oft weniger kalt als Sie denken.
-                p Viele der Gäste kommen, um die Pisten zu erkunden.  Aufgrund der Anwesenheit von Schneekanonen und den Gletscher auf der Zugspitze ist Schnee <strong>garantiert</strong>.
-                p Von unserem Haus haben Sie blick auf einige der Pisten. Die ZugspitzArena hat 139km Pisten, mehrere Funparks und Off Piste Strecke für den Enthusiasten.
-                p <strong>Direkt</strong> vor unserem Haus beginnt das Loipennetz, 110 km Loipen stehen ihr kostenlos zur Verfügung.
-                p Und für diejenigen, die Abenteuer und Action lieben, gebt es auch Snowparks und Freeride-Trails.
-                p Wenn Sie wirklich das Sporten nicht so lieben;  in der Sonne auf dem Gipfel des Berges, mit einer Tasse Kaffee oder ein Bier haben Sie auch eine Schöne Tag!
+                if taal == 'NL' 
+                  include ./include/index/html_index3.pug
+                if taal == 'DE'
+                  include ./include/index/html_index3DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index3EN.pug
               .videozomer
                 .grid.videovoorbeeld.animated(data-os-animation='fadeInLeft')
                   .figure
@@ -386,13 +322,13 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p Haus Brabant hat 9 <strong>Appartements</strong> für 2 bis 8 Personen. . Und das neueste hat eine überdachte Terrasse von 40m2!
-                p Alle Apartments sind geräumig und erst kürzlich renoviert.
-                p Haus Brabant liegt an der <strong>Hauptstraße</strong>, hält der (Ski-) Bus ist an der Tür. 
-                p Das Zentrum, Supermarkt und Restaurants sind zu Fuß erreichbar.
-                p Für Wintersportler haben wir einen separaten Raum mit Skischuhheizungen, so dass Sie immer am nächsten Tag mit trockenen und warmen Füßen die Pisten rauf können. 
-                p Im Sommer trifft diesen Raum als ein Fahrradraum, damit Ihr Eigentum auch bei uns sicher ist.
-              a.a-btn(href='reserveringDE.html')
+                if taal == 'NL' 
+                  include ./include/index/html_index3.pug
+                if taal == 'DE'
+                  include ./include/index/html_index3DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index3EN.pug
+              a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
                 span.a-btn-slide-text= viaform 
                 span.a-btn-icon-right
@@ -411,13 +347,12 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p Sie Setsen sich auf verschiedene Weise mit uns in <strong>Verbindung</strong>. Sofern es nicht in der Mitte der Nacht ist, versuchen wir Sie so schnell wie möglich zum Reagieren.
-                p Am liebsten schicken sie uns eine <strong>E-Mail</strong> an <span class="reverse">moc.tnabarbsuah@ofni</span> oder einfach ein WhatsApp, weil wenn wir nicht in die lage sein können wir hierauf so schnell wie möglich antworten.
-                p Für Reservierungen bitte den unten stehenden <strong>Link</strong> verwenden
-                p Wenn da auskommt das es keine Möglichkeiten gibst, bitte verwenden Sie das Reservierung anfrage Formular. Vielleicht können wir was verschieben, so dass wir doch Platz für Sie haben
-                p Bei Fragen bitte anrufen (Tel: +43 6 50 41 65 726).
-                p
-                  | <strong>Haus Brabant</strong>
+                if taal == 'NL' 
+                  include ./include/index/html_index3.pug
+                if taal == 'DE'
+                  include ./include/index/html_index3DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index3EN.pug
               .row
                 .col-lg-3.col-sm-4.col-xs-6
                   p.adresfont
@@ -439,7 +374,7 @@ html
                     | <span class="reverse">moc.tnabarbsuah@ofni</span><br />
                     | +43056073202431<br>
               br
-              a.a-btn(href='reserveringDE.html')
+              a.a-btn(href= reserveerknop )
                 span.a-btn-text= reserveer
                 span.a-btn-slide-text= slimkeus 
                 span.a-btn-icon-right

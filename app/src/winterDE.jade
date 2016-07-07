@@ -1,22 +1,13 @@
-- var koptext= 'Winter in'
-- var koptextsub = 'garantierter Winterspaß für die ganze Familie'
-
-// menu
-- var Langaufen = 'Langaufen'
-- var Ski = 'Ski'
-- var Rodelen = 'Rodlen' 
-- var Wandelen = 'Wandern'
-- var Activiteiten = 'Aktivitäten'
-
-// table
-- var Bezienswaardigheid = 'Sehenswürdigkeit'
-- var Plaats = 'Standort'
-- var Land = 'Land'
-- var Webpagina = 'Web'
-- var lengte = 'Länge'
-- var Gebied = 'Bereich'
-// repeat varBe
-- var klikfoto = 'klicken Sie auf das Foto für mehr ....'
+- var taal = 'DE'
+if taal == 'NL' 
+  include ./include/winter/var_winterNL.pug
+  include ./include/links.pug
+if taal == 'DE'
+  include ./include/winter/var_winterDE.pug
+  include ./include/linksDE.pug
+if taal == 'EN'  
+  include ./include/winter/var_winterEN.pug
+  include ./include/linksEN.pug
 
 doctype html
 html
@@ -47,7 +38,7 @@ html
           div#myNavbar
             ul
               li.nav-link
-                a(href="indexDE.html" data-bg="winter") Home
+                a(href= HomeKnop data-bg="winter") Home
               li.nav-link
                 a(href="#section-2" data-bg="langlaufen")= Langaufen
               li.nav-link
@@ -82,15 +73,12 @@ html
           .row.row-eq-height
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Langaufen
-                p Die große offene Fläche zwischen Ehrwald, Lermoos und Biberwier ist ein Paradies für Liebhaber von Langlaufloipen. Es gibt alle Arten von Drehmomentgängen in die Nachbartäler.
-                p Toller Bonus: alle Langlaufstrecken können kostenlos benützt werden!
-                p Insgesamt umfasst das Loipennetz über 110 km, jeweils Klassisch und zum Skaten. Die einzelnen Strecken sind abwechslungsreich und bieten sowohl für ambitionierte und ruhigere Sportler das Passende.
-                p Schneesicherheit garantieren die Hochloipen sowie die beschneibare Golfrundloipe direkt am Fuße der Zugspitze.
-                p Schönes Highlight: auf den Nachtloipen kann man seine Runden unter dem Sternenhimmel drehen.
-                p Für langlauftouren:  
-                  a(href='http://www.zugspitzarena.com/de/info-service/tourenportal?submit2=1&regionen=&streckemin=0&streckemax=84.6&category=45&dauermin=0&dauermax=46&grad=' target='new') info
-                
+                if taal == 'NL' 
+                  include ./include/winter/html_winter1NL.pug
+                if taal == 'DE'
+                  include ./include/winter/html_winter1DE.pug
+                if taal == 'EN'  
+                  include ./include/winter/html_winter1EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
                 .foto
                   a(href='images/galWinter/langlauf1.jpg' rel='wandelgroup' title='langlaufen').groupfb
@@ -118,27 +106,12 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Ski / Snowboard
-                p Erste Skiregion im Norden Tirols
-                p Die Tiroler Zugspitz Arena bietet Dir 7 sensationelle Skigebiete, die alle schnell erreicht werden können und jedem Anspruch gerecht werden. 139 Pistenkilometer (davon 93 km beschneit) und 58 Bergbahnen stehen Dir zur Verfügung.
-                p Skifahren auf der Zugspitze, in Ehrwald, Lermoos, Biberwier, Bichlbach oder Berwang bedeutet Abwechslung und unvergessliches Schneevergnügen. Von einfachen Pisten für Anfänger und Familien bis hin zu fordernden Abfahrten für geübte Skifahrer ist alles dabei.
-                p Wer Nervenkitzel, Abenteuer und Action sucht, ist in den Snowparks und auf den Freeridestrecken der Tiroler Zugspitz Arena bestens aufgehoben.
-                p Aufregende Pipes und abwechslungsreiche Hindernisse warten auf Deine spektakulären Stunts. In den Snowparks wird es bestimmt nicht langweilig.
-                p Unberührter Tiefschnee, menschenleere Abfahrten und ein atemberaubendes Alpenpanorama: das ist Freeride in Lermoos. Die Freeridestre
-                p Für einen Überblick über die Möglichkeiten zeigt der Ehrwalder Alm alle Info:
-                  a(href='images/winter/skikaartehrwald.pdf' target='new') Ski-kaart Ehrwald
-                p
-                  | Ook voor de snow-boarders heeft Ehrwald heel wat te bieden. Een uitgebreid snowpark met giga jumps en allerlei rails.<br>
-                  | Voor een overzicht van de mogelijkheden geeft de site van de
-                  a(href='http://www.almbahn.at/nl/winter/skigebied/snowpark/' target='new') Ehrwalder Alm
-                  |  alle info
-                p
-                  | Op 3 km van Ehrwald voert een grote zweefbaan in tien minuten naar de top van de Zugspitze (2964 meter), de hoogste berg van Duitsland.
-                  | Het ritje is zo spectaculair dat er ook veel mensen zonder skiuitrusting gebruik van maken.
-                  | Onder de top van de Zugspitze ligt het skigebied Zugspitzplatt (gletscher) dat eveneens vanuit Garmisch-Partenkichen (Duitsland) per bergtreintje te bereiken is.
-                  | Door de hoge ligging vind je hier droomsneeuw van november tot mei, en heeft Ehrwald altijd gegarandeerde sneeuwzekerheid achter de hand. Allemaal heerlijke blauwe en rode carvingpistes geflankeerd door offpiste-hellingen.
-                  | Via een spectaculaire offpiste route is het mogelijk af te dalen naar de Ehrwalder Alm. (Neue Welt)
-                  | Buiten de pistes is de Zugspitzplatt dus een waar diepsneeuwparadijs.
+                if taal == 'NL' 
+                  include ./include/winter/html_winter2NL.pug
+                if taal == 'DE'
+                  include ./include/winter/html_winter2DE.pug
+                if taal == 'EN'  
+                  include ./include/winter/html_winter2EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 a(href='images/galWinter/ski1.jpg' rel='ski' title='Tiroler Zugspitz Arena/Christoph Jordan' ).groupfb
@@ -166,9 +139,9 @@ html
                 | <!--[if !IE]><!-->
                 | <style>
                 | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
-                |  td:nth-of-type(1):before { content: "Standort"; }
-                |  td:nth-of-type(2):before { content: "Länge "; }
-                |  td:nth-of-type(3):before { content: "Bereich "; }
+                |  td:nth-of-type(1):before { content: "#{Plaats}"; }
+                |  td:nth-of-type(2):before { content: "#{Lengte}"; }
+                |  td:nth-of-type(3):before { content: "#{Gebied}"; }
                 |  td:nth-of-type(4):before { content: "Web"; }
                 | }
                 | </style>
@@ -230,14 +203,12 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Rodeln
-                p Ein absolutes Highlight in jedem Urlaub! Nachtrodeln auf die beleuchtete Talabfahrt der Ehwalder Almbahn . Das Tirolerhaus, die Ehrwalder Alm, die Ganghofer Hütte und die Brentalm sorgen während der Rodelabende für Euer leibliches Wohl. Mit Live Musik wird der Abend so richtig stimmungsvoll.
-                p Länge: 3 km Höhenunterschied: 400m
-                p Rodeln wird ein zur stimmigen Abwechslung, am Grubigstein in Lermoos geht Loss. Hier befindet sich die längste Naturrodelbahn der Region. Rodeln wird hier zur stimmigen Abwechslung.
-                p Länge: 3,5 km Höhenunterschied: 330 m
-                p Start: Brettlalm | Mittelstation Grubigstein | Lermoos
-                p Ziel: Talstation Hochmoosexpress Grubigstein | Lermoos
-
+                if taal == 'NL' 
+                  include ./include/winter/html_winter3NL.pug
+                if taal == 'DE'
+                  include ./include/winter/html_winter3DE.pug
+                if taal == 'EN'  
+                  include ./include/winter/html_winter3EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 img(src='images/winter/rodelen1.jpg')
@@ -251,12 +222,12 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Zauberhaftes Winterwunderland
-                p Wandern ist nur etwas für den Sommer? Ganz und gar nicht! Die Bergwelt hat im Winter viel zu bieten! 
-                p Auf über 60 km geräumten Winterwanderwegen lässt sich gesunde Höhenluft tanken und die zauberhafte Schneelandschaft genießen. Stapfe gemütlich oder sportlich durch die weiße Idylle und kombiniere Deinen Tag mit einer Einkehr auf einer Skihütte. Beim Winterwandern in der Tiroler Zugspitz Arena kommst Du bestimmt auf Deine Kosten. 
-                p Für einen Überblick von winterwandern 
-                  a(href='http://www.zugspitzarena.com/de/tourdetail?tour=1503657' target='new') wegen
-
+                if taal == 'NL' 
+                  include ./include/winter/html_winter3NL.pug
+                if taal == 'DE'
+                  include ./include/winter/html_winter3DE.pug
+                if taal == 'EN'  
+                  include ./include/winter/html_winter3EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 img(src='images/winter/wandelen1.jpg')
@@ -272,14 +243,12 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1= Activiteiten
-                h3 Pferdeschlittenfahrt
-                p Wild romantisch lässt sich die Tiroler Zugspitz Arena bei einer Pferdeschlittenfahrt erkunden.<br> Dick eingepackt und in Decken gehüllt kannst Du so die bezaubernde Winteridylle erkunden. Ein Muss für jeden Urlaub!
-                p <br>
-                p <br>
-                h3 Nachtskilauf
-                p Skifahren bei Nacht. Hell erleuchtete Pisten und das Lichtermeer im Tal machen die Nacht zu einem besonderen Erlebnis für Pistenfreunde. Wer seinen Skitag verlängern oder einfach einmal bei Nacht auf die Piste möchte gibt es Möglichkeiten in Lermoos und Berwang.
-              
+                if taal == 'NL' 
+                  include ./include/winter/html_winter4NL.pug
+                if taal == 'DE'
+                  include ./include/winter/html_winter4DE.pug
+                if taal == 'EN'  
+                  include ./include/winter/html_winter4EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 img(src='images/winter/arrenslee1.jpg' alt='Arrenslee')
@@ -290,15 +259,15 @@ html
               img(src='images/winter/avondski1.jpg')
           .row
             .col-lg-12
-              h3= Activiteiten
+              h3 Uitstapjes
               .containtable
                 | <!--[if !IE]><!-->
                 | <style>
                 | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
-                |  td:nth-of-type(1):before { content: "Type"; }
-                |  td:nth-of-type(2):before { content: "Sehenswürdigkeit"; }
-                |  td:nth-of-type(3):before { content: "Standort"; }
-                |  td:nth-of-type(4):before { content: "Land"; }
+                |  td:nth-of-type(1):before { content: "#{Type}"; }
+                |  td:nth-of-type(2):before { content: "#{Bezienswaardigheid}"; }
+                |  td:nth-of-type(3):before { content: "#{Plaats}"; }
+                |  td:nth-of-type(4):before { content: "#{Land}"; }
                 |  td:nth-of-type(5):before { content: "km"; }
                 |  td:nth-of-type(6):before { content: "min"; }
                 | }

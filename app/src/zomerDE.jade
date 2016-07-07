@@ -1,25 +1,13 @@
-- var koptext= 'Sommer in'
-- var koptextsub = 'Ein idealer Ort für Wanderer, Mountainbiker usw.'
-
-// menu
-- var Wandelen = 'Wandern'
-- var Mountainbike = 'Mountainbike'
-- var Golf = 'Golf'
-- var Rodelen = 'Schlitteln' 
-- var Klimmen = 'Klettern'
-- var Activiteiten = 'Aktivitäten'
-- var WandelRouters = 'Wander routes'
-
-// table
-- var Type= 'Type'
-- var Bezienswaardigheid = 'Sehenswürdigkeit'
-- var Plaats = 'Stadt'
-- var Land = 'Land'
-
-// repeat var
-- var klikfoto = 'klicken Sie auf das Foto für mehr ....'
-
-// let op : link naar zugspitze ook aangepast!! voor duitstalig
+- var taal = 'DE'
+if taal == 'NL' 
+  include ./include/zomer/var_zomerNL.pug
+  include ./include/links.pug
+if taal == 'DE'
+  include ./include/zomer/var_zomerDE.pug
+  include ./include/linksDE.pug
+if taal == 'EN'  
+  include ./include/zomer/var_zomerEN.pug
+  include ./include/linksEN.pug
 
 doctype html
 html
@@ -50,7 +38,7 @@ html
           div#myNavbar
             ul
               li.nav-link
-                a(href="indexDE.html" data-bg="wandel") Home
+                a(href= HomeKnop data-bg="wandel") Home
               li.nav-link
                 a(href="#section-2" data-bg="wandel")= Wandelen
               li.nav-link
@@ -87,22 +75,17 @@ html
           .row.row-eq-height
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Wandern
-                p Insgesamt sind rund 150 verschiedene Trails zur Verfügung. Die Auswahl reicht von Lichtpfade ,Erlebnispfade bis hin zu anspruchsvollen Klettertouren und Bergspitzen. Die größte Herausforderung ist die Zugspitze mit 2962 Metern. Auf Anraten von uns haben viele Gäste, auch mit Kindern, dem weg zu Fuß zur Seebensee gefunden!
-                p Seebensee - Coburger Hütte 1917 m - Gehzeit: ca. 4 Stunden
-                p Der Ausgangspunkt für diese Route ist die Talstation der Ehrwalder Alm. Eine Seilbahn geht auf bis Bergrestaurant Tiroler Haus. Der Breiten Wanderweg führt durch die Ganghofer`s Rast zum Seebenalm.  Oder Sie laufen von Unter Station durch die Hohegang direkt nach die  Seebenalm .. .. Von Seebenalm lauen Sie zur wunderschön gelegenen SeebenSee. Für diejenigen, die noch was Energie übrig hatte lauf einem steilen und gewundenen Pfad zum Coburgerhütte. Hier können Sie voll genießen können von die wunderschöne blick auf zwei Seen.
-                p Ein sehr schöner Spaziergang, und auch gut zu tun, ist die Weg von der Zugpitze über die Gatterl zum Ehrwalderalm.
-                p Zugspitze 2.962 m – Lauf Zeit: 6 Stunden
-                p Mit der Seilbahn fahren Sie bis zum die top von der Zugspitze. Nach unter mit der Gletscherbahn oder laufen Sie ein schwierige Gehweg runter bis auf das Plateau der Zugspitze. Der Weg führt durch die Knorrhütte 2.051 m bis 2.000 m Gatterl - Feldernjöchl 2.045 m - 1.732 m Hochfeldern Alm - Ehrwalder Alm 1.502 m - Talfahrt mit der Ehrwalder Alm oder zu Fuß über den Forst- oder Wiesenweg ins Tal.
-                
-                h3 Nordic Walking
-                p Die langjährige Erfahrung in Langlaufen ist die Grundlage der Begeisterung für Nordic Walking, die natürlich viel Ähnlichkeit mit nordischen langlaufen hat, auch als Nordic Ski bekannt. 
-                p Nordic Walker kommen in Ehrwald nichts zu kurz. Die große offene Fläche zwischen Ehrwald, Lermoos und Biberwier ist ein Paradies für Nordic Walker. Es gibt alle Arten von Drehmomentgängen in die Nachbartäler. Die Hochloipe Ehrwalder Alm lädt Sie ein zu einem Märchenfahrt mitten in ein ausgestreckte Landschaft auf 1500 Meter Höhe.
+                if taal == 'NL' 
+                  include ./include/zomer/html_zomer1NL.pug
+                if taal == 'DE'
+                  include ./include/zomer/html_zomer1DE.pug
+                if taal == 'EN'  
+                  include ./include/zomer/html_zomer1EN.pug
               .row    
                 .col-lg-4.col-sm-8
                   h4= Wandelroutes
                   .foto.reversegrow  
-                    a(href='http://www.zugspitzarena.com/de/info-service/tourenportal' target='new')
+                    a(href='http://www.zugspitzarena.com/nl/info-service/tourenportaal' target='new')
                       img(src='images/zomer/trail.jpg')
                       .kliktosee
                         span
@@ -134,14 +117,12 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Mountain Bike
-                p Die Zugspitz Arena wird von vielen als das "Eldorado" für Mountainbiker genannt. Es ist kein Zufall, dass es mehrmals als die besten Mountainbike-Region Tirol gewählt wird. Sie können sicher sein, dass Sie genug in der Zugspitz Arena, präparierte Waldwegen finden.
-                p Möchte Sie eine Tour unter professioneller Aufsicht, dann sind die Bikeguiding-Team von der Zugspitzarena für Sie da. Alternative Touren werden in verschiedenen Kategorien angeboten und, falls gewünscht, können Sie ein Mountainbike Ausrüstung mieten.
-                p Von unserem Haus sind die Mountainbike-Strecken schnell und einfach zu erreichen  und nach das mountainbike Berggebiet Ehrwalder Alm sind es nur ein paar Minuten. 
-                p Die Routen in der Ehrwalder Moos sind fur diejenigen, die etwas mehr auf dem flacheren Gelände bewegen wollen. Die Bergtouren sind für den geschulten Radfahrer konzipiert. Für jede Zielgruppe finden Sie in unserem Zugspitz richtigen Radweg zu finden.
-                p Mountainbike mit Tretunterstützung? Das ist kein Problem, jeder Fahrradverleih warten auf Sie, und auf dem Berg finden Sie viele Ladestationen.
-                p Bereits die Route entdecken? 
-                  a(href='http://www.zugspitzarena.com/de/info-service/tourenportal' target='new') Bike und Freeride-Strecken
+                if taal == 'NL' 
+                  include ./include/zomer/html_zomer2NL.pug
+                if taal == 'DE'
+                  include ./include/zomer/html_zomer2DE.pug
+                if taal == 'EN'  
+                  include ./include/zomer/html_zomer2EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 a(href='images/galZomer/mountainbike1.jpg' rel='mountainbike').groupfb
@@ -177,11 +158,12 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Golfen
-                p Auf dem 9-Loch Golfplatz der Tiroler Zugspitz Arena spielst Du mit direktem Blick auf die Zugspitze. Wer Besonderes sucht, wird hier mit dem schönen Alpenpanorama belohnt.
-                p Der Tiroler Zugspitz Golfplatz liegt auf ca. 1.000 Meter mit großzügig angelegten Spielbahnen, bei denen sowohl Könner wie auch Anfänger ihre Herausforderung finden.
-                p
-                  i Golfclub Zugspitze, Am Rettensee 1, 6632 Ehrwald, Österreich
+                if taal == 'NL' 
+                  include ./include/zomer/html_zomer3NL.pug
+                if taal == 'DE'
+                  include ./include/zomer/html_zomer3DE.pug
+                if taal == 'EN'  
+                  include ./include/zomer/html_zomer3EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 a(href='images/galZomer/golf1.jpg' rel='golf').groupfb
@@ -204,10 +186,12 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Schlitteln
-                p Wer im Sommer in der Zugspitz Arena ist sollte auf jeden Fall eine Fahrt auf der längsten Sommerrodel in Tirol (1,5 km) machen. Kinder, sondern auch die Papis und Mamis, lieben diese Rodelbahn.
-                p In der Nähe von Hotel "MyTirol" in Biberwier gehen Sie mit die Marienbergbahn zum startplatz.
-                p Die Kleinen können natürlich mit Mama oder Papa auf die Schoss um von diese fahrt zu genießen. Mit der Brems (und die benötigen Sie), können Sie Ihre Geschwindigkeit bestimmen. Die allererste fahrt sollte Sie wahrscheinlich noch ruhig fahren, aber dann geht’s Loss…. 
+                if taal == 'NL' 
+                  include ./include/zomer/html_zomer4NL.pug
+                if taal == 'DE'
+                  include ./include/zomer/html_zomer4DE.pug
+                if taal == 'EN'  
+                  include ./include/zomer/html_zomer4EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 img(src='images/zomer/rodelen1.jpg')
@@ -219,11 +203,12 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Klettern
-                p Für wem ein Hartz für Klettern hatte, gibt es viele Möglichkeiten. Ehrwald hat eine neue Kletterhalle für 1267m2 klettervergnügen.
-                p Die neue Kletterhalle verfügt über vielfältige und modernste Klettervorrichtungen. Im Klettershop kann Ausrüstung sowie Zubehör geliehen oder bestellt werden. Auch Kurse werden Angeboten. Das Sport-Bistro sorgt für Erfrischungen. Die Kletterhalle ist wettkampftauglich.
-                p Alpine Sportkletterer und Bergsteiger finden in der Tiroler Zugspitz Arena eine Vielzahl an Felsmassiven, Klettergärten sowie Klettersteigen in allen Graden. Durch die südseitig gelegene Lage sind viele Steige und Routen schon in den frühen Morgenstunden kletterbar.
-                p Glauben Sie wirklich in Tarzan, dann können Sie den Kletterwald besuchen, hier können Sie 5 Kurse mit 60 herausfordernden Kletterelemente finden.
+                if taal == 'NL' 
+                  include ./include/zomer/html_zomer5NL.pug
+                if taal == 'DE'
+                  include ./include/zomer/html_zomer5DE.pug
+                if taal == 'EN'  
+                  include ./include/zomer/html_zomer5EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 a(href='images/galZomer/klimmen1.jpg' rel='klim').groupfb
@@ -252,308 +237,287 @@ html
             .divider
             .col-lg-12.col-sm-12
               .editcms.cms-editable
-                h1 Wasser-Spaß
-                p Zur Abkühlung gehen Sie nach eine der acht kristallklaren Bergseen, oder rutschen Sie von der gelben Rutsche in Panorambad in Lermoos! 
-                p Und was derzeit ziemlich cool ist, ist das Paddel Surfen. Von Ihrem Bord, haben Sie einen fantastischen Blick auf der Heiterwangersee.
-                p Sollte ein Tag schlechter Wetter sein, dann gibst ein modernes Hallenbad in Ehrwald mit Salzwasser Bad und natürlich eine Rutsche.
-                p Für die sportlichen unter uns gibt es zahlreiche Möglichkeiten zum Tauchen.
-                p Entdecke beim Canyoning die schönsten Gebirgsschluchten in der Tiroler Zugspitz Arena! Beim Abseilen entlang faszinierender Wasserfälle oder Kraterwände, beim Klettern über massive Felsen oder bei Sprüngen ins türkise Nass - Canyoning ist Abenteuer für Groß & Klein.
-                p Oder kombinier ein Tour mit Wildwasser-Rafting, um Ihnen Urlaub unvergesslich zu machen.
-
-                h1 In der Luft ..
-                p Die Freiheit des Himmels, Paragliding ist auch in der Tiroler Zugspitz Arena ein echtes Erlebnis, nicht nur durch die sensationelle Aussicht auf die Bergwelt inklusive Zugspitze.
-                p Zusammen mit dem Paraglide-Experten der Region Alexander Rauter, haben die Bergbahnen gute Bedingungen für Paraglider geschaffen. 
-                  a(href='www.flyteam.info' target='new') www.flyteam.info
-                p Für diejenigen, die sein Hobby zu Hause nicht verlassen kann, kann im Tal zwischen Ehrwald und Lermoos eine Landungsplatz für Modellflugzeugen finden. Wie wir zuvor gesagt, hat für jeden von uns gedacht!
-
-                h1 Zugspitze
-                p Die Fahrt mit der Tiroler Zugspitzbahn auf den höchsten Punkt in Deutschland (2962 m) führt Sie in die Berge mit herrlicher Aussicht. Einmal sollte man von die "Vier-Länder-Blick" geniessen, wo Berge von zwei bis dreitausend Meter hoch zu sehn sein (und sogar eine von viertausend Meter). Von der großen Terrasse mit Panoramablick bei klarem Wetter kann unter anderem den Großglockner (der höchste Berg in Österreich), der Piz Bernina und auch der Fernsehturm in München erkennen.
-                p Für eine 360-Ansicht und eine Sommer-und Winter-Ansicht klicken 
-                  a(href='http://www.zugspitze.at/de/gipfel/panorama/panorama/' target='new') Sie hier
-                p
-                   a(href="http://www.youtube.com/embed/rqZWLk-HsHg?autohide=1&autoplay=1&controls=0" class='fancybox.iframe').fancybox-media Videofragment van de Zugspitzbahn
-                h1 Z-ticket
-                p Entdecke die Region mit vielen Vorteilen: mit dem Z-Ticket kannst Du viele Vorzüge genießen!
-                p Die Aktivkarte bietet Dir viele Inklusiv Leistungen und weitere Vergünstigungen. Ohne zusätzlichen Eintritt kommt man z.B. in den Genuss der Bergbahnen, Busse, Frei- & Hallenbäder uvm. Absolutes Highlight ist eine Fahrt auf die Zugspitze.
-                p Alle Leistungen der Z-Tickets finden  Sie hier.
-                  a(href='http://www.zugspitzarena.com/de/urlaubsthemen/z-ticket' target='new') hier
-                  | .<br>
-                h1= Activiteiten
-                .containtable
-                  | <!--[if !IE]><!-->
-                  | <style>
-                  | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
-                  |  td:nth-of-type(1):before { content: "Type"; }
-                  |  td:nth-of-type(2):before { content: "Bezienswaardigheid"; }
-                  |  td:nth-of-type(3):before { content: "Plaats"; }
-                  |  td:nth-of-type(4):before { content: "Land"; }
-                  |  td:nth-of-type(5):before { content: "km"; }
-                  |  td:nth-of-type(6):before { content: "min"; }
-                  | }
-                  | </style>
-                  | <!--<![endif]-->
-                  table.animated(data-os-animation='fadeIn')
-                    thead
-                      tr
-                        th= Type
-                        th= Bezienswaardigheid
-                        th= Plaats
-                        th= Land
-                        th km
-                        th minuten
-                    tbody
-                      tr
-                        td See
-                        td 
-                          a(href='http://www.zugspitzarena.com' target='new') Plansee Heiterwang
-                        td Heiterwang
-                        td 
-                          img(src= 'images/au.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.zugspitzarena.com' target='new') Blindsee
-                        td Biberwier
-                        td 
-                          img(src= 'images/au.png')
-                        td &nbsp
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.zugspitzarena.com' target='new') Mittersee
-                        td Biberwier
-                        td 
-                          img(src= 'images/au.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.zugspitzarena.com' target='new') Loisachquellen
-                        td Biberwier
-                        td 
-                          img(src= 'images/au.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.eibsee.de' target='new') EibSee
-                        td Grainau
-                        td 
-                          img(src= 'images/au.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td Klamm/waterval
-                        td
-                          a(href='http://www.leutasch.net' target='new') web Geisterklamm
-                        td Leutasch
-                        td 
-                          img(src= 'images/au.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.parnachklamm-info.de' target='new') web Partnachklamm
-                        td Garmisch-Partenkichen
-                        td 
-                          img(src= 'images/de.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.hoellentalklamm-info.de' target='new') Höllentalklamm
-                        td Grainaus
-                        td 
-                          img(src= 'images/de.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.imst.at/de/naturjuwele/rosengartenschlucht-blaue-grotte-1609625.html' target='new') Rosengartenschlucht
-                        td Imst
-                        td 
-                          img(src= 'images/au.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.stuibenfall.com' target='new') Stuibenfall
-                        td Umhausen
-                        td 
-                          img(src= 'images/au.png')
-                        td 67.2
-                        td 66
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.stuibenfaelle.at' target='new') Stuibenfälle
-                        td Reutte
-                        td 
-                          img(src= 'images/au.png')
-                        td 20
-                        td 24
-                      tr
-                        td Kastelen
-                        td
-                          a(href='http://www.schlosslinderhof.de' target='new') Schloß Linderhof
-                        td Ettal
-                        td 
-                          img(src= 'images/de.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.kloster-ettal.de' target='new') web Kloster Ettal
-                        td Ettal
-                        td 
-                          img(src= 'images/de.png')
-                        td 36.7
-                        td 36
-                      tr
-                        td &nbsp
-                        td 
-                          a(href='http://www.neuschwanstein.de' target='new') "het sprookjeskasteel"
-                        td Neuschwanstein	Schwangau
-                        td 
-                          img(src= 'images/de.png')
-                        td 40.9
-                        td 40
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.fernsteinsee.at' target='new') web Schloß Fernstein en Fernstein See
-                        td Nassereith
-                        td 
-                          img(src= 'images/au.png')
-                        td &nbsp 
-                        td &nbsp
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http:/www.hohenschwangau.de' target='new') Kasteel Hohenschwangau
-                        td Füssen
-                        td 
-                          img(src= 'images/de.png')
-                        td 39.2
-                        td 36
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='www.ehrenberg.at' target='new') Burgenwelten Ehrenberg
-                        td Reutte
-                        td 
-                          img(src= 'images/au.png')
-                        td 18.4
-                        td 19
-                      tr
-                        td &nbsp
-                        td
-                          a(href='http://www.linderhof.de' target='new') Kasteel Linderhof
-                        td Ettak
-                        td 
-                          img(src= 'images/de.png')
-                        td 45.9
-                        td 48
-                      tr
-                        td Divers
-                        td
-                          a(href='http://kristallwelten.swarovski.com' target='new') Swarovski kristalwerelden
-                        td Wattens
-                        td 
-                          img(src= 'images/au.png')
-                        td 97
-                        td 74
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.glentleiten.de' target='new') Openluchtmuseum Glentleiten
-                        td Grossweil
-                        td 
-                          img(src= 'images/de.png')
-                        td 52.8
-                        td 47
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.knappenwelt.at' target='new') Knappenwelt Gurgltal
-                        td Tarrenz
-                        td 
-                          img(src= 'images/au.png')
-                        td 31.6
-                        td 32
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.oetzi-dorf.at' target='new') Ötzi dorp - Umhausen
-                        td Umhausen
-                        td 
-                          img(src= 'images/au.png')
-                        td 65.3
-                        td 62
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.highline179.com' target='new') Highline 179
-                        td Reutte
-                        td 
-                          img(src= 'images/au.png')
-                        td 20
-                        td 22
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.dachau.nl' target='new') Concentratiekamp
-                        td Dachau
-                        td 
-                          img(src= 'images/de.png')
-                        td 127
-                        td 92
-                      tr
-                        td Stadt
-                        td
-                          a(href='http://www.gapa.de' target='new') Garmisch-Partenkichen
-                        td Garmisch-Partenkichen
-                        td 
-                          img(src= 'images/de.png')
-                        td 22.3
-                        td 22
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.muenchen.de' target='new') München
-                        td München
-                        td 
-                          img(src= 'images/de.png')
-                        td 111
-                        td 87
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.innsbruck.info' target='new') Innsbruck
-                        td Innsbruck
-                        td 
-                          img(src= 'images/au.png')
-                        td 82.5
-                        td 68
-                      tr
-                        td &nbsp 
-                        td
-                          a(href='http://www.fuessen.de' target='new') Füssen
-                        td Füssen
-                        td 
-                          img(src= 'images/de.png')
-                        td 40.9
-                        td 40
+                if taal == 'NL' 
+                  include ./include/zomer/html_zomer6NL.pug
+                if taal == 'DE'
+                  include ./include/zomer/html_zomer6DE.pug
+                if taal == 'EN'  
+                  include ./include/zomer/html_zomer6EN.pug
+              .containtable
+                | <!--[if !IE]><!-->
+                | <style>
+                | @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+                |  td:nth-of-type(1):before { content: "#{Type}"; }
+                |  td:nth-of-type(2):before { content: "#{Bezienswaardigheid}"; }
+                |  td:nth-of-type(3):before { content: "#{Plaats}"; }
+                |  td:nth-of-type(4):before { content: "#{Land}"; }
+                |  td:nth-of-type(5):before { content: "km"; }
+                |  td:nth-of-type(6):before { content: "min"; }
+                | }
+                | </style>
+                | <!--<![endif]-->
+                table.animated(data-os-animation='fadeIn')
+                  thead
+                    tr
+                      th= Type
+                      th= Bezienswaardigheid
+                      th= Plaats
+                      th= Land
+                      th km
+                      th minuten
+                  tbody
+                    tr
+                      td See
+                      td 
+                        a(href='http://www.zugspitzarena.com' target='new') Plansee Heiterwang
+                      td Heiterwang
+                      td 
+                        img(src= 'images/au.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.zugspitzarena.com' target='new') Blindsee
+                      td Biberwier
+                      td 
+                        img(src= 'images/au.png')
+                      td &nbsp
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.zugspitzarena.com' target='new') Mittersee
+                      td Biberwier
+                      td 
+                        img(src= 'images/au.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.zugspitzarena.com' target='new') Loisachquellen
+                      td Biberwier
+                      td 
+                        img(src= 'images/au.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.eibsee.de' target='new') EibSee
+                      td Grainau
+                      td 
+                        img(src= 'images/au.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td Klamm/waterval
+                      td
+                        a(href='http://www.leutasch.net' target='new') web Geisterklamm
+                      td Leutasch
+                      td 
+                        img(src= 'images/au.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.parnachklamm-info.de' target='new') web Partnachklamm
+                      td Garmisch-Partenkichen
+                      td 
+                        img(src= 'images/de.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.hoellentalklamm-info.de' target='new') Höllentalklamm
+                      td Grainaus
+                      td 
+                        img(src= 'images/de.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.imst.at/de/naturjuwele/rosengartenschlucht-blaue-grotte-1609625.html' target='new') Rosengartenschlucht
+                      td Imst
+                      td 
+                        img(src= 'images/au.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.stuibenfall.com' target='new') Stuibenfall
+                      td Umhausen
+                      td 
+                        img(src= 'images/au.png')
+                      td 67.2
+                      td 66
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.stuibenfaelle.at' target='new') Stuibenfälle
+                      td Reutte
+                      td 
+                        img(src= 'images/au.png')
+                      td 20
+                      td 24
+                    tr
+                      td= Kastelen
+                      td
+                        a(href='http://www.schlosslinderhof.de' target='new') Schloß Linderhof
+                      td Ettal
+                      td 
+                        img(src= 'images/de.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.kloster-ettal.de' target='new') web Kloster Ettal
+                      td Ettal
+                      td 
+                        img(src= 'images/de.png')
+                      td 36.7
+                      td 36
+                    tr
+                      td &nbsp
+                      td 
+                        a(href='http://www.neuschwanstein.de' target='new') "het sprookjeskasteel"
+                      td Neuschwanstein	Schwangau
+                      td 
+                        img(src= 'images/de.png')
+                      td 40.9
+                      td 40
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.fernsteinsee.at' target='new') web Schloß Fernstein en Fernstein See
+                      td Nassereith
+                      td 
+                        img(src= 'images/au.png')
+                      td &nbsp 
+                      td &nbsp
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http:/www.hohenschwangau.de' target='new') Kasteel Hohenschwangau
+                      td Füssen
+                      td 
+                        img(src= 'images/de.png')
+                      td 39.2
+                      td 36
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='www.ehrenberg.at' target='new') Burgenwelten Ehrenberg
+                      td Reutte
+                      td 
+                        img(src= 'images/au.png')
+                      td 18.4
+                      td 19
+                    tr
+                      td &nbsp
+                      td
+                        a(href='http://www.linderhof.de' target='new') Kasteel Linderhof
+                      td Ettak
+                      td 
+                        img(src= 'images/de.png')
+                      td 45.9
+                      td 48
+                    tr
+                      td Divers
+                      td
+                        a(href='http://kristallwelten.swarovski.com' target='new') Swarovski kristalwerelden
+                      td Wattens
+                      td 
+                        img(src= 'images/au.png')
+                      td 97
+                      td 74
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.glentleiten.de' target='new') Openluchtmuseum Glentleiten
+                      td Grossweil
+                      td 
+                        img(src= 'images/de.png')
+                      td 52.8
+                      td 47
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.knappenwelt.at' target='new') Knappenwelt Gurgltal
+                      td Tarrenz
+                      td 
+                        img(src= 'images/au.png')
+                      td 31.6
+                      td 32
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.oetzi-dorf.at' target='new') Ötzi dorp - Umhausen
+                      td Umhausen
+                      td 
+                        img(src= 'images/au.png')
+                      td 65.3
+                      td 62
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.highline179.com' target='new') Highline 179
+                      td Reutte
+                      td 
+                        img(src= 'images/au.png')
+                      td 20
+                      td 22
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.dachau.nl' target='new') Concentratiekamp
+                      td Dachau
+                      td 
+                        img(src= 'images/de.png')
+                      td 127
+                      td 92
+                    tr
+                      td Stadt
+                      td
+                        a(href='http://www.gapa.de' target='new') Garmisch-Partenkichen
+                      td Garmisch-Partenkichen
+                      td 
+                        img(src= 'images/de.png')
+                      td 22.3
+                      td 22
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.muenchen.de' target='new') München
+                      td München
+                      td 
+                        img(src= 'images/de.png')
+                      td 111
+                      td 87
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.innsbruck.info' target='new') Innsbruck
+                      td Innsbruck
+                      td 
+                        img(src= 'images/au.png')
+                      td 82.5
+                      td 68
+                    tr
+                      td &nbsp 
+                      td
+                        a(href='http://www.fuessen.de' target='new') Füssen
+                      td Füssen
+                      td 
+                        img(src= 'images/de.png')
+                      td 40.9
+                      td 40
         .footer
           p
             | Haus Brabant (c) 2016 fam v. Schijndel

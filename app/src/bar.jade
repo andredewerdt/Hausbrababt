@@ -1,10 +1,14 @@
-- var koptextsub = 'sfeervol en modern uitgerust'
-// menu
-- var Bar = 'Bar'
-- var Speelkamer = 'Speelkamer'
-
-- var klikfoto = 'klik op de foto voor meer ....'
-
+- var taal = 'NL'
+if taal == 'NL' 
+  include ./include/bar/var_barNL.pug
+  include ./include/links.pug
+if taal == 'DE'
+include ./include/bar/var_barDE.pug
+  include ./include/linksDE.pug
+if taal == 'EN'  
+  include ./include/bar/var_barEN.pug
+  include ./include/linksEN.pug
+  
 doctype html
 html
   include ./include/head.pug
@@ -32,7 +36,7 @@ html
           div#myNavbar
             ul
               li.nav-link
-                a(href="index.html" data-bg="bar") Home
+                a(href= HomeKnop data-bg="bar") Home
               li.nav-link
                 a(href="#section-2" data-bg="bar")= Bar
               li.nav-link
@@ -62,59 +66,46 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Huis Bar (bayernsturb’l)
-                p
-                  | Onze huisbar is enkel toegankelijk voor onze gasten.  Niks moet, en (bijna) alles mag, Helmut staat met veel plezier achter zijn barretje, en tapt op z’n tijd een lekker Paullanertje.
-                p
-                  | Onze gastvrijheid en de huislijke sfeer maakt het dat vele die nooit in een bar komen, toch elke avond te vinden zijn bij Helmut in de Sturb’l.
-                p
-                  | Als het weer het toestaat verzorgen we ook een barbecue met alles erop en eraan op het terras in onze achtertuin.
-                  | Met soms nog een kampvuurtje als afsluiter, je zult dan ervaren dat tussen de bergen een geweldige sterrenhemel is.
-                P
-                  | De wintergasten kunnen u ook vertellen hoe we de brabantse carnaval naar Oostenrijk hebben gehaald.
-                  | De apresski wordt dan ook op de voor ons kenmerkende wijze invulling gegeven.
-                P 
-                  | Naast de versnaperingen kunt je je ook nog amuseren met:
-                ul
-                  li tafeltennis
-                  li darts
-                  li tafelvoetbal
-                  li poolbiljart
-                  li je partner (geintje..)
+                if taal == 'NL' 
+                  include ./include/bar/html_barNL.pug
+                if taal == 'DE'
+                  include ./include/bar/html_barDE.pug
+                if taal == 'EN'  
+                  include ./include/bar/html_barEN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                a(href='images/galHoofd/bar6.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                a(href='images/galHoofd/bar6.jpg' rel='bar1' title= onzebar ).groupfb
                   img(src='images/bar/bar1.jpg')
-                a(href='images/galHoofd/bar.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar3.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar4.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar5.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar2.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar7.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                a(href='images/galHoofd/bar.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar3.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar4.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar5.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar2.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar7.jpg' rel='bar1' title= onzebar ).groupfb
                 .kliktosee
                   span
                     p= klikfoto
               .foto
-                a(href='images/galHoofd/bar6.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                a(href='images/galHoofd/bar6.jpg' rel='bar1' title= onzebar ).groupfb
                   img(src='images/bar/bar2.jpg')
-                a(href='images/galHoofd/bar.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar3.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar4.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar5.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar2.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar7.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                a(href='images/galHoofd/bar.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar3.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar4.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar5.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar2.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar7.jpg' rel='bar1' title= onzebar ).groupfb
                 .kliktosee
                   span
                     p= klikfoto
               .foto
-                a(href='images/galHoofd/bar3.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                a(href='images/galHoofd/bar3.jpg' rel='bar1' title= onzebar ).groupfb
                   img(src='images/bar/bar3.jpg')
-                a(href='images/galHoofd/bar4.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar5.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar2.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar7.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar6jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                a(href='images/galHoofd/bar.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                a(href='images/galHoofd/bar4.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar5.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar2.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar7.jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar6jpg' rel='bar1' title= onzebar ).groupfb
+                a(href='images/galHoofd/bar.jpg' rel='bar1' title= onzebar ).groupfb
                 .kliktosee
                   span
                     p= klikfoto
@@ -132,31 +123,26 @@ html
             .divider
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Speelkamer
-                p
-                  | Als de kids het naar hun zin hebben is de vakantie vaak geslaagd is een vaak gehoorde zegswijze.
-                  | Vaak is het behelpen op zo'n hotelkamer maar daar hebben wij wat op bedacht!
-                p
-                  | Voor de kids hebben wij een speelkamer ingericht waar ze lekker kunnen ravotten, klimmen, tafelvoetbal een playstation en alles waar onze eigen kinderen zich ook altijd mee vermaken.
-                  | Grootste probleem vormt meestal om ze daar weer weg te krijgen....
-                p
-                  | Ook in onze achtertuin staan diverse speeltoestellen en een heus piratenschip!
-                p
-                  | Dus terwijl u een gezellige avond in de bar heeft kunnen uw kids op gepaste afstand lekker zichzelf zijn zodat u beiden een optimale vakantie kunt genieten.
+                if taal == 'NL' 
+                  include ./include/bar/html_bar2NL.pug
+                if taal == 'DE'
+                  include ./include/bar/html_bar2DE.pug
+                if taal == 'EN'  
+                  include ./include/bar/html_bar2EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
-                a(href='images/galHoofd/speelkamer2.jpg' rel='speelkamer1' ).groupfb
+                a(href='images/galHoofd/speelkamer2.jpg' rel='speelkamer1'  title= onzespeel ).groupfb
                   img(src='images/bar/speelkamer1.jpg')
-                a(href='images/galHoofd/speelkamer1.jpg' rel='speelkamer1' title='Onze gezellige speelkamer ' ).groupfb
-                a(href='images/galHoofd/speelkamer4.jpg' rel='speelkamer1' title='Onze gezellige speelkamer ' ).groupfb
+                a(href='images/galHoofd/speelkamer1.jpg' rel='speelkamer1'  title= onzespeel ).groupfb
+                a(href='images/galHoofd/speelkamer4.jpg' rel='speelkamer1'  title= onzespeel ).groupfb
                 .kliktosee
                   span
                     p= klikfoto
               .foto
                 a(href='images/galHoofd/speelkamer4.jpg' rel='speelkamer2' ).groupfb
                   img(src='images/bar/speelkamer2.jpg')
-                a(href='images/galHoofd/speelkamer2.jpg' rel='speelkamer2' title='Onze gezellige speelkamer ' ).groupfb
-                a(href='images/galHoofd/speelkamer1.jpg' rel='speelkamer2' title='Onze gezellige speelkamer ' ).groupfb
+                a(href='images/galHoofd/speelkamer2.jpg' rel='speelkamer2'  title= onzespeel ).groupfb
+                a(href='images/galHoofd/speelkamer1.jpg' rel='speelkamer2'  title= onzespeel ).groupfb
                 .kliktosee
                   span
                     p= klikfoto

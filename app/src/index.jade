@@ -1,66 +1,13 @@
-// menu
-- var Zomer = 'Zomer'
-- var Winter = 'Winter'
-- var Appartement = 'Appartement'
-- var Contact = 'Contact'
-// var balkzomer
-- var koptextzomer = 'Zomer in'
-- var koptextsubzomer= 'Een ideale omgeving voor wandelaars, mountainbikers enz.'
-- var wandelen =  'Wandelen'
-- var wandelensub = ' Diverse wandelwegen en bergoutes ...'
-- var mountainbike = 'Mountain bike'
-- var mountainbikesub = 'Afwisselende trails en prachtige vergezichten'
-- var golf = 'Golf'
-- var golfsub = 'Een 9-holes golfbaan met een mooi Alpenpanorama'
-- var rodelen = 'Rodelen'
-- var rodelensub = 'Een absolute aanrader..'
-- var klimmen = 'Klimmen'
-- var klimmensub = 'Voor de avontuurlijke medemens een geweldige ervaring'
-- var activeiten = 'Activiteiten'
-- var activeitensub = 'Dingen die u zeker een keer gezien/gedaan moet hebben'
-// var balkwinter
-- var koptextwinter= 'Winter in'
-- var koptextsubwinter = 'Gegarandeerde winterpret voor het hele gezin'
-- var langlaufen = 'Langlaufen'
-- var langlaufensub = 'Groot Loipennetwerk...'
-- var ski = 'Ski Arena Zugspite'
-- var skisub = 'Sneeuwzeker en uitermate geschikt voor gezinnen'
-- var rodelen = 'Rodelen'
-- var rodelensub = 'Heerlijk rodelen zowel overdag als \'s avonds'
-- var wandelen = 'Wandelen'
-- var wandelensub = 'Een absolute aanrader..'
-- var arrenslee = 'Arrenslee'
-- var arrensleesub = 'Geef je vakantie een romantische draai.'
-- var uitstapjes = 'Uitstapjes'
-- var uitstapjessub = 'Excursiemogelijkheden in de regio en een beetje verder'
-// var balkappartementen
-- var koptextApp = 'Appartementen'
-- var koptextAppsub = 'sfeervol en modern uitgerust'
-- var appartementen = 'Appartementen'
-- var appartementensub = 'Moderne volledig ingerichte kamers ...'
-- var bar = ' Gezellige bar'
-- var barsub = 'Biljart, darts, tafeltennis...'
-- var speelkamer = 'Speelkamer en Speelplaats'
-- var speelkamersub = 'Een paradijsje voor de kleintjes..'
-// balkcontact
-- var koptextcontact = ' De gezelligste locatie in Tirol'
-- var koptextsubcontact = 'altijd staan we met een lach voor u klaar'
-
-// adres
-- var straat = 'Straat en huisnr'
-- var postcode = 'Postcode'
-- var plaats = 'Plaats'
-- var email = 'Email-adres'
-- var telefoon = 'Telefoonnr'
-
-- var reserveer = 'Reserveer nu'
-- var viaform = 'via het formulier'
-- var slimkeus = 'fantastisch!!'
-
-// repeat var
-- var klikfoto = 'klik op de foto voor meer ....'
-- var klikzoover = 'klik om zoover te openen..'
-- var klikvideo = 'klik voor impressie'
+- var taal = 'NL'
+if taal == 'NL' 
+  include ./include/index/var_indexNL.pug
+  include ./include/links.pug
+if taal == 'DE'
+  include ./include/index/var_indexDE.pug
+  include ./include/linksDE.pug
+if taal == 'EN'  
+  include ./include/index/var_indexEN.pug
+  include ./include/linksEN.pug
 
 doctype html
 html
@@ -122,32 +69,19 @@ html
           .row.row-eq-height
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Proficiat!! Gratuliere!! Congratulations!!
-                p
-                  | Je bent terecht gekomen bij het gezelligste <strong>appartementenhuis</strong> in Tirol. 
-                  a(href='https://www.google.nl/maps/place/Haus+Brabant/@47.4061755,10.9151109,17z/data=!3m1!4b1!4m5!3m4!1s0x479cfd367bc4e725:0xf959551d7caf98f7!8m2!3d47.4061719!4d10.9172996' target='new') 
-                    img(src='images/googlemaps.png').gmapsicon
-                p Je hebt de parel in Tirol ontdekt en dat is best knap met alle opties en mogelijkheden die het net je tegenwoordig biedt.
-                p Wat maakt <strong>Haus Brabant</strong> zo speciaal? 
-                  | Comfort in de gloednieuwe appartementen gerealiseerd in een oeroud pand! (1890!). 
-                  | Een prachtige combinatie van oud en nieuw, met panoramische blik op alle bergtoppen!.
-                p Het voelt als thuiskomen voor iedereen in Winter-Lente-Zomer-Herfst.  
-                p De Brabantse gezelligheid in de Stube en rondom het kampvuur is uniek!
-                p En dat is geen grootspraak: dat is de mening van onze gasten die deze stelling ook onderschrijven met een <strong>9.3</strong> op Zoover.<br/>
-                  | En daar mogen we toch met recht trots op zijn..
-                p Wij hopen dat je een heel leuk verblijf bij ons zult hebben, en uitgerust weer thuis komt.
-                p Er zijn mogelijkheden te over in de omgeving zowel in de winter als in de zomer.
-                p Mochten er vragen zijn na het bekijken van deze site of heb je speciale wensen : wij staan voor jullie klaar.
-                p  Liebe Grüße,  <br/>
-                  | Helmut und Leonie
-
-                a.a-btn(href='reservering.html')
+                if taal == 'NL' 
+                  include ./include/index/html_index1.pug
+                if taal == 'DE'
+                  include ./include/index/html_index1DE.pug
+                if taal == 'EN'
+                  include ./include/index/html_index1EN.pug
+                a.a-btn(href= reserveerknop)
                   span.a-btn-text= reserveer
                   span.a-btn-slide-text= slimkeus
                   span.a-btn-icon-right
                 p
               .zoover
-                a(href='http://www.zoover.nl/oostenrijk/tirol/ehrwald/haus-brabant-bayrischerhof-tirol/appartement' target='new')
+                a(href= zooverlink target='new')
                   img(style="border: 0px none ; margin: 1px; width: 100%; padding: 0px;" src="http://www.zoover.nl/shared/images2/nl/logosummarywide.png")
               .centerrow
                 .periscope
@@ -163,15 +97,15 @@ html
                     span
                       p= klikfoto
                 .foto
-                  a(href='images/galHoofd/bar.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                  a(href='images/galHoofd/bar.jpg' rel='bar1' title= onzebar ).groupfb
                     img(src='images/stube.png')
                   a(href='images/galHoofd/speelkamer1.jpg' rel='bar1' title='De speelkamer ' ).groupfb
-                  a(href='images/galHoofd/bar2.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar3.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar4.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar5.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar6.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar7.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                  a(href='images/galHoofd/bar2.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar3.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar4.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar5.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar6.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar7.jpg' rel='bar1' title= onzebar ).groupfb
                   .kliktosee
                     span
                       p= klikfoto
@@ -190,7 +124,7 @@ html
                     span
                       p= klikfoto
                 .foto
-                  a(href='http://www.zoover.nl/oostenrijk/tirol/ehrwald/haus-brabant-bayrischerhof-tirol/appartement' target='new')
+                  a(href= zooverlink target='new')
                     img(src='images/zoover1.jpg')
                   .kliktosee
                     span
@@ -258,25 +192,14 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p
-                  | Haus Brabant ligt midden in het romantische dorpje Ehrwald te midden van een dal wat bekend staat als de Zugspitzarena.<br/>
-                p 
-                  | Deze naam komt een aantal misschien bekend voor en komt van de Zugspitze: de hoogste berg van Duitsland!?! <br/>
-                  | Inderdaad Duitsland, de  grens ligt namelijk boven op de berg, maar Ehrwald ligt toch echt in Oostenrijk! De typische en traditionele bouwstijl vind je hier dan ook volop terug. Ehrwald is het grootste dorp(je) van de 3 in dit dal.
-                p 
-                  | Maar wat maakt het ook uit, je bent in ieder geval goed terecht gekomen, want hier is erg veel te doen in de zomer!
-                p 
-                  | Vanaf Ehrwald beginnen schitterende wandelingen, voor de fanatieke wandelaar, de nordic walker, maar ook voor de echter klimmer. 
-                p 
-                  | We zitten in een dal dat omringt is door bergtoppen,  wat inhoudt dat je zowel vele kilometers als hoogte meters kunt maken.
-                  |  Een rondje fietsen gaat dan ook erg makkelijk of juist heel moeilijk voor diegene die daar fan van is.  Fiets/mountain bike routes te over, van eenvoudig tot echte kuitenbijters.
-                p 
-                  | In de Zugspitzarena vind je een 8-tal bergmeertjes, het ene wat warmer dan het andere.  Om de hoek zit een mooie grote waterval,  hierin zwemmen is voor de echte bikkels.
-                p
-                  | Bekijk eens een de onderstaande video om een impressie te krijgen van het landschap.
-
+                if taal == 'NL' 
+                  include ./include/index/html_index2.pug
+                if taal == 'DE'
+                  include ./include/index/html_index2DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index2EN.pug
           .row
-            .col-sm-12
+            .col-sm-12 
               .videozomer
                 .grid.videovoorbeeld.animated(data-os-animation='fadeInLeft')
                   .figure
@@ -348,18 +271,12 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p
-                  | Waarom zou je voor een wintervakantie verder rijden dan nodig? Bij ons vind je het <strong> eerste</strong> skigebied in het noorden van Tirol!
-                p
-                  | Bij winter denk je vaak aan kou en sneeuw. Maar wist je dat er vaak hoge temperaturen gehaald worden in de winter in Oostenrijk? Door de droge berglucht is het vaak minder koud dan je denkt.
-                p
-                  | Veel van de gasten komen om de skipistes te verkennen. Door de aanwezigheid sneeuwkanonnen, en de gletscher op de Zugspitze is sneeuw gegarandeerd.
-                p   
-                  | Vanaf ons huis kijk je op een deel van de pistes. De Zugspitzarena telt 139km pistes, diverse funparks, en een off piste strekke voor de liefhebber.  <br/>
-                  | Recht voor ons huis start je je langlauf route.  100km loipen heb je gratis ter beschikking! <br/>
-                  | En voor degene die van spanning, avontuur en actie houden vind je hier ook  Snowparks en Freeridetrails. 
-                p  
-                  | Mocht je nu echt niet zo van sport houden, in het zonnetje boven op de berg , met een lekker bakje koffie kom je je dag ook vast door. 
+                if taal == 'NL' 
+                  include ./include/index/html_index3.pug
+                if taal == 'DE'
+                  include ./include/index/html_index3DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index3EN.pug
               .videozomer
                 .grid.videovoorbeeld.animated(data-os-animation='fadeInLeft')
                   .figure
@@ -407,15 +324,13 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p
-                  | Haus Brabant heeft 9 appartementen voor 2 tm 8 personen. Waarvan de nieuwste een overkapt terras van maar liefst 40m2 kent! <br>
-                  | Alle appartementen zijn ruim van opzet en recent gerenoveerd
-                p
-                  | Haus Brabant ligt aan de hoofdstraat, de (ski)bus stopt voor de deur. Het centrum, de supermarkt en de restaurants zijn op loopafstand. 
-                p
-                  | Voor de wintersporters hebben we een aparte ruimte met schoenverwarmers zodat u de volgende dag altijd met droge en warme voeten de pistes kunt verkennen. 
-                  | In de zomer voldoet deze ruimte als fietsenstalling zodat uw eigendom veilig is opgeborgen.
-              a.a-btn(href='reservering.html')
+                if taal == 'NL' 
+                  include ./include/index/html_index4.pug
+                if taal == 'DE'
+                  include ./include/index/html_index4DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index4EN.pug
+              a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
                 span.a-btn-slide-text= viaform
                 span.a-btn-icon-right
@@ -434,17 +349,12 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p
-                  | Je kunt op diverse manieren contact met ons opnemen. Mits het niet midden in de nacht is zullen we je zo snel mogelijk te woord staan.
-                p
-                  | Laat bij voorkeur een mailtje op <span class="reverse">moc.tnabarbsuah@ofni</span> achter of stuur een whatsapp dan kunnen we je altijd bericht geven mochten we niet in staat zijn om de boodschap direct aan te nemen.
-                p
-                  | Voor reserveringen kunt je gebruik maken van onderstaande link.<br>
-                  | Mocht deze echter aangeven dat er geen mogelijkheden zijn kunt je via het reserveringsformulier jullie voorkeur wensen doorgeven. <br>
-                  | Misschien kunnen we het eea schuiven zodat we jullie toch kunnen plaatsen.<br>
-                  | Bij vragen gewoon even bellen (tel:+43 6 50 41 65 726).
-                p
-                  | <strong>Haus Brabant</strong>
+                if taal == 'NL' 
+                  include ./include/index/html_index5.pug
+                if taal == 'DE'
+                  include ./include/index/html_index5DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index5EN.pug
               .row
                 .col-lg-3.col-sm-4.col-xs-6
                   p.adresfont
@@ -466,7 +376,7 @@ html
                     | <span class="reverse">moc.tnabarbsuah@ofni</span><br>
                     | +43056073202431<br>
               br
-              a.a-btn(href='reservering.html')
+              a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
                 span.a-btn-slide-text= slimkeus
                 span.a-btn-icon-right

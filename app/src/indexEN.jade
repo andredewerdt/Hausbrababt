@@ -1,66 +1,13 @@
-// menu
-- var Zomer = 'Summer'
-- var Winter = 'Winter'
-- var Appartement = 'Appartments'
-- var Contact = 'Contact'
-// var balkzomer
-- var koptextzomer = 'Summer in'
-- var koptextsubzomer= 'Een ideale omgeving voor wandelaars, mountainbikers enz.'
-- var wandelen =  'Wandelen'
-- var wandelensub = ' Diverse wandelwegen en bergoutes ...'
-- var mountainbike = 'Mountain bike'
-- var mountainbikesub = 'Afwisselende trails en prachtige vergezichten'
-- var golf = 'Golf'
-- var golfsub = 'Een prachtige 9 holes baan met prachtige greens voor de ware golf liefhebber'
-- var rodelen = 'Rodelen'
-- var rodelensub = 'Een absolute aanrader..'
-- var klimmen = 'Klimmen'
-- var klimmensub = 'Voor de avontuurlijke medemens een geweldige ervaring'
-- var activeiten = 'Activiteiten'
-- var activeitensub = 'Dingen die u zeker een keer gezien/gedaan moet hebben'
-// var balkwinter
-- var koptextwinter= 'Winter in'
-- var koptextsubwinter = 'Gegarandeerde winterpret voor het hele gezin'
-- var langlaufen = 'Langlaufen'
-- var langlaufensub = 'Keuze uit loipes te over...  '
-- var ski = 'Ski Arena Zugspite'
-- var skisub = 'Sneeuwzeker en uitermate geschikt voor gezinnen'
-- var rodelen = 'Rodelen'
-- var rodelensub = 'Heerlijk rodelen zowel overdag als \'s avonds'
-- var wandelen = 'Wandelen'
-- var wandelensub = 'Een absolute aanrader..'
-- var arrenslee = 'Arrenslee'
-- var arrensleesub = 'Geef je vakantie een romantische draai.'
-- var uitstapjes = 'Uitstapjes'
-- var uitstapjessub = 'Bezoek de pittoreske plaatsen in de directe omgeving'
-// var balkappartementen
-- var koptextApp = 'Appartementen'
-- var koptextAppsub = 'sfeervol en modern uitgerust'
-- var appartementen = 'Appartementen'
-- var appartementensub = 'Moderne volledig ingerichte kamers ...'
-- var bar = ' Gezellige bar'
-- var barsub = 'Biljart, darts, tafeltennis...'
-- var speelkamer = 'Speelkamer'
-- var speelkamersub = 'Een paradijsje voor de kleintjes..'
-// balkcontact
-- var koptextcontact = ' De gezelligste locatie in Tirol'
-- var koptextsubcontact = 'altijd staan we met een lach voor u klaar'
-
-// adres
-- var straat = 'Street and number'
-- var postcode = 'Postalcode'
-- var plaats = 'City'
-- var email = 'Email-address'
-- var telefoon = 'Phonenumber'
-
-- var reserveer = 'Reserve now'
-- var viaform = 'use the form'
-- var slimkeus = 'a smart choice'
-
-// repeat var
-- var klikfoto = 'klik op de foto voor meer ....'
-- var klikzoover = 'klik om zoover te openen..'
-- var klikvideo = 'klik voor impressie'
+- var taal = 'NL'
+if taal == 'NL' 
+  include ./include/index/var_indexNL.pug
+  include ./include/links.pug
+if taal == 'DE'
+  include ./include/index/var_indexDE.pug
+  include ./include/linksDE.pug
+if taal == 'EN'  
+  include ./include/index/var_indexEN.pug
+  include ./include/linksEN.pug
 
 doctype html
 html
@@ -145,12 +92,12 @@ html
                   | Niet voor niets hebben we vele "regulars"; mensen die ons al vele jaren op rij bezoeken!
                 p
                   | Met trots verwijzen wij dan ook naar onze referentie op Zoover vakantiebeoordelingen<br>
-                a.a-btn(href='reserveringEN.html')
+                a.a-btn(href= reserveerknop)
                   span.a-btn-text= reserveer
                   span.a-btn-slide-text= slimkeus
                   span.a-btn-icon-right
               .zoover
-                a(href='http://www.zoover.nl/oostenrijk/tirol/ehrwald/haus-brabant-bayrischerhof-tirol/appartement' target='new')
+                a(href= zooverlink target='new')
                   img(style="border: 0px none ; margin: 1px; width: 100%; padding: 0px;" src="http://www.zoover.nl/shared/images2/nl/logosummarywide.png")
               .centerrow
                 .periscope
@@ -165,15 +112,15 @@ html
                     span
                       p= klikfoto
                 .foto
-                  a(href='images/galHoofd/bar.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                  a(href='images/galHoofd/bar.jpg' rel='bar1' title= onzebar ).groupfb
                     img(src='images/stube.png')
                   a(href='images/galHoofd/speelkamer1.jpg' rel='bar1' title='Playroom ' ).groupfb
-                  a(href='images/galHoofd/bar2.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar3.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar4.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar5.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar6.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
-                  a(href='images/galHoofd/bar7.jpg' rel='bar1' title='Onze gezellige bar ' ).groupfb
+                  a(href='images/galHoofd/bar2.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar3.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar4.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar5.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar6.jpg' rel='bar1' title= onzebar ).groupfb
+                  a(href='images/galHoofd/bar7.jpg' rel='bar1' title= onzebar ).groupfb
                   .kliktosee
                     span
                       p= klikfoto
@@ -192,7 +139,7 @@ html
                     span
                       p= klikfoto
                 .foto
-                  a(href='http://www.zoover.nl/oostenrijk/tirol/ehrwald/haus-brabant-bayrischerhof-tirol/appartement' target='new')
+                  a(href= zooverlink target='new')
                     img(src='images/zoover1.jpg')
                   .kliktosee
                     span
@@ -407,7 +354,7 @@ html
                   | Ons huis ligt aan de hoofdstraat, de (ski)bus stopt voor de deur. Het centrum, de supermarkt en de restaurants vind u op loopafstand.
                 p
                   | Voor de wintersporters hebben we een aparte ruimte met schoenverwarmers zodat u de volgende dag altijd met droge en warme voeten de pistes kunt verkennen.
-              a.a-btn(href='reserveringEN.html')
+              a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
                 span.a-btn-slide-text= viaform
                 span.a-btn-icon-right
@@ -458,7 +405,7 @@ html
                     | <span class="reverse">moc.tnabarbsuah@ofni</span><br>
                     | +43056073202431<br>
               br
-              a.a-btn(href='reserveringEN.html')
+              a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
                 span.a-btn-slide-text= slimkeus
                 span.a-btn-icon-right

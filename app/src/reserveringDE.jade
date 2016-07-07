@@ -1,6 +1,13 @@
-- var koptextsub = 'Comfort und modern ausgestattet' 
-// menu
-- var Reservering = 'Reservierung'
+- var taal = 'NL'
+if taal == 'NL' 
+  include ./include/reservering/var_reserveringNL.pug
+  include ./include/links.pug
+if taal == 'DE'
+  include ./include/reservering/var_reserveringDE.pug
+  include ./include/linksDE.pug
+if taal == 'EN'  
+  include ./include/reservering/var_reserveringEN.pug
+  include ./include/linksEN.pug
 
 doctype html
 html
@@ -28,7 +35,7 @@ html
           div#myNavbar
             ul
               li.nav-link
-                a(href="indexDE.html" data-bg="appartement") Home
+                a(href= HomeKnop data-bg="appartement") Home
               li.nav-link
                 a(href="#section-2" data-bg="appartement")= Reservering
               li.nav-link.pull-left.topicon
@@ -55,15 +62,19 @@ html
           .row
             .divider
             .col-lg-12
-              .editcms.cms-editable
-                h1 Reservering
-                p
-                  | U kunt een reservering maken via onderstaand formulier<br>
-                  | Mocht u geen geschikte data kunnen vinden stuur dan altijd even een mail naar <span class="reverse">moc.tnabarbsuah@ofni</span>
-                  | dan kunnen we altijd kijken of we door hier en daar wat te schuiven toch aan uw voorkeur kunnen voldoen.<br>
-                  | <br>
-
-                include ./include/easybookV2DE.html
+              .editcms.cms-editable 
+                if taal == 'NL' 
+                  include ./include/reservering/html_reserveringNL.pug
+                if taal == 'DE'
+                  include ./include/reservering/html_reserveringDE.pug
+                if taal == 'EN'  
+                  include ./include/reservering/html_reserveringEN.pug
+                if taal == 'NL' 
+                  include ./include/easybookV2.html
+                if taal == 'DE' 
+                  include ./include/easybookV2DE.html
+                if taal == 'EN' 
+                  include ./include/easybookV2EN.html
         .footer
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
