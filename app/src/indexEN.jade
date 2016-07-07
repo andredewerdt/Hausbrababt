@@ -1,4 +1,4 @@
-- var taal = 'NL'
+- var taal = 'EN'
 if taal == 'NL' 
   include ./include/index/var_indexNL.pug
   include ./include/links.pug
@@ -58,7 +58,7 @@ html
                 img(src="images/de.png")
             .nl
               a(href="index.html")
-                img(src="images/nl.png")
+                img(src="images/nl.png") 
             .en
               a(href="indexEN.html")
                 img(src="images/en.png")
@@ -69,38 +69,23 @@ html
           .row.row-eq-height
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                h1 Proficiat!
-                p
-                  | Je bent terecht gekomen bij het gezelligste <strong>appartementenhuis</strong> in Tirol.
-                  a(href='https://www.google.com/maps/place/Haus+Brabant/@47.4061755,10.9151109,17z/data=!3m1!4b1!4m5!3m4!1s0x479cfd367bc4e725:0xf959551d7caf98f7!8m2!3d47.4061719!4d10.9172996' target='new') 
-                    img(src='images/googlemaps.png').gmapsicon                  
-                p
-                  | <strong> Wie zijn wij?</strong> Wij zijn een jong gezin met 5 kinderen. <br> Helmut, Leonie, Joy, Brett, Sky, Yesse en Kate
-                p
-                  | Onze jeugd hebben wij doorgebracht in het Brabantse Lieshout en Beek en Donk. Samen hebben wij de laatste jaren in het dorpje Waalre gewoond, van waaruit wij verhuist zijn naar Tirol.
-                p
-                  | In 2009 hebben wij dit huis overgenomen van een Oostenrijkse familie. De eerste jaren hebben wij de naam Bayricherhof-tirol doorgevoerd.
-                p
-                  | Nadat wij in 2011 de naam brabantsegezelligheid hebben geïntroduceerd zijn wij in 2012 verder gegaan als Haus Brabant.
-                p
-                  | Haus Brabant heeft 9 appartementen en een 2-4 pers. kamer. Het voorste gedeelte van ons huis dateerde nog uit 1890 en is in 2016 geheel verbouwd.
-                  | De appartementen bevinden zich aan de achterzijde van ons huis, en hebben een panoramische uitkijk op de "Zugspitze".
-                p
-                  | Bent je op zoek naar een heerlijke welverdiende vakantie?<br> Stop dan maar met zoeken want bij ons in HAUS BRABANT in Ehrwald bent je gegarandeerd aan het juiste adres. <br>
-                  | Bij aankomst krijg je van ons voldoende informatie en uitleg over de omgeving. Genoeg om weken vooruit te kunnen!
-                p
-                  | Niet voor niets hebben we vele "regulars"; mensen die ons al vele jaren op rij bezoeken!
-                p
-                  | Met trots verwijzen wij dan ook naar onze referentie op Zoover vakantiebeoordelingen<br>
+                if taal == 'NL' 
+                  include ./include/index/html_index1.pug
+                if taal == 'DE'
+                  include ./include/index/html_index1DE.pug
+                if taal == 'EN'
+                  include ./include/index/html_index1EN.pug
                 a.a-btn(href= reserveerknop)
                   span.a-btn-text= reserveer
                   span.a-btn-slide-text= slimkeus
                   span.a-btn-icon-right
+                p
               .zoover
                 a(href= zooverlink target='new')
-                  img(style="border: 0px none ; margin: 1px; width: 100%; padding: 0px;" src="http://www.zoover.nl/shared/images2/nl/logosummarywide.png")
+                  img(style="border: 0px none ; margin: 1px; width: 100%; padding: 0px;" src= zooverlinkimg)
               .centerrow
                 .periscope
+                  span
             .col-lg-4.col-sm-4.fotocontainer
                 .foto
                   a(href='images/galHoofd/hausbrabant1.jpg' rel='group1' title='Haus Brabant ' ).groupfb
@@ -114,7 +99,7 @@ html
                 .foto
                   a(href='images/galHoofd/bar.jpg' rel='bar1' title= onzebar ).groupfb
                     img(src='images/stube.png')
-                  a(href='images/galHoofd/speelkamer1.jpg' rel='bar1' title='Playroom ' ).groupfb
+                  a(href='images/galHoofd/speelkamer1.jpg' rel='bar1' title='De speelkamer ' ).groupfb
                   a(href='images/galHoofd/bar2.jpg' rel='bar1' title= onzebar ).groupfb
                   a(href='images/galHoofd/bar3.jpg' rel='bar1' title= onzebar ).groupfb
                   a(href='images/galHoofd/bar4.jpg' rel='bar1' title= onzebar ).groupfb
@@ -162,8 +147,8 @@ html
                       img(src="images/blokken/wandelen.jpg")
                       figcaption
                         h2= wandelen
-                        p= wandelensub
-                        a(href="zomerEN.html") View more
+                        p= wandelensub 
+                        a(href= zomerlink) View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath
@@ -171,7 +156,7 @@ html
                       figcaption
                         h2= mountainbike
                         p= mountainbikesub
-                        a(href="zomerEN.html#section-3") View more
+                        a(href= zomerlink+"#section-3") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
@@ -179,7 +164,7 @@ html
                       figcaption
                         h2= golf
                         p= golfsub
-                        a(href="zomerEN.html#section-4") View more
+                        a(href= zomerlink+"#section-4") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInLeft')
                     .figure.effect-goliath
@@ -187,7 +172,7 @@ html
                       figcaption
                         h2= rodelen
                         p= rodelensub
-                        a(href="zomerEN.html#section-5") View more
+                        a(href= zomerlink+"#section-5") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath
@@ -195,7 +180,7 @@ html
                       figcaption
                         h2=  klimmen
                         p= klimmensub
-                        a(href="zomerEN.html#section-6") View more
+                        a(href= zomerlink+"#section-6") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
@@ -203,19 +188,18 @@ html
                       figcaption
                         h2= activeiten
                         p= activeitensub
-                        a(href="zomerEN.html#section-7") View more
+                        a(href= zomerlink+"#section-7") View more
           .row
             .col-lg-12
               .editcms.cms-editable
-                p
-                 | Ehrwald ligt in een prachtig dal waar 3 dorpen (Lermoos, Biberwier en Ehrwald) centraal liggen. Prachtige wandelwegen, zowel in de vallei als avontuurlijk de hellingen op trekken al vel
-                p
-                 | Talrijke wandelwegen en bergroutes op de spitsen van het Wetterstein- en Ammergebergte in de Lechtaler Alpen en Mieminger Kette worden zowel door wandelaars als bergbeklimmers met open armen begroet.
-                 | Men wordt hier met fraaie uitzichten in de ware zin van het woord verwend. De acht bergmeertjes van het gebied rondom de Zugspitze zijn absoluut landschappelijke juweeltjes.
-                 | Een total van over 150 verschillende Wandelroutes zijn beschikbaar.
-                 | De selectie varieert van lichte paden verspreid over avontuurlijke paden tot uitdagende klimmtochten en bergtoppen. De grootste uitdaging is de populaire Zugspitze met 2962 meter.
+                if taal == 'NL' 
+                  include ./include/index/html_index2.pug
+                if taal == 'DE'
+                  include ./include/index/html_index2DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index2EN.pug
           .row
-            .col-sm-12
+            .col-sm-12 
               .videozomer
                 .grid.videovoorbeeld.animated(data-os-animation='fadeInLeft')
                   .figure
@@ -243,7 +227,7 @@ html
                       figcaption
                         h2= langlaufen
                         p= langlaufensub
-                        a(href="winterEN.html#section-2") View more
+                        a(href= winterlink+"#section-2") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath.winter
@@ -251,7 +235,7 @@ html
                       figcaption
                         h2= ski
                         p= skisub
-                        a(href="winterEN.html#section-3") View more
+                        a(href= winterlink+"#section-3") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath.winter
@@ -259,7 +243,7 @@ html
                       figcaption
                         h2= rodelen
                         p= rodelensub
-                        a(href="winterEN.html#section-4") View more
+                        a(href= winterlink+"#section-4") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInLeft')
                     .figure.effect-goliath.winter
@@ -267,7 +251,7 @@ html
                       figcaption
                         h2= wandelen
                         p= wandelensub
-                        a(href="winterEN.html#section-5") View more
+                        a(href= winterlink+"#section-5") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath.winter
@@ -275,7 +259,7 @@ html
                       figcaption
                         h2= arrenslee
                         p= arrensleesub
-                        a(href="winterEN.html#section-6") View more
+                        a(href= winterlink+"#section-6") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath.winter
@@ -283,23 +267,16 @@ html
                       figcaption
                         h2= uitstapjes
                         p= uitstapjessub
-                        a(href="winterEN.html#section-6") View more
+                        a(href= winterlink+"#section-6") View more
           .row
             .col-lg-12
               .editcms.cms-editable
-                p
-                  | Het Zugspitze-ski gebied is uitermate geschikt voor gezinnen met kinderen. Door de aanwezigheid van de gletscher op de Zugspitze is sneeuw gegarandeerd.
-                p
-                  | Het ski-gebied loopt van 900 to 2700m en zijn uitgerust met sneeuw-installatie's mocht de natuur zelf zijn werk niet optimaal gedaan hebben.
-                  | Het totale skigebied van Ehrwald valt in drie delen uiteen. Deze drie gebieden met in totaal 64,5 km piste.
-                p
-                  | Ideale gebieden voor gezinnen met kinderen; de pistes in Biberwier en Ehrwald hebben een centraal dalpunt zodat u uw kinderen nooit kwijt raakt.
-                  | Maar ook de sportievelingen kunnen hun hart ophalen in het Fun parc op de Ehrwalder Alm of de uitdaging opzoeken in het nabij gelegen Garmisch (bekend van de hanenkam rennen).
-                  | De Tiroler Zugspitz Arena biedt u 7 sensationele skigebieden, die allemaal snel kunnen worden bereikt en aan alle eisen voldoen. 139 km pistes (inclusief 93 km kunstmatig besneeuwd) en 58 liften zijn voor u beschikbaar.
-                p
-                  | Op 3 km van Ehrwald voert een grote zweefbaan in tien minuten naar de top van de Zugspitze (2964 meter), de hoogste berg van Duitsland.
-                  | Het ritje is zo spectaculair dat er ook veel mensen zonder skiuitrusting gebruik van maken. Onder de top van de Zugspitze ligt het skigebied Zugspitzplatt (gletsjer)
-                  | dat eveneens vanuit Garmisch-Partenkichen (Duitsland) per bergtreintje te bereiken is.
+                if taal == 'NL' 
+                  include ./include/index/html_index3.pug
+                if taal == 'DE'
+                  include ./include/index/html_index3DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index3EN.pug
               .videozomer
                 .grid.videovoorbeeld.animated(data-os-animation='fadeInLeft')
                   .figure
@@ -327,7 +304,7 @@ html
                       figcaption
                         h2= appartementen
                         p= appartementensub
-                        a(href="appartementEN.html") View more
+                        a(href= appartementlink) View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath
@@ -335,7 +312,7 @@ html
                       figcaption
                         h2= bar
                         p= barsub
-                        a(href="barEN.html#section-2") View more
+                        a(href= barlink+"#section-2") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
@@ -343,17 +320,16 @@ html
                       figcaption
                         h2= speelkamer
                         p= speelkamersub
-                        a(href="barEN.html#section-3") View more
+                        a(href= barlink+"#section-3") View more
           .row
             .col-lg-12
               .editcms.cms-editable
-                p
-                  | We hebben 9 appartementen van diverse afmetingen voor 2 tm 8 personen. Een aantal is recent gerenoveerd zodat het u tijdens uw verblijf aan niets ontbreekt. <br>
-                  | Alle appartementen zijn ruim van opzet en zijn goed uitgerust met TV en complete keuken. Voor een mooi beeld van deze appartementen en hun indeling hebben we onder het kopje appartementen de layout en diverse foto's toegevoegd.
-                p
-                  | Ons huis ligt aan de hoofdstraat, de (ski)bus stopt voor de deur. Het centrum, de supermarkt en de restaurants vind u op loopafstand.
-                p
-                  | Voor de wintersporters hebben we een aparte ruimte met schoenverwarmers zodat u de volgende dag altijd met droge en warme voeten de pistes kunt verkennen.
+                if taal == 'NL' 
+                  include ./include/index/html_index4.pug
+                if taal == 'DE'
+                  include ./include/index/html_index4DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index4EN.pug
               a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
                 span.a-btn-slide-text= viaform
@@ -373,17 +349,12 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                p
-                  | Je kunt op diverse manieren contact met ons opnemen. Mits het niet midden in de nacht is zullen we je zo snel mogelijk te woord staan.
-                p
-                  | Laat bij voorkeur een mailtje op <span class="reverse">moc.tnabarbsuah@ofni</span> achter of stuur een whatsapp dan kunnen we u altijd bericht geven mochten we niet in staat zijn om uw boodschap direct aan te nemen.
-                p
-                  | Voor reserveringen kunt u gebruik maken van onderstaande link.<br>
-                  | Mocht deze echter aangeven dat er geen mogelijkheden zijn kunt u via het reserveringsformulier uw wensen doorgeven. <br>
-                  | Misschien kunnen we het eea schuiven zodat we u toch kunnen plaatsen.<br>
-                  | U kunt natuurlijk ook altijd bellen  (tel:+43 6 50 41 65 726).
-                p
-                  | <strong>Haus Brabant</strong>
+                if taal == 'NL' 
+                  include ./include/index/html_index5.pug
+                if taal == 'DE'
+                  include ./include/index/html_index5DE.pug
+                if taal == 'EN'  
+                  include ./include/index/html_index5EN.pug
               .row
                 .col-lg-3.col-sm-4.col-xs-6
                   p.adresfont
@@ -410,7 +381,7 @@ html
                 span.a-btn-slide-text= slimkeus
                 span.a-btn-icon-right
                   span
-        .footer
+        .footer 
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
       include ./include/mobilenav.pug

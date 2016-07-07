@@ -223,11 +223,11 @@ html
             .col-lg-8.col-sm-8
               .editcms.cms-editable
                 if taal == 'NL' 
-                  include ./include/winter/html_winter3NL.pug
+                  include ./include/winter/html_winter4NL.pug
                 if taal == 'DE'
-                  include ./include/winter/html_winter3DE.pug
+                  include ./include/winter/html_winter4DE.pug
                 if taal == 'EN'  
-                  include ./include/winter/html_winter3EN.pug
+                  include ./include/winter/html_winter4EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 img(src='images/winter/wandelen1.jpg')
@@ -244,11 +244,11 @@ html
             .col-lg-8.col-sm-8
               .editcms.cms-editable
                 if taal == 'NL' 
-                  include ./include/winter/html_winter4NL.pug
+                  include ./include/winter/html_winter5NL.pug
                 if taal == 'DE'
-                  include ./include/winter/html_winter4DE.pug
+                  include ./include/winter/html_winter5DE.pug
                 if taal == 'EN'  
-                  include ./include/winter/html_winter4EN.pug
+                  include ./include/winter/html_winter5EN.pug
             .col-lg-4.col-sm-4.fotocontainer.animated(data-os-animation='fadeInRight')
               .foto
                 img(src='images/winter/arrenslee1.jpg' alt='Arrenslee')
@@ -284,7 +284,7 @@ html
                       th minuten
                   tbody
                     tr
-                      td See
+                      td= Meer
                       td 
                         a(href='http://www.zugspitzarena.com' target='new') Plansee Heiterwang
                       td Heiterwang
@@ -329,7 +329,7 @@ html
                       td &nbsp 
                       td &nbsp
                     tr
-                      td Klamm/waterval
+                      td= Waterval
                       td
                         a(href='http://www.leutasch.net' target='new') Geisterklamm
                       td Leutasch
@@ -383,7 +383,7 @@ html
                       td 20
                       td 24
                     tr
-                      td Kastelen
+                      td= Kastelen
                       td
                         a(href='http://www.schlosslinderhof.de' target='new') Schloß Linderhof
                       td Ettal
@@ -446,7 +446,7 @@ html
                       td 45.9
                       td 48
                     tr
-                      td Divers
+                      td= Divers
                       td
                         a(href='http://kristallwelten.swarovski.com' target='new') Swarovski kristalwerelden
                       td Wattens

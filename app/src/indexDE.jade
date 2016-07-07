@@ -53,12 +53,12 @@ html
             a(href="https://www.facebook.com/brabantsegezelligheid/" target='new')
               img(src='images/fb.png')
           div.taal
-            .de 
+            .de
               a(href="indexDE.html")
                 img(src="images/de.png")
             .nl
               a(href="index.html")
-                img(src="images/nl.png")
+                img(src="images/nl.png") 
             .en
               a(href="indexEN.html")
                 img(src="images/en.png")
@@ -73,17 +73,19 @@ html
                   include ./include/index/html_index1.pug
                 if taal == 'DE'
                   include ./include/index/html_index1DE.pug
-                if taal == 'EN'  
+                if taal == 'EN'
                   include ./include/index/html_index1EN.pug
                 a.a-btn(href= reserveerknop)
                   span.a-btn-text= reserveer
                   span.a-btn-slide-text= slimkeus
                   span.a-btn-icon-right
+                p
               .zoover
                 a(href= zooverlink target='new')
-                  img(style="border: 0px none ; margin: 1px; width: 100%; padding: 0px;" src="http://www.zoover.nl/shared/images2/nl/logosummarywide.png")
+                  img(style="border: 0px none ; margin: 1px; width: 100%; padding: 0px;" src= zooverlinkimg)
               .centerrow
                 .periscope
+                  span
             .col-lg-4.col-sm-4.fotocontainer
                 .foto
                   a(href='images/galHoofd/hausbrabant1.jpg' rel='group1' title='Haus Brabant ' ).groupfb
@@ -92,12 +94,12 @@ html
                   a(href='images/galHoofd/hausbrabant3.jpg' rel='group1' title='Haus Brabant ' ).groupfb
                   a(href='images/galHoofd/hausbrabant4.jpg' rel='group1' title='Haus Brabant ' ).groupfb
                   .kliktosee
-                    span 
+                    span
                       p= klikfoto
                 .foto
                   a(href='images/galHoofd/bar.jpg' rel='bar1' title= onzebar ).groupfb
                     img(src='images/stube.png')
-                  a(href='images/galHoofd/speelkamer1.jpg' rel='bar1' title='Das Spielzimmer ' ).groupfb
+                  a(href='images/galHoofd/speelkamer1.jpg' rel='bar1' title='De speelkamer ' ).groupfb
                   a(href='images/galHoofd/bar2.jpg' rel='bar1' title= onzebar ).groupfb
                   a(href='images/galHoofd/bar3.jpg' rel='bar1' title= onzebar ).groupfb
                   a(href='images/galHoofd/bar4.jpg' rel='bar1' title= onzebar ).groupfb
@@ -145,48 +147,48 @@ html
                       img(src="images/blokken/wandelen.jpg")
                       figcaption
                         h2= wandelen
-                        p= wandelensub
-                        a(href="zomerDE.html") View more
+                        p= wandelensub 
+                        a(href= zomerlink) View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath
                       img(src="images/blokken/mountainbike.jpg")
                       figcaption
-                        h2= mountainbike 
-                        p= mountainbikesub 
-                        a(href="zomerDE.html#section-3") View more
+                        h2= mountainbike
+                        p= mountainbikesub
+                        a(href= zomerlink+"#section-3") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
                       img(src="images/blokken/golf.jpg")
                       figcaption
                         h2= golf
-                        p= golfsub 
-                        a(href="zomerDE.html#section-4") View more
+                        p= golfsub
+                        a(href= zomerlink+"#section-4") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInLeft')
                     .figure.effect-goliath
                       img(src="images/blokken/rodeln.jpg")
                       figcaption
                         h2= rodelen
-                        p= rodelensub 
-                        a(href="zomerDE.html#section-5") View more
+                        p= rodelensub
+                        a(href= zomerlink+"#section-5") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath
                       img(src="images/blokken/klimmen.jpg")
                       figcaption
                         h2=  klimmen
-                        p= klimmensub 
-                        a(href="zomerDE.html#section-6") View more
+                        p= klimmensub
+                        a(href= zomerlink+"#section-6") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
                       img(src="images/blokken/uitstapje.jpg")
                       figcaption
                         h2= activeiten
-                        p= activeitensub 
-                        a(href="zomerDE.html#section-7") View more
+                        p= activeitensub
+                        a(href= zomerlink+"#section-7") View more
           .row
             .col-lg-12
               .editcms.cms-editable
@@ -197,7 +199,7 @@ html
                 if taal == 'EN'  
                   include ./include/index/html_index2EN.pug
           .row
-            .col-sm-12
+            .col-sm-12 
               .videozomer
                 .grid.videovoorbeeld.animated(data-os-animation='fadeInLeft')
                   .figure
@@ -223,9 +225,9 @@ html
                     .figure.effect-goliath.winter
                       img(src="images/blokken/langlauf.jpg")
                       figcaption
-                        h2= langlaufen 
+                        h2= langlaufen
                         p= langlaufensub
-                        a(href="winterDE.html#section-2") View more
+                        a(href= winterlink+"#section-2") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath.winter
@@ -233,39 +235,39 @@ html
                       figcaption
                         h2= ski
                         p= skisub
-                        a(href="winterDE.html#section-3") View more
+                        a(href= winterlink+"#section-3") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath.winter
                       img(src="images/blokken/avondrodel.jpg")
                       figcaption
                         h2= rodelen
-                        p= rodelensub 
-                        a(href="winterDE.html#section-4") View more
+                        p= rodelensub
+                        a(href= winterlink+"#section-4") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInLeft')
                     .figure.effect-goliath.winter
                       img(src="images/blokken/winterwandel.jpg")
                       figcaption
-                        h2= wandelen 
-                        p= wandelensub 
-                        a(href="winterDE.html#section-5") View more
+                        h2= wandelen
+                        p= wandelensub
+                        a(href= winterlink+"#section-5") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath.winter
                       img(src="images/blokken/arrenslee.jpg")
                       figcaption
-                        h2= arrenslee 
-                        p= arrensleesub  
-                        a(href="winterDE.html#section-6") View more
+                        h2= arrenslee
+                        p= arrensleesub
+                        a(href= winterlink+"#section-6") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath.winter
                       img(src="images/blokken/garmisch.jpg")
                       figcaption
-                        h2= uitstapjes 
-                        p= uitstapjessub 
-                        a(href="winterDE.html#section-6") View more
+                        h2= uitstapjes
+                        p= uitstapjessub
+                        a(href= winterlink+"#section-6") View more
           .row
             .col-lg-12
               .editcms.cms-editable
@@ -290,9 +292,9 @@ html
               .figure.effect-menu
                 img(src='images/header/appartementen.jpg')
                 figcaption
-                  h2= koptextApp 
+                  h2= koptextApp
                     span  Haus Brabant
-                  p= koptextAppsub 
+                  p= koptextAppsub
             .col-lg-12.nabalk
               .row
                 .col-lg-4.col-sm-6.col-xs-6
@@ -301,36 +303,36 @@ html
                       img(src="images/blokken/kamers.jpg")
                       figcaption
                         h2= appartementen
-                        p= appartementensub 
-                        a(href="appartementDE.html") View more
+                        p= appartementensub
+                        a(href= appartementlink) View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
                     .figure.effect-goliath
                       img(src="images/blokken/bar.jpg")
                       figcaption
                         h2= bar
-                        p= barsub 
-                        a(href="barDE.html#section-2") View more
+                        p= barsub
+                        a(href= barlink+"#section-2") View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeInRight')
                     .figure.effect-goliath
                       img(src="images/blokken/speelkamer.jpg")
                       figcaption
-                        h2= speelkamer 
-                        p= speelkamersub 
-                        a(href="barDE.html#section-3") View more
+                        h2= speelkamer
+                        p= speelkamersub
+                        a(href= barlink+"#section-3") View more
           .row
             .col-lg-12
               .editcms.cms-editable
                 if taal == 'NL' 
-                  include ./include/index/html_index3.pug
+                  include ./include/index/html_index4.pug
                 if taal == 'DE'
-                  include ./include/index/html_index3DE.pug
+                  include ./include/index/html_index4DE.pug
                 if taal == 'EN'  
-                  include ./include/index/html_index3EN.pug
+                  include ./include/index/html_index4EN.pug
               a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
-                span.a-btn-slide-text= viaform 
+                span.a-btn-slide-text= viaform
                 span.a-btn-icon-right
                   span
         section#section-5
@@ -341,45 +343,45 @@ html
                 img(src='images/header/contactheader.jpg')
                 figcaption
                   h2 Haus Brabant
-                    span= koptextcontact  
+                    span= koptextcontact
                   p= koptextsubcontact
             .col-lg-12.nabalk
           .row
             .col-lg-12
               .editcms.cms-editable
                 if taal == 'NL' 
-                  include ./include/index/html_index3.pug
+                  include ./include/index/html_index5.pug
                 if taal == 'DE'
-                  include ./include/index/html_index3DE.pug
+                  include ./include/index/html_index5DE.pug
                 if taal == 'EN'  
-                  include ./include/index/html_index3EN.pug
+                  include ./include/index/html_index5EN.pug
               .row
                 .col-lg-3.col-sm-4.col-xs-6
                   p.adresfont
                     = straat
-                    | <br />
+                    | <br/>
                     = postcode
-                    | <br />
+                    | <br>
                     = plaats
-                    | <br />
+                    | <br>
                     = email
-                    | <br />
+                    | <br>
                     = telefoon
-                    | <br />
+                    | <br>
                 .col-lg-3.col-sm-4.col-xs-6
-                  p.adresfont 
-                    | Haupstrasse 108 <br />
-                    | 6632<br />
-                    | Ehrwald<br />
-                    | <span class="reverse">moc.tnabarbsuah@ofni</span><br />
+                  p.adresfont
+                    | Haupstrasse 108 <br>
+                    | 6632<br>
+                    | Ehrwald<br>
+                    | <span class="reverse">moc.tnabarbsuah@ofni</span><br>
                     | +43056073202431<br>
               br
-              a.a-btn(href= reserveerknop )
+              a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
-                span.a-btn-slide-text= slimkeus 
+                span.a-btn-slide-text= slimkeus
                 span.a-btn-icon-right
                   span
-        .footer
+        .footer 
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
       include ./include/mobilenav.pug
