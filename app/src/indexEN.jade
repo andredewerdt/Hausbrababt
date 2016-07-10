@@ -17,6 +17,12 @@ html
     overlay.zomer.start-overlay
     overlay.bar
     overlay.winter
+  if taal == 'NL'
+    div#fbcontainer
+      div#facebook_tab
+      div#facebookcontainer
+        include ./include/fbplugin.html
+  endif
     .container
       .header
         .figure.effect-menu

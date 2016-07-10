@@ -46,6 +46,10 @@ body
   transition: transform 0.35s
   box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.2)
 
+#facebook_tab,
+#facebookcontainer
+  display: none
+
 /* Custom page footer */
 .footer
   padding-top: 19px
@@ -208,7 +212,6 @@ td, th
   .speelkamer
     background: url("../images/background/speelkamerbg-min.jpg") no-repeat center fixed
     background-size: cover
-
   .header
       height: auto
 
@@ -217,6 +220,31 @@ td, th
       display: flex
       flex-direction: column
       justify-content: space-between
+  #fbcontainer
+    display: flex
+    width: 350px
+    height: 144px
+    position: fixed
+    top: 50px
+    right: -300px
+    z-index: 1000
+    transition: all .8s ease-in-out
+    &:hover
+      right: 0px
+  #facebook_tab
+    position:relative
+    display: block
+    width: 50px
+    height: 144px
+    right: 0px
+    background: url("../images/fbvertical.jpg")
+  #facebookcontainer
+    display: block
+    position: relative
+    right: 0px
+    width: 300px
+
+
 @media screen and (min-width: 1024px)
   .container
     max-width: 900px
