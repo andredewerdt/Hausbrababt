@@ -1,0 +1,15 @@
+include fbscript.html
+div#fbcontainer
+  div#facebook_tab
+  div#facebookcontainer
+    include fbplugin.html
+
+div#reserveer
+  div#reserveer_tab
+  div#reserveercontainer
+    if taal == 'NL'
+      include easybooksmal.html
+    if taal == 'DE'
+      include easybooksmalDE.html
+    if taal == 'EN'
+      include easybooksmalEN.html

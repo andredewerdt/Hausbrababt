@@ -8,22 +8,17 @@ if taal == 'DE'
 if taal == 'EN'  
   include ./include/index/var_indexEN.pug
   include ./include/linksEN.pug
-
+ 
+ 
 doctype html
 html
   head
     include ./include/head.pug
   body#Home
-    include ./include/fbscript.html 
     overlay.zomer.start-overlay
     overlay.bar
     overlay.winter
-  if taal == 'NL'
-    div#fbcontainer
-      div#facebook_tab
-      div#facebookcontainer
-        include ./include/fbplugin.html
-  endif
+    include ./include/sidetabs.pug
     .container
       .header
         .figure.effect-menu
