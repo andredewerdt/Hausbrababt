@@ -47,7 +47,9 @@ body
   box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.2)
 
 #facebook_tab,
-#facebookcontainer
+#facebookcontainer,
+#reserveer,
+#reserveercontainer
   display: none
 
 /* Custom page footer */
@@ -220,30 +222,41 @@ td, th
       display: flex
       flex-direction: column
       justify-content: space-between
-  #fbcontainer
+  #fbcontainer, #reserveer
     display: flex
     width: 350px
     height: 144px
     position: fixed
-    top: 50px
     right: -300px
     z-index: 1000
     transition: all .8s ease-in-out
     &:hover
       right: 0px
-  #facebook_tab
+  #fbcontainer
+    top: 50px
+    z-index: 1001
+  #reserveer
+    top: 199px
+
+  #facebook_tab, #reserveer_tab
     position:relative
     display: block
     width: 50px
     height: 144px
     right: 0px
+  #facebook_tab
     background: url("../images/fbvertical.jpg")
-  #facebookcontainer
+  #reserveer_tab
+    background: url("../images/booking.jpg")
+  #facebookcontainer, #reserveercontainer
     display: block
     position: relative
     right: 0px
     width: 300px
-
+  #reserveercontainer
+    background-color: rgb(247,247,247)
+    height: 380px
+    padding: 10px
 
 @media screen and (min-width: 1024px)
   .container

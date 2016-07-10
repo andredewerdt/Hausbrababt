@@ -1,0 +1,22 @@
+<div id="ebSmallSearch"></div>
+<script  type="text/javascript" src="http://www.easy-booking.at/ebPlugins/smallSearch/js/jquery.easybooking.smallsearch.v2.js"></script>
+<script type="text/javascript">
+function ebSmallSearchLoadedCheck() {
+    if(typeof jQuery != "undefined") {
+        if(jQuery.fn.ebSmallSearch) {
+            jQuery("#ebSmallSearch").ebSmallSearch({
+                customerId: 3561,
+                serialNo: "7822-2579-9427",
+                localeId: 2,
+                resultPage: "popup",
+                maxRooms:3,
+                loadCSS: true,
+                labels: {
+                    "continue" : "weiter"
+                }
+            });
+        } else { setTimeout(ebSmallSearchLoadedCheck,200);}
+    } else {setTimeout(ebSmallSearchLoadedCheck,200);}
+}
+ebSmallSearchLoadedCheck();
+</script>
