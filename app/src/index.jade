@@ -1,15 +1,14 @@
 - var taal = 'NL'
-if taal == 'NL' 
+if taal == 'NL'
   include ./include/index/var_indexNL.pug
   include ./include/links.pug
 if taal == 'DE'
   include ./include/index/var_indexDE.pug
   include ./include/linksDE.pug
-if taal == 'EN'  
+if taal == 'EN'
   include ./include/index/var_indexEN.pug
   include ./include/linksEN.pug
- 
- 
+
 doctype html
 html
   head
@@ -60,7 +59,7 @@ html
                 img(src="images/de.png")
             .nl
               a(href="index.html")
-                img(src="images/nl.png") 
+                img(src="images/nl.png")
             .en
               a(href="indexEN.html")
                 img(src="images/en.png")
@@ -71,7 +70,7 @@ html
           .row.row-eq-height
             .col-lg-8.col-sm-8
               .editcms.cms-editable
-                if taal == 'NL' 
+                if taal == 'NL'
                   include ./include/index/html_index1.pug
                 if taal == 'DE'
                   include ./include/index/html_index1DE.pug
@@ -149,7 +148,7 @@ html
                       img(src="images/blokken/wandelen.jpg")
                       figcaption
                         h2= wandelen
-                        p= wandelensub 
+                        p= wandelensub
                         a(href= zomerlink) View more
                 .col-lg-4.col-sm-6.col-xs-6
                   .grid.animated(data-os-animation='fadeIn')
@@ -194,14 +193,14 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                if taal == 'NL' 
+                if taal == 'NL'
                   include ./include/index/html_index2.pug
                 if taal == 'DE'
                   include ./include/index/html_index2DE.pug
-                if taal == 'EN'  
+                if taal == 'EN'
                   include ./include/index/html_index2EN.pug
           .row
-            .col-sm-12 
+            .col-sm-12
               .videozomer
                 .grid.videovoorbeeld.animated(data-os-animation='fadeInLeft')
                   .figure
@@ -273,11 +272,11 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                if taal == 'NL' 
+                if taal == 'NL'
                   include ./include/index/html_index3.pug
                 if taal == 'DE'
                   include ./include/index/html_index3DE.pug
-                if taal == 'EN'  
+                if taal == 'EN'
                   include ./include/index/html_index3EN.pug
               .videozomer
                 .grid.videovoorbeeld.animated(data-os-animation='fadeInLeft')
@@ -326,11 +325,11 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                if taal == 'NL' 
+                if taal == 'NL'
                   include ./include/index/html_index4.pug
                 if taal == 'DE'
                   include ./include/index/html_index4DE.pug
-                if taal == 'EN'  
+                if taal == 'EN'
                   include ./include/index/html_index4EN.pug
               a.a-btn(href= reserveerknop)
                 span.a-btn-text= reserveer
@@ -351,11 +350,11 @@ html
           .row
             .col-lg-12
               .editcms.cms-editable
-                if taal == 'NL' 
+                if taal == 'NL'
                   include ./include/index/html_index5.pug
                 if taal == 'DE'
                   include ./include/index/html_index5DE.pug
-                if taal == 'EN'  
+                if taal == 'EN'
                   include ./include/index/html_index5EN.pug
               .row
                 .col-lg-3.col-sm-4.col-xs-6
@@ -383,7 +382,7 @@ html
                 span.a-btn-slide-text= slimkeus
                 span.a-btn-icon-right
                   span
-        .footer 
+        .footer
           p
             | Haus Brabant (c) 2016 fam v. Schijndel
       include ./include/mobilenav.pug
